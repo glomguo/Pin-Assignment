@@ -1,1 +1,1 @@
-//Test
+int a=0;//Test
