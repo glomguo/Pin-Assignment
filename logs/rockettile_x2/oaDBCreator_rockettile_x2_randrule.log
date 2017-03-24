@@ -1,0 +1,28 @@
+*****************************************************************************
+Tool:		lef2oa        	22.04.054
+*****************************************************************************
+Running: lef2oa -lib DesignLib -lef "library/NangateOpenCellLibrary.tech.lef"
+Started: Mon Mar 13 01:16:48 2017 (Hostname: eeapps02.seas.ucla.edu)
+WARNING: (OALEFDEF-10018): No default library definition file found. A default lib.defs file will be created in the current working directory. If this is not desired use the -libDefFile option to specify the location of an existing lib.defs file to use.
+Finished lef2oa
+Time elapsed:	0.41 seconds
+Peak VM:	831488 bytes
+Messages:	0 errors, 1 warning
+*****************************************************************************
+Tool:		lef2oa        	22.04.054
+*****************************************************************************
+Running: lef2oa -lib DesignLib -lef "benchmarks/rockettile_x2/macros/RocketTile_1.lef"
+Started: Mon Mar 13 01:16:48 2017 (Hostname: eeapps02.seas.ucla.edu)
+Finished lef2oa
+Time elapsed:	0.06 seconds
+Peak VM:	1134592 bytes
+Messages:	0 errors, 0 warnings
+*****************************************************************************
+Tool:		def2oa        	22.04.054
+*****************************************************************************
+Running: def2oa -lib DesignLib -def "benchmarks/rockettile_x2/rockettile_x2.def"
+Started: Mon Mar 13 01:16:48 2017 (Hostname: eeapps02.seas.ucla.edu)
+Finished def2oa
+Time elapsed:	0.10 seconds
+Peak VM:	1830912 bytes
+Messages:	0 errors, 0 warnings

@@ -1,0 +1,3 @@
+DEFINE DesignLib DesignLib
+ASSIGN DesignLib writePath DesignLib
+ASSIGN DesignLib libMode shared

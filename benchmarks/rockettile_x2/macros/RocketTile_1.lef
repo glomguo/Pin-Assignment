@@ -1,0 +1,4269 @@
+##
+## LEF for PtnCells ;
+## created by Innovus v16.10-p004_1 on Fri Dec  2 17:37:59 2016
+##
+
+VERSION 5.7 ;
+
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO RocketTile_1
+  CLASS BLOCK ;
+  SIZE 1999.7600 BY 1999.4800 ;
+  FOREIGN RocketTile_1 0.0000 0.0000 ;
+  ORIGIN 0 0 ;
+  SYMMETRY X Y R90 ;
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 992.2500 1999.3400 992.3900 1999.4800 ;
+    END
+  END clk
+  PIN reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 384.0900 0.1400 384.2300 ;
+    END
+  END reset
+  PIN io_cached_0_acquire_ready
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 880.8100 0.0000 880.9500 0.1400 ;
+    END
+  END io_cached_0_acquire_ready
+  PIN io_cached_0_acquire_valid
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 869.6100 0.0000 869.7500 0.1400 ;
+    END
+  END io_cached_0_acquire_valid
+  PIN io_cached_0_acquire_bits_addr_block[25]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 443.1700 0.0000 443.3100 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[25]
+  PIN io_cached_0_acquire_bits_addr_block[24]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 445.9700 0.0000 446.1100 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[24]
+  PIN io_cached_0_acquire_bits_addr_block[23]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 450.1700 0.0000 450.3100 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[23]
+  PIN io_cached_0_acquire_bits_addr_block[22]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 403.6900 0.0000 403.8300 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[22]
+  PIN io_cached_0_acquire_bits_addr_block[21]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 440.3700 0.0000 440.5100 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[21]
+  PIN io_cached_0_acquire_bits_addr_block[20]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 438.1300 0.1400 438.2700 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[20]
+  PIN io_cached_0_acquire_bits_addr_block[19]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 388.0100 0.0000 388.1500 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[19]
+  PIN io_cached_0_acquire_bits_addr_block[18]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 441.4900 0.1400 441.6300 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[18]
+  PIN io_cached_0_acquire_bits_addr_block[17]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 452.9700 0.0000 453.1100 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[17]
+  PIN io_cached_0_acquire_bits_addr_block[16]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 525.4900 0.0000 525.6300 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[16]
+  PIN io_cached_0_acquire_bits_addr_block[15]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 406.4900 0.0000 406.6300 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[15]
+  PIN io_cached_0_acquire_bits_addr_block[14]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 437.5700 0.0000 437.7100 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[14]
+  PIN io_cached_0_acquire_bits_addr_block[13]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 435.3300 0.1400 435.4700 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[13]
+  PIN io_cached_0_acquire_bits_addr_block[12]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 434.7700 0.0000 434.9100 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[12]
+  PIN io_cached_0_acquire_bits_addr_block[11]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 392.2100 0.0000 392.3500 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[11]
+  PIN io_cached_0_acquire_bits_addr_block[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 432.5300 0.1400 432.6700 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[10]
+  PIN io_cached_0_acquire_bits_addr_block[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 515.1300 0.0000 515.2700 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[9]
+  PIN io_cached_0_acquire_bits_addr_block[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 431.9700 0.0000 432.1100 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[8]
+  PIN io_cached_0_acquire_bits_addr_block[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 429.7300 0.1400 429.8700 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[7]
+  PIN io_cached_0_acquire_bits_addr_block[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 399.4900 0.0000 399.6300 0.1400 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[6]
+  PIN io_cached_0_acquire_bits_addr_block[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1002.6100 0.1400 1002.7500 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[5]
+  PIN io_cached_0_acquire_bits_addr_block[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 984.9700 0.1400 985.1100 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[4]
+  PIN io_cached_0_acquire_bits_addr_block[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 982.1700 0.1400 982.3100 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[3]
+  PIN io_cached_0_acquire_bits_addr_block[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 989.1700 0.1400 989.3100 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[2]
+  PIN io_cached_0_acquire_bits_addr_block[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 979.3700 0.1400 979.5100 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[1]
+  PIN io_cached_0_acquire_bits_addr_block[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 991.9700 0.1400 992.1100 ;
+    END
+  END io_cached_0_acquire_bits_addr_block[0]
+  PIN io_cached_0_acquire_bits_client_xact_id
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1117.6900 1999.3400 1117.8300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_client_xact_id
+  PIN io_cached_0_acquire_bits_addr_beat[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1011.2900 0.1400 1011.4300 ;
+    END
+  END io_cached_0_acquire_bits_addr_beat[2]
+  PIN io_cached_0_acquire_bits_addr_beat[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1008.4900 0.1400 1008.6300 ;
+    END
+  END io_cached_0_acquire_bits_addr_beat[1]
+  PIN io_cached_0_acquire_bits_addr_beat[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1005.6900 0.1400 1005.8300 ;
+    END
+  END io_cached_0_acquire_bits_addr_beat[0]
+  PIN io_cached_0_acquire_bits_is_builtin_type
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 865.6900 1999.3400 865.8300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_is_builtin_type
+  PIN io_cached_0_acquire_bits_a_type[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1016.8900 0.1400 1017.0300 ;
+    END
+  END io_cached_0_acquire_bits_a_type[2]
+  PIN io_cached_0_acquire_bits_a_type[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1019.6900 0.1400 1019.8300 ;
+    END
+  END io_cached_0_acquire_bits_a_type[1]
+  PIN io_cached_0_acquire_bits_a_type[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1014.0900 0.1400 1014.2300 ;
+    END
+  END io_cached_0_acquire_bits_a_type[0]
+  PIN io_cached_0_acquire_bits_union[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 972.6500 1999.3400 972.7900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_union[10]
+  PIN io_cached_0_acquire_bits_union[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1029.4900 0.1400 1029.6300 ;
+    END
+  END io_cached_0_acquire_bits_union[9]
+  PIN io_cached_0_acquire_bits_union[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 969.8500 1999.3400 969.9900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_union[8]
+  PIN io_cached_0_acquire_bits_union[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1032.2900 0.1400 1032.4300 ;
+    END
+  END io_cached_0_acquire_bits_union[7]
+  PIN io_cached_0_acquire_bits_union[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 967.0500 1999.3400 967.1900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_union[6]
+  PIN io_cached_0_acquire_bits_union[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 999.8100 0.1400 999.9500 ;
+    END
+  END io_cached_0_acquire_bits_union[5]
+  PIN io_cached_0_acquire_bits_union[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1035.0900 0.1400 1035.2300 ;
+    END
+  END io_cached_0_acquire_bits_union[4]
+  PIN io_cached_0_acquire_bits_union[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 997.0100 0.1400 997.1500 ;
+    END
+  END io_cached_0_acquire_bits_union[3]
+  PIN io_cached_0_acquire_bits_union[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 964.2500 1999.3400 964.3900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_union[2]
+  PIN io_cached_0_acquire_bits_union[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1037.8900 0.1400 1038.0300 ;
+    END
+  END io_cached_0_acquire_bits_union[1]
+  PIN io_cached_0_acquire_bits_union[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 961.4500 1999.3400 961.5900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_union[0]
+  PIN io_cached_0_acquire_bits_data[63]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1040.4100 1999.7600 1040.5500 ;
+    END
+  END io_cached_0_acquire_bits_data[63]
+  PIN io_cached_0_acquire_bits_data[62]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1037.0500 1999.7600 1037.1900 ;
+    END
+  END io_cached_0_acquire_bits_data[62]
+  PIN io_cached_0_acquire_bits_data[61]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1043.2100 1999.7600 1043.3500 ;
+    END
+  END io_cached_0_acquire_bits_data[61]
+  PIN io_cached_0_acquire_bits_data[60]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1044.8900 1999.3400 1045.0300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[60]
+  PIN io_cached_0_acquire_bits_data[59]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1034.2500 1999.7600 1034.3900 ;
+    END
+  END io_cached_0_acquire_bits_data[59]
+  PIN io_cached_0_acquire_bits_data[58]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1046.0100 1999.7600 1046.1500 ;
+    END
+  END io_cached_0_acquire_bits_data[58]
+  PIN io_cached_0_acquire_bits_data[57]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1031.4500 1999.7600 1031.5900 ;
+    END
+  END io_cached_0_acquire_bits_data[57]
+  PIN io_cached_0_acquire_bits_data[56]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1028.6500 1999.7600 1028.7900 ;
+    END
+  END io_cached_0_acquire_bits_data[56]
+  PIN io_cached_0_acquire_bits_data[55]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1025.8500 1999.7600 1025.9900 ;
+    END
+  END io_cached_0_acquire_bits_data[55]
+  PIN io_cached_0_acquire_bits_data[54]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1040.9700 1999.3400 1041.1100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[54]
+  PIN io_cached_0_acquire_bits_data[53]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1023.0500 1999.7600 1023.1900 ;
+    END
+  END io_cached_0_acquire_bits_data[53]
+  PIN io_cached_0_acquire_bits_data[52]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1038.1700 1999.3400 1038.3100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[52]
+  PIN io_cached_0_acquire_bits_data[51]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1020.2500 1999.7600 1020.3900 ;
+    END
+  END io_cached_0_acquire_bits_data[51]
+  PIN io_cached_0_acquire_bits_data[50]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1035.3700 1999.3400 1035.5100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[50]
+  PIN io_cached_0_acquire_bits_data[49]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1032.5700 1999.3400 1032.7100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[49]
+  PIN io_cached_0_acquire_bits_data[48]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1029.7700 1999.3400 1029.9100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[48]
+  PIN io_cached_0_acquire_bits_data[47]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1026.9700 1999.3400 1027.1100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[47]
+  PIN io_cached_0_acquire_bits_data[46]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1024.1700 1999.3400 1024.3100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[46]
+  PIN io_cached_0_acquire_bits_data[45]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1047.6900 1999.3400 1047.8300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[45]
+  PIN io_cached_0_acquire_bits_data[44]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1021.3700 1999.3400 1021.5100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[44]
+  PIN io_cached_0_acquire_bits_data[43]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1018.5700 1999.3400 1018.7100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[43]
+  PIN io_cached_0_acquire_bits_data[42]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1015.7700 1999.3400 1015.9100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[42]
+  PIN io_cached_0_acquire_bits_data[41]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1012.9700 1999.3400 1013.1100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[41]
+  PIN io_cached_0_acquire_bits_data[40]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1048.8100 1999.7600 1048.9500 ;
+    END
+  END io_cached_0_acquire_bits_data[40]
+  PIN io_cached_0_acquire_bits_data[39]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1017.4500 1999.7600 1017.5900 ;
+    END
+  END io_cached_0_acquire_bits_data[39]
+  PIN io_cached_0_acquire_bits_data[38]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1014.6500 1999.7600 1014.7900 ;
+    END
+  END io_cached_0_acquire_bits_data[38]
+  PIN io_cached_0_acquire_bits_data[37]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1011.8500 1999.7600 1011.9900 ;
+    END
+  END io_cached_0_acquire_bits_data[37]
+  PIN io_cached_0_acquire_bits_data[36]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1009.0500 1999.7600 1009.1900 ;
+    END
+  END io_cached_0_acquire_bits_data[36]
+  PIN io_cached_0_acquire_bits_data[35]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1010.1700 1999.3400 1010.3100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[35]
+  PIN io_cached_0_acquire_bits_data[34]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1007.3700 1999.3400 1007.5100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[34]
+  PIN io_cached_0_acquire_bits_data[33]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1050.4900 1999.3400 1050.6300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[33]
+  PIN io_cached_0_acquire_bits_data[32]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1004.5700 1999.3400 1004.7100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[32]
+  PIN io_cached_0_acquire_bits_data[31]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1051.6100 1999.7600 1051.7500 ;
+    END
+  END io_cached_0_acquire_bits_data[31]
+  PIN io_cached_0_acquire_bits_data[30]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1053.2900 1999.3400 1053.4300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[30]
+  PIN io_cached_0_acquire_bits_data[29]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1054.4100 1999.7600 1054.5500 ;
+    END
+  END io_cached_0_acquire_bits_data[29]
+  PIN io_cached_0_acquire_bits_data[28]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1056.0900 1999.3400 1056.2300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[28]
+  PIN io_cached_0_acquire_bits_data[27]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1057.2100 1999.7600 1057.3500 ;
+    END
+  END io_cached_0_acquire_bits_data[27]
+  PIN io_cached_0_acquire_bits_data[26]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1058.8900 1999.3400 1059.0300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[26]
+  PIN io_cached_0_acquire_bits_data[25]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1060.0100 1999.7600 1060.1500 ;
+    END
+  END io_cached_0_acquire_bits_data[25]
+  PIN io_cached_0_acquire_bits_data[24]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1061.6900 1999.3400 1061.8300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[24]
+  PIN io_cached_0_acquire_bits_data[23]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1006.2500 1999.7600 1006.3900 ;
+    END
+  END io_cached_0_acquire_bits_data[23]
+  PIN io_cached_0_acquire_bits_data[22]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1062.8100 1999.7600 1062.9500 ;
+    END
+  END io_cached_0_acquire_bits_data[22]
+  PIN io_cached_0_acquire_bits_data[21]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1003.4500 1999.7600 1003.5900 ;
+    END
+  END io_cached_0_acquire_bits_data[21]
+  PIN io_cached_0_acquire_bits_data[20]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1064.4900 1999.3400 1064.6300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[20]
+  PIN io_cached_0_acquire_bits_data[19]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1000.6500 1999.7600 1000.7900 ;
+    END
+  END io_cached_0_acquire_bits_data[19]
+  PIN io_cached_0_acquire_bits_data[18]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1001.7700 1999.3400 1001.9100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[18]
+  PIN io_cached_0_acquire_bits_data[17]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 997.8500 1999.7600 997.9900 ;
+    END
+  END io_cached_0_acquire_bits_data[17]
+  PIN io_cached_0_acquire_bits_data[16]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 995.0500 1999.7600 995.1900 ;
+    END
+  END io_cached_0_acquire_bits_data[16]
+  PIN io_cached_0_acquire_bits_data[15]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1065.6100 1999.7600 1065.7500 ;
+    END
+  END io_cached_0_acquire_bits_data[15]
+  PIN io_cached_0_acquire_bits_data[14]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1067.2900 1999.3400 1067.4300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[14]
+  PIN io_cached_0_acquire_bits_data[13]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1068.4100 1999.7600 1068.5500 ;
+    END
+  END io_cached_0_acquire_bits_data[13]
+  PIN io_cached_0_acquire_bits_data[12]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 998.9700 1999.3400 999.1100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[12]
+  PIN io_cached_0_acquire_bits_data[11]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 996.1700 1999.3400 996.3100 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[11]
+  PIN io_cached_0_acquire_bits_data[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 989.4500 1999.3400 989.5900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[10]
+  PIN io_cached_0_acquire_bits_data[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1070.0900 1999.3400 1070.2300 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[9]
+  PIN io_cached_0_acquire_bits_data[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1071.2100 1999.7600 1071.3500 ;
+    END
+  END io_cached_0_acquire_bits_data[8]
+  PIN io_cached_0_acquire_bits_data[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 986.6500 1999.3400 986.7900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[7]
+  PIN io_cached_0_acquire_bits_data[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 983.8500 1999.3400 983.9900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[6]
+  PIN io_cached_0_acquire_bits_data[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 981.0500 1999.3400 981.1900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[5]
+  PIN io_cached_0_acquire_bits_data[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 978.2500 1999.3400 978.3900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[4]
+  PIN io_cached_0_acquire_bits_data[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1022.4900 0.1400 1022.6300 ;
+    END
+  END io_cached_0_acquire_bits_data[3]
+  PIN io_cached_0_acquire_bits_data[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 975.4500 1999.3400 975.5900 1999.4800 ;
+    END
+  END io_cached_0_acquire_bits_data[2]
+  PIN io_cached_0_acquire_bits_data[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 992.2500 1999.7600 992.3900 ;
+    END
+  END io_cached_0_acquire_bits_data[1]
+  PIN io_cached_0_acquire_bits_data[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1025.2900 0.1400 1025.4300 ;
+    END
+  END io_cached_0_acquire_bits_data[0]
+  PIN io_cached_0_probe_ready
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 866.8100 0.0000 866.9500 0.1400 ;
+    END
+  END io_cached_0_probe_ready
+  PIN io_cached_0_probe_valid
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 878.0100 0.0000 878.1500 0.1400 ;
+    END
+  END io_cached_0_probe_valid
+  PIN io_cached_0_probe_bits_addr_block[25]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 359.7300 0.1400 359.8700 ;
+    END
+  END io_cached_0_probe_bits_addr_block[25]
+  PIN io_cached_0_probe_bits_addr_block[24]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 356.3700 0.1400 356.5100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[24]
+  PIN io_cached_0_probe_bits_addr_block[23]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 364.4900 0.1400 364.6300 ;
+    END
+  END io_cached_0_probe_bits_addr_block[23]
+  PIN io_cached_0_probe_bits_addr_block[22]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 373.1700 0.0000 373.3100 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[22]
+  PIN io_cached_0_probe_bits_addr_block[21]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 367.2900 0.1400 367.4300 ;
+    END
+  END io_cached_0_probe_bits_addr_block[21]
+  PIN io_cached_0_probe_bits_addr_block[20]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 360.0100 0.0000 360.1500 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[20]
+  PIN io_cached_0_probe_bits_addr_block[19]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 364.2100 0.0000 364.3500 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[19]
+  PIN io_cached_0_probe_bits_addr_block[18]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 355.2500 0.0000 355.3900 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[18]
+  PIN io_cached_0_probe_bits_addr_block[17]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 385.2100 0.0000 385.3500 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[17]
+  PIN io_cached_0_probe_bits_addr_block[16]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 368.4100 0.0000 368.5500 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[16]
+  PIN io_cached_0_probe_bits_addr_block[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 395.0100 0.0000 395.1500 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[15]
+  PIN io_cached_0_probe_bits_addr_block[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 382.4100 0.0000 382.5500 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[14]
+  PIN io_cached_0_probe_bits_addr_block[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 375.9700 0.0000 376.1100 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[13]
+  PIN io_cached_0_probe_bits_addr_block[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 379.6100 0.0000 379.7500 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[12]
+  PIN io_cached_0_probe_bits_addr_block[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 409.2900 0.0000 409.4300 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[11]
+  PIN io_cached_0_probe_bits_addr_block[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 353.5700 0.1400 353.7100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[10]
+  PIN io_cached_0_probe_bits_addr_block[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 352.4500 0.0000 352.5900 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[9]
+  PIN io_cached_0_probe_bits_addr_block[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 350.7700 0.1400 350.9100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[8]
+  PIN io_cached_0_probe_bits_addr_block[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 412.0900 0.0000 412.2300 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[7]
+  PIN io_cached_0_probe_bits_addr_block[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 349.6500 0.0000 349.7900 0.1400 ;
+    END
+  END io_cached_0_probe_bits_addr_block[6]
+  PIN io_cached_0_probe_bits_addr_block[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 970.9700 0.1400 971.1100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[5]
+  PIN io_cached_0_probe_bits_addr_block[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 968.1700 0.1400 968.3100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[4]
+  PIN io_cached_0_probe_bits_addr_block[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 965.3700 0.1400 965.5100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[3]
+  PIN io_cached_0_probe_bits_addr_block[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 962.5700 0.1400 962.7100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[2]
+  PIN io_cached_0_probe_bits_addr_block[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 959.7700 0.1400 959.9100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[1]
+  PIN io_cached_0_probe_bits_addr_block[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 956.9700 0.1400 957.1100 ;
+    END
+  END io_cached_0_probe_bits_addr_block[0]
+  PIN io_cached_0_probe_bits_p_type[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 948.2900 0.0000 948.4300 0.1400 ;
+    END
+  END io_cached_0_probe_bits_p_type[1]
+  PIN io_cached_0_probe_bits_p_type[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 956.6900 0.0000 956.8300 0.1400 ;
+    END
+  END io_cached_0_probe_bits_p_type[0]
+  PIN io_cached_0_release_ready
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 117.2500 0.0000 117.3900 0.1400 ;
+    END
+  END io_cached_0_release_ready
+  PIN io_cached_0_release_valid
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 864.0100 0.0000 864.1500 0.1400 ;
+    END
+  END io_cached_0_release_valid
+  PIN io_cached_0_release_bits_addr_beat[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 959.7700 0.0000 959.9100 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_beat[2]
+  PIN io_cached_0_release_bits_addr_beat[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 948.8500 0.1400 948.9900 ;
+    END
+  END io_cached_0_release_bits_addr_beat[1]
+  PIN io_cached_0_release_bits_addr_beat[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 954.1700 0.1400 954.3100 ;
+    END
+  END io_cached_0_release_bits_addr_beat[0]
+  PIN io_cached_0_release_bits_addr_block[25]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 370.0900 0.1400 370.2300 ;
+    END
+  END io_cached_0_release_bits_addr_block[25]
+  PIN io_cached_0_release_bits_addr_block[24]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 347.9700 0.1400 348.1100 ;
+    END
+  END io_cached_0_release_bits_addr_block[24]
+  PIN io_cached_0_release_bits_addr_block[23]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 372.8900 0.1400 373.0300 ;
+    END
+  END io_cached_0_release_bits_addr_block[23]
+  PIN io_cached_0_release_bits_addr_block[22]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 375.6900 0.1400 375.8300 ;
+    END
+  END io_cached_0_release_bits_addr_block[22]
+  PIN io_cached_0_release_bits_addr_block[21]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 414.8900 0.0000 415.0300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[21]
+  PIN io_cached_0_release_bits_addr_block[20]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 346.8500 0.0000 346.9900 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[20]
+  PIN io_cached_0_release_bits_addr_block[19]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 345.1700 0.1400 345.3100 ;
+    END
+  END io_cached_0_release_bits_addr_block[19]
+  PIN io_cached_0_release_bits_addr_block[18]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 378.4900 0.1400 378.6300 ;
+    END
+  END io_cached_0_release_bits_addr_block[18]
+  PIN io_cached_0_release_bits_addr_block[17]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 417.6900 0.0000 417.8300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[17]
+  PIN io_cached_0_release_bits_addr_block[16]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 344.0500 0.0000 344.1900 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[16]
+  PIN io_cached_0_release_bits_addr_block[15]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 420.4900 0.0000 420.6300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[15]
+  PIN io_cached_0_release_bits_addr_block[14]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 423.2900 0.0000 423.4300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[14]
+  PIN io_cached_0_release_bits_addr_block[13]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 342.3700 0.1400 342.5100 ;
+    END
+  END io_cached_0_release_bits_addr_block[13]
+  PIN io_cached_0_release_bits_addr_block[12]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 341.2500 0.0000 341.3900 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[12]
+  PIN io_cached_0_release_bits_addr_block[11]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 426.0900 0.0000 426.2300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[11]
+  PIN io_cached_0_release_bits_addr_block[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 381.2900 0.1400 381.4300 ;
+    END
+  END io_cached_0_release_bits_addr_block[10]
+  PIN io_cached_0_release_bits_addr_block[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 339.5700 0.1400 339.7100 ;
+    END
+  END io_cached_0_release_bits_addr_block[9]
+  PIN io_cached_0_release_bits_addr_block[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 338.4500 0.0000 338.5900 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[8]
+  PIN io_cached_0_release_bits_addr_block[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 428.8900 0.0000 429.0300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[7]
+  PIN io_cached_0_release_bits_addr_block[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 336.7700 0.1400 336.9100 ;
+    END
+  END io_cached_0_release_bits_addr_block[6]
+  PIN io_cached_0_release_bits_addr_block[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 946.0500 0.1400 946.1900 ;
+    END
+  END io_cached_0_release_bits_addr_block[5]
+  PIN io_cached_0_release_bits_addr_block[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 945.4900 0.0000 945.6300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[4]
+  PIN io_cached_0_release_bits_addr_block[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 943.2500 0.1400 943.3900 ;
+    END
+  END io_cached_0_release_bits_addr_block[3]
+  PIN io_cached_0_release_bits_addr_block[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 942.6900 0.0000 942.8300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[2]
+  PIN io_cached_0_release_bits_addr_block[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 940.4500 0.1400 940.5900 ;
+    END
+  END io_cached_0_release_bits_addr_block[1]
+  PIN io_cached_0_release_bits_addr_block[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 939.8900 0.0000 940.0300 0.1400 ;
+    END
+  END io_cached_0_release_bits_addr_block[0]
+  PIN io_cached_0_release_bits_client_xact_id
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1118.8100 1999.7600 1118.9500 ;
+    END
+  END io_cached_0_release_bits_client_xact_id
+  PIN io_cached_0_release_bits_voluntary
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 861.2100 0.0000 861.3500 0.1400 ;
+    END
+  END io_cached_0_release_bits_voluntary
+  PIN io_cached_0_release_bits_r_type[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 937.0900 0.0000 937.2300 0.1400 ;
+    END
+  END io_cached_0_release_bits_r_type[2]
+  PIN io_cached_0_release_bits_r_type[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 934.2900 0.0000 934.4300 0.1400 ;
+    END
+  END io_cached_0_release_bits_r_type[1]
+  PIN io_cached_0_release_bits_r_type[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 932.0500 0.1400 932.1900 ;
+    END
+  END io_cached_0_release_bits_r_type[0]
+  PIN io_cached_0_release_bits_data[63]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 986.6500 1999.7600 986.7900 ;
+    END
+  END io_cached_0_release_bits_data[63]
+  PIN io_cached_0_release_bits_data[62]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 983.8500 1999.7600 983.9900 ;
+    END
+  END io_cached_0_release_bits_data[62]
+  PIN io_cached_0_release_bits_data[61]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1072.8900 1999.3400 1073.0300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[61]
+  PIN io_cached_0_release_bits_data[60]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1074.0100 1999.7600 1074.1500 ;
+    END
+  END io_cached_0_release_bits_data[60]
+  PIN io_cached_0_release_bits_data[59]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1075.6900 1999.3400 1075.8300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[59]
+  PIN io_cached_0_release_bits_data[58]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 981.0500 1999.7600 981.1900 ;
+    END
+  END io_cached_0_release_bits_data[58]
+  PIN io_cached_0_release_bits_data[57]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 978.2500 1999.7600 978.3900 ;
+    END
+  END io_cached_0_release_bits_data[57]
+  PIN io_cached_0_release_bits_data[56]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1076.8100 1999.7600 1076.9500 ;
+    END
+  END io_cached_0_release_bits_data[56]
+  PIN io_cached_0_release_bits_data[55]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 946.8900 1999.3400 947.0300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[55]
+  PIN io_cached_0_release_bits_data[54]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1054.6900 0.1400 1054.8300 ;
+    END
+  END io_cached_0_release_bits_data[54]
+  PIN io_cached_0_release_bits_data[53]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1057.4900 0.1400 1057.6300 ;
+    END
+  END io_cached_0_release_bits_data[53]
+  PIN io_cached_0_release_bits_data[52]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 944.0900 1999.3400 944.2300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[52]
+  PIN io_cached_0_release_bits_data[51]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 937.6500 0.1400 937.7900 ;
+    END
+  END io_cached_0_release_bits_data[51]
+  PIN io_cached_0_release_bits_data[50]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1060.2900 0.1400 1060.4300 ;
+    END
+  END io_cached_0_release_bits_data[50]
+  PIN io_cached_0_release_bits_data[49]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 934.8500 0.1400 934.9900 ;
+    END
+  END io_cached_0_release_bits_data[49]
+  PIN io_cached_0_release_bits_data[48]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 941.2900 1999.3400 941.4300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[48]
+  PIN io_cached_0_release_bits_data[47]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 975.4500 1999.7600 975.5900 ;
+    END
+  END io_cached_0_release_bits_data[47]
+  PIN io_cached_0_release_bits_data[46]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1022.7700 0.0000 1022.9100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[46]
+  PIN io_cached_0_release_bits_data[45]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1078.4900 1999.3400 1078.6300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[45]
+  PIN io_cached_0_release_bits_data[44]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 972.6500 1999.7600 972.7900 ;
+    END
+  END io_cached_0_release_bits_data[44]
+  PIN io_cached_0_release_bits_data[43]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 969.8500 1999.7600 969.9900 ;
+    END
+  END io_cached_0_release_bits_data[43]
+  PIN io_cached_0_release_bits_data[42]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 967.0500 1999.7600 967.1900 ;
+    END
+  END io_cached_0_release_bits_data[42]
+  PIN io_cached_0_release_bits_data[41]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1019.9700 0.0000 1020.1100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[41]
+  PIN io_cached_0_release_bits_data[40]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1005.4100 0.0000 1005.5500 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[40]
+  PIN io_cached_0_release_bits_data[39]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1079.6100 1999.7600 1079.7500 ;
+    END
+  END io_cached_0_release_bits_data[39]
+  PIN io_cached_0_release_bits_data[38]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 964.2500 1999.7600 964.3900 ;
+    END
+  END io_cached_0_release_bits_data[38]
+  PIN io_cached_0_release_bits_data[37]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1081.2900 1999.3400 1081.4300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[37]
+  PIN io_cached_0_release_bits_data[36]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1082.4100 1999.7600 1082.5500 ;
+    END
+  END io_cached_0_release_bits_data[36]
+  PIN io_cached_0_release_bits_data[35]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 205.4500 0.1400 205.5900 ;
+    END
+  END io_cached_0_release_bits_data[35]
+  PIN io_cached_0_release_bits_data[34]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1084.0900 1999.3400 1084.2300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[34]
+  PIN io_cached_0_release_bits_data[33]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1025.5700 0.0000 1025.7100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[33]
+  PIN io_cached_0_release_bits_data[32]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1017.1700 0.0000 1017.3100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[32]
+  PIN io_cached_0_release_bits_data[31]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1014.3700 0.0000 1014.5100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[31]
+  PIN io_cached_0_release_bits_data[30]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1085.2100 1999.7600 1085.3500 ;
+    END
+  END io_cached_0_release_bits_data[30]
+  PIN io_cached_0_release_bits_data[29]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1011.5700 0.0000 1011.7100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[29]
+  PIN io_cached_0_release_bits_data[28]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 961.4500 1999.7600 961.5900 ;
+    END
+  END io_cached_0_release_bits_data[28]
+  PIN io_cached_0_release_bits_data[27]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 958.6500 1999.7600 958.7900 ;
+    END
+  END io_cached_0_release_bits_data[27]
+  PIN io_cached_0_release_bits_data[26]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1086.8900 1999.3400 1087.0300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[26]
+  PIN io_cached_0_release_bits_data[25]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1088.0100 1999.7600 1088.1500 ;
+    END
+  END io_cached_0_release_bits_data[25]
+  PIN io_cached_0_release_bits_data[24]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1089.6900 1999.3400 1089.8300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[24]
+  PIN io_cached_0_release_bits_data[23]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1040.6900 0.0000 1040.8300 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[23]
+  PIN io_cached_0_release_bits_data[22]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1090.8100 1999.7600 1090.9500 ;
+    END
+  END io_cached_0_release_bits_data[22]
+  PIN io_cached_0_release_bits_data[21]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 955.8500 1999.7600 955.9900 ;
+    END
+  END io_cached_0_release_bits_data[21]
+  PIN io_cached_0_release_bits_data[20]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1028.3700 0.0000 1028.5100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[20]
+  PIN io_cached_0_release_bits_data[19]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 953.0500 1999.7600 953.1900 ;
+    END
+  END io_cached_0_release_bits_data[19]
+  PIN io_cached_0_release_bits_data[18]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 950.2500 1999.7600 950.3900 ;
+    END
+  END io_cached_0_release_bits_data[18]
+  PIN io_cached_0_release_bits_data[17]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 947.4500 1999.7600 947.5900 ;
+    END
+  END io_cached_0_release_bits_data[17]
+  PIN io_cached_0_release_bits_data[16]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 998.4100 0.0000 998.5500 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[16]
+  PIN io_cached_0_release_bits_data[15]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 938.4900 1999.3400 938.6300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[15]
+  PIN io_cached_0_release_bits_data[14]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 991.9700 0.0000 992.1100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[14]
+  PIN io_cached_0_release_bits_data[13]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 994.7700 0.0000 994.9100 0.1400 ;
+    END
+  END io_cached_0_release_bits_data[13]
+  PIN io_cached_0_release_bits_data[12]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1063.0900 0.1400 1063.2300 ;
+    END
+  END io_cached_0_release_bits_data[12]
+  PIN io_cached_0_release_bits_data[11]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 935.6900 1999.3400 935.8300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[11]
+  PIN io_cached_0_release_bits_data[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1065.8900 0.1400 1066.0300 ;
+    END
+  END io_cached_0_release_bits_data[10]
+  PIN io_cached_0_release_bits_data[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 932.8900 1999.3400 933.0300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[9]
+  PIN io_cached_0_release_bits_data[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1068.6900 0.1400 1068.8300 ;
+    END
+  END io_cached_0_release_bits_data[8]
+  PIN io_cached_0_release_bits_data[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 930.0900 1999.3400 930.2300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[7]
+  PIN io_cached_0_release_bits_data[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1071.4900 0.1400 1071.6300 ;
+    END
+  END io_cached_0_release_bits_data[6]
+  PIN io_cached_0_release_bits_data[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 927.2900 1999.3400 927.4300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[5]
+  PIN io_cached_0_release_bits_data[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1074.2900 0.1400 1074.4300 ;
+    END
+  END io_cached_0_release_bits_data[4]
+  PIN io_cached_0_release_bits_data[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 924.4900 1999.3400 924.6300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[3]
+  PIN io_cached_0_release_bits_data[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1077.0900 0.1400 1077.2300 ;
+    END
+  END io_cached_0_release_bits_data[2]
+  PIN io_cached_0_release_bits_data[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 921.6900 1999.3400 921.8300 1999.4800 ;
+    END
+  END io_cached_0_release_bits_data[1]
+  PIN io_cached_0_release_bits_data[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1079.8900 0.1400 1080.0300 ;
+    END
+  END io_cached_0_release_bits_data[0]
+  PIN io_cached_0_grant_ready
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1119.0900 0.0000 1119.2300 0.1400 ;
+    END
+  END io_cached_0_grant_ready
+  PIN io_cached_0_grant_valid
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 875.2100 0.0000 875.3500 0.1400 ;
+    END
+  END io_cached_0_grant_valid
+  PIN io_cached_0_grant_bits_addr_beat[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 976.5700 0.1400 976.7100 ;
+    END
+  END io_cached_0_grant_bits_addr_beat[2]
+  PIN io_cached_0_grant_bits_addr_beat[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 973.7700 0.1400 973.9100 ;
+    END
+  END io_cached_0_grant_bits_addr_beat[1]
+  PIN io_cached_0_grant_bits_addr_beat[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 973.7700 0.0000 973.9100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_addr_beat[0]
+  PIN io_cached_0_grant_bits_client_xact_id
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1114.8900 1999.3400 1115.0300 1999.4800 ;
+    END
+  END io_cached_0_grant_bits_client_xact_id
+  PIN io_cached_0_grant_bits_manager_xact_id[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 953.8900 0.0000 954.0300 0.1400 ;
+    END
+  END io_cached_0_grant_bits_manager_xact_id[3]
+  PIN io_cached_0_grant_bits_manager_xact_id[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 856.7300 0.1400 856.8700 ;
+    END
+  END io_cached_0_grant_bits_manager_xact_id[2]
+  PIN io_cached_0_grant_bits_manager_xact_id[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 859.5300 0.1400 859.6700 ;
+    END
+  END io_cached_0_grant_bits_manager_xact_id[1]
+  PIN io_cached_0_grant_bits_manager_xact_id[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 841.6100 0.1400 841.7500 ;
+    END
+  END io_cached_0_grant_bits_manager_xact_id[0]
+  PIN io_cached_0_grant_bits_is_builtin_type
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 114.4500 0.0000 114.5900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_is_builtin_type
+  PIN io_cached_0_grant_bits_g_type[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 218.6100 0.1400 218.7500 ;
+    END
+  END io_cached_0_grant_bits_g_type[3]
+  PIN io_cached_0_grant_bits_g_type[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 178.2900 0.1400 178.4300 ;
+    END
+  END io_cached_0_grant_bits_g_type[2]
+  PIN io_cached_0_grant_bits_g_type[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 128.4500 0.0000 128.5900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_g_type[1]
+  PIN io_cached_0_grant_bits_g_type[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 125.9300 0.1400 126.0700 ;
+    END
+  END io_cached_0_grant_bits_g_type[0]
+  PIN io_cached_0_grant_bits_data[63]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1138.9700 0.0000 1139.1100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[63]
+  PIN io_cached_0_grant_bits_data[62]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1040.6900 0.1400 1040.8300 ;
+    END
+  END io_cached_0_grant_bits_data[62]
+  PIN io_cached_0_grant_bits_data[61]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1110.6900 0.0000 1110.8300 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[61]
+  PIN io_cached_0_grant_bits_data[60]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1001.2100 0.0000 1001.3500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[60]
+  PIN io_cached_0_grant_bits_data[59]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 958.6500 1999.3400 958.7900 1999.4800 ;
+    END
+  END io_cached_0_grant_bits_data[59]
+  PIN io_cached_0_grant_bits_data[58]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1107.0500 0.0000 1107.1900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[58]
+  PIN io_cached_0_grant_bits_data[57]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1043.4900 0.1400 1043.6300 ;
+    END
+  END io_cached_0_grant_bits_data[57]
+  PIN io_cached_0_grant_bits_data[56]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1008.2100 0.0000 1008.3500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[56]
+  PIN io_cached_0_grant_bits_data[55]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 885.2900 0.1400 885.4300 ;
+    END
+  END io_cached_0_grant_bits_data[55]
+  PIN io_cached_0_grant_bits_data[54]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 844.4100 0.1400 844.5500 ;
+    END
+  END io_cached_0_grant_bits_data[54]
+  PIN io_cached_0_grant_bits_data[53]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 804.3700 0.0000 804.5100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[53]
+  PIN io_cached_0_grant_bits_data[52]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 783.0900 0.1400 783.2300 ;
+    END
+  END io_cached_0_grant_bits_data[52]
+  PIN io_cached_0_grant_bits_data[51]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 838.5300 0.0000 838.6700 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[51]
+  PIN io_cached_0_grant_bits_data[50]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 880.5300 0.1400 880.6700 ;
+    END
+  END io_cached_0_grant_bits_data[50]
+  PIN io_cached_0_grant_bits_data[49]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 877.1700 0.1400 877.3100 ;
+    END
+  END io_cached_0_grant_bits_data[49]
+  PIN io_cached_0_grant_bits_data[48]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 830.1300 0.1400 830.2700 ;
+    END
+  END io_cached_0_grant_bits_data[48]
+  PIN io_cached_0_grant_bits_data[47]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1069.2500 0.0000 1069.3900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[47]
+  PIN io_cached_0_grant_bits_data[46]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1053.8500 0.0000 1053.9900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[46]
+  PIN io_cached_0_grant_bits_data[45]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1045.4500 0.0000 1045.5900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[45]
+  PIN io_cached_0_grant_bits_data[44]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1074.0100 0.0000 1074.1500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[44]
+  PIN io_cached_0_grant_bits_data[43]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1076.8100 0.0000 1076.9500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[43]
+  PIN io_cached_0_grant_bits_data[42]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1062.8100 0.0000 1062.9500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[42]
+  PIN io_cached_0_grant_bits_data[41]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1049.6500 0.0000 1049.7900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[41]
+  PIN io_cached_0_grant_bits_data[40]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1032.0100 0.0000 1032.1500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[40]
+  PIN io_cached_0_grant_bits_data[39]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1133.6500 0.0000 1133.7900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[39]
+  PIN io_cached_0_grant_bits_data[38]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1113.4900 0.0000 1113.6300 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[38]
+  PIN io_cached_0_grant_bits_data[37]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1167.2500 0.0000 1167.3900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[37]
+  PIN io_cached_0_grant_bits_data[36]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1141.7700 0.0000 1141.9100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[36]
+  PIN io_cached_0_grant_bits_data[35]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1104.2500 0.0000 1104.3900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[35]
+  PIN io_cached_0_grant_bits_data[34]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1144.5700 0.0000 1144.7100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[34]
+  PIN io_cached_0_grant_bits_data[33]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1147.3700 0.0000 1147.5100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[33]
+  PIN io_cached_0_grant_bits_data[32]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1116.2900 0.0000 1116.4300 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[32]
+  PIN io_cached_0_grant_bits_data[31]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 955.8500 1999.3400 955.9900 1999.4800 ;
+    END
+  END io_cached_0_grant_bits_data[31]
+  PIN io_cached_0_grant_bits_data[30]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 986.3700 0.0000 986.5100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[30]
+  PIN io_cached_0_grant_bits_data[29]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 989.4500 1999.7600 989.5900 ;
+    END
+  END io_cached_0_grant_bits_data[29]
+  PIN io_cached_0_grant_bits_data[28]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1046.2900 0.1400 1046.4300 ;
+    END
+  END io_cached_0_grant_bits_data[28]
+  PIN io_cached_0_grant_bits_data[27]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 953.0500 1999.3400 953.1900 1999.4800 ;
+    END
+  END io_cached_0_grant_bits_data[27]
+  PIN io_cached_0_grant_bits_data[26]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1049.0900 0.1400 1049.2300 ;
+    END
+  END io_cached_0_grant_bits_data[26]
+  PIN io_cached_0_grant_bits_data[25]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 950.2500 1999.3400 950.3900 1999.4800 ;
+    END
+  END io_cached_0_grant_bits_data[25]
+  PIN io_cached_0_grant_bits_data[24]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1051.8900 0.1400 1052.0300 ;
+    END
+  END io_cached_0_grant_bits_data[24]
+  PIN io_cached_0_grant_bits_data[23]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1066.4500 0.0000 1066.5900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[23]
+  PIN io_cached_0_grant_bits_data[22]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1079.6100 0.0000 1079.7500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[22]
+  PIN io_cached_0_grant_bits_data[21]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1082.4100 0.0000 1082.5500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[21]
+  PIN io_cached_0_grant_bits_data[20]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1037.8900 0.0000 1038.0300 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[20]
+  PIN io_cached_0_grant_bits_data[19]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1056.6500 0.0000 1056.7900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[19]
+  PIN io_cached_0_grant_bits_data[18]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1060.0100 0.0000 1060.1500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[18]
+  PIN io_cached_0_grant_bits_data[17]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1085.2100 0.0000 1085.3500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[17]
+  PIN io_cached_0_grant_bits_data[16]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1034.8100 0.0000 1034.9500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[16]
+  PIN io_cached_0_grant_bits_data[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 883.6100 0.0000 883.7500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[15]
+  PIN io_cached_0_grant_bits_data[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 807.1700 0.0000 807.3100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[14]
+  PIN io_cached_0_grant_bits_data[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 809.9700 0.0000 810.1100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[13]
+  PIN io_cached_0_grant_bits_data[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 812.7700 0.0000 812.9100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[12]
+  PIN io_cached_0_grant_bits_data[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 893.1300 0.0000 893.2700 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[11]
+  PIN io_cached_0_grant_bits_data[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 801.5700 0.0000 801.7100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[10]
+  PIN io_cached_0_grant_bits_data[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 889.2100 0.0000 889.3500 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[9]
+  PIN io_cached_0_grant_bits_data[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 793.4500 0.0000 793.5900 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[8]
+  PIN io_cached_0_grant_bits_data[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 976.5700 0.0000 976.7100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[7]
+  PIN io_cached_0_grant_bits_data[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 979.3700 0.0000 979.5100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[6]
+  PIN io_cached_0_grant_bits_data[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 970.9700 0.0000 971.1100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[5]
+  PIN io_cached_0_grant_bits_data[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 968.1700 0.0000 968.3100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[4]
+  PIN io_cached_0_grant_bits_data[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 982.1700 0.0000 982.3100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[3]
+  PIN io_cached_0_grant_bits_data[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 965.3700 0.0000 965.5100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[2]
+  PIN io_cached_0_grant_bits_data[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 989.1700 0.0000 989.3100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[1]
+  PIN io_cached_0_grant_bits_data[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 962.5700 0.0000 962.7100 0.1400 ;
+    END
+  END io_cached_0_grant_bits_data[0]
+  PIN io_cached_0_grant_bits_manager_id
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 821.7300 0.1400 821.8700 ;
+    END
+  END io_cached_0_grant_bits_manager_id
+  PIN io_cached_0_finish_ready
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 872.4100 0.0000 872.5500 0.1400 ;
+    END
+  END io_cached_0_finish_ready
+  PIN io_cached_0_finish_valid
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 858.4100 0.0000 858.5500 0.1400 ;
+    END
+  END io_cached_0_finish_valid
+  PIN io_cached_0_finish_bits_manager_xact_id[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 951.0900 0.0000 951.2300 0.1400 ;
+    END
+  END io_cached_0_finish_bits_manager_xact_id[3]
+  PIN io_cached_0_finish_bits_manager_xact_id[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 853.9300 0.1400 854.0700 ;
+    END
+  END io_cached_0_finish_bits_manager_xact_id[2]
+  PIN io_cached_0_finish_bits_manager_xact_id[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 850.5700 0.1400 850.7100 ;
+    END
+  END io_cached_0_finish_bits_manager_xact_id[1]
+  PIN io_cached_0_finish_bits_manager_xact_id[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 847.2100 0.1400 847.3500 ;
+    END
+  END io_cached_0_finish_bits_manager_xact_id[0]
+  PIN io_cached_0_finish_bits_manager_id
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 818.9300 0.1400 819.0700 ;
+    END
+  END io_cached_0_finish_bits_manager_id
+  PIN io_uncached_0_acquire_ready
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1371.0900 0.1400 1371.2300 ;
+    END
+  END io_uncached_0_acquire_ready
+  PIN io_uncached_0_acquire_valid
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1368.2900 0.1400 1368.4300 ;
+    END
+  END io_uncached_0_acquire_valid
+  PIN io_uncached_0_acquire_bits_addr_block[25]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 291.1300 1999.3400 291.2700 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[25]
+  PIN io_uncached_0_acquire_bits_addr_block[24]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 326.1300 1999.3400 326.2700 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[24]
+  PIN io_uncached_0_acquire_bits_addr_block[23]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 320.2500 1999.3400 320.3900 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[23]
+  PIN io_uncached_0_acquire_bits_addr_block[22]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 360.2900 1999.3400 360.4300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[22]
+  PIN io_uncached_0_acquire_bits_addr_block[21]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 304.8500 1999.3400 304.9900 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[21]
+  PIN io_uncached_0_acquire_bits_addr_block[20]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 273.7700 1999.3400 273.9100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[20]
+  PIN io_uncached_0_acquire_bits_addr_block[19]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 311.5700 1999.3400 311.7100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[19]
+  PIN io_uncached_0_acquire_bits_addr_block[18]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 276.5700 1999.3400 276.7100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[18]
+  PIN io_uncached_0_acquire_bits_addr_block[17]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 293.9300 1999.3400 294.0700 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[17]
+  PIN io_uncached_0_acquire_bits_addr_block[16]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 280.7700 1999.3400 280.9100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[16]
+  PIN io_uncached_0_acquire_bits_addr_block[15]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 288.3300 1999.3400 288.4700 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[15]
+  PIN io_uncached_0_acquire_bits_addr_block[14]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 285.5300 1999.3400 285.6700 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[14]
+  PIN io_uncached_0_acquire_bits_addr_block[13]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 314.3700 1999.3400 314.5100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[13]
+  PIN io_uncached_0_acquire_bits_addr_block[12]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 270.9700 1999.3400 271.1100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[12]
+  PIN io_uncached_0_acquire_bits_addr_block[11]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 296.7300 1999.3400 296.8700 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[11]
+  PIN io_uncached_0_acquire_bits_addr_block[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 268.1700 1999.3400 268.3100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[10]
+  PIN io_uncached_0_acquire_bits_addr_block[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 299.5300 1999.3400 299.6700 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[9]
+  PIN io_uncached_0_acquire_bits_addr_block[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 328.9300 1999.3400 329.0700 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[8]
+  PIN io_uncached_0_acquire_bits_addr_block[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 307.6500 1999.3400 307.7900 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[7]
+  PIN io_uncached_0_acquire_bits_addr_block[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 317.1700 1999.3400 317.3100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[6]
+  PIN io_uncached_0_acquire_bits_addr_block[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 733.2500 1999.3400 733.3900 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[5]
+  PIN io_uncached_0_acquire_bits_addr_block[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 738.5700 1999.3400 738.7100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[4]
+  PIN io_uncached_0_acquire_bits_addr_block[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 730.4500 1999.3400 730.5900 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[3]
+  PIN io_uncached_0_acquire_bits_addr_block[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 741.3700 1999.3400 741.5100 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[2]
+  PIN io_uncached_0_acquire_bits_addr_block[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1288.2100 0.1400 1288.3500 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[1]
+  PIN io_uncached_0_acquire_bits_addr_block[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1291.0100 0.1400 1291.1500 ;
+    END
+  END io_uncached_0_acquire_bits_addr_block[0]
+  PIN io_uncached_0_acquire_bits_client_xact_id
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 880.2500 1999.7600 880.3900 ;
+    END
+  END io_uncached_0_acquire_bits_client_xact_id
+  PIN io_uncached_0_acquire_bits_addr_beat[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 936.2500 1999.7600 936.3900 ;
+    END
+  END io_uncached_0_acquire_bits_addr_beat[2]
+  PIN io_uncached_0_acquire_bits_addr_beat[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 933.4500 1999.7600 933.5900 ;
+    END
+  END io_uncached_0_acquire_bits_addr_beat[1]
+  PIN io_uncached_0_acquire_bits_addr_beat[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 931.4900 0.0000 931.6300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_addr_beat[0]
+  PIN io_uncached_0_acquire_bits_is_builtin_type
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1120.4900 1999.3400 1120.6300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_is_builtin_type
+  PIN io_uncached_0_acquire_bits_a_type[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 944.6500 1999.7600 944.7900 ;
+    END
+  END io_uncached_0_acquire_bits_a_type[2]
+  PIN io_uncached_0_acquire_bits_a_type[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 941.8500 1999.7600 941.9900 ;
+    END
+  END io_uncached_0_acquire_bits_a_type[1]
+  PIN io_uncached_0_acquire_bits_a_type[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 939.0500 1999.7600 939.1900 ;
+    END
+  END io_uncached_0_acquire_bits_a_type[0]
+  PIN io_uncached_0_acquire_bits_union[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 896.4900 1999.3400 896.6300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_union[10]
+  PIN io_uncached_0_acquire_bits_union[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1103.6900 1999.3400 1103.8300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_union[9]
+  PIN io_uncached_0_acquire_bits_union[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 895.6500 0.1400 895.7900 ;
+    END
+  END io_uncached_0_acquire_bits_union[8]
+  PIN io_uncached_0_acquire_bits_union[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1104.8100 1999.7600 1104.9500 ;
+    END
+  END io_uncached_0_acquire_bits_union[7]
+  PIN io_uncached_0_acquire_bits_union[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1105.0900 0.1400 1105.2300 ;
+    END
+  END io_uncached_0_acquire_bits_union[6]
+  PIN io_uncached_0_acquire_bits_union[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 894.2500 1999.7600 894.3900 ;
+    END
+  END io_uncached_0_acquire_bits_union[5]
+  PIN io_uncached_0_acquire_bits_union[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 893.6900 1999.3400 893.8300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_union[4]
+  PIN io_uncached_0_acquire_bits_union[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1106.4900 1999.3400 1106.6300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_union[3]
+  PIN io_uncached_0_acquire_bits_union[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 892.8500 0.1400 892.9900 ;
+    END
+  END io_uncached_0_acquire_bits_union[2]
+  PIN io_uncached_0_acquire_bits_union[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1107.6100 1999.7600 1107.7500 ;
+    END
+  END io_uncached_0_acquire_bits_union[1]
+  PIN io_uncached_0_acquire_bits_union[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1107.8900 0.1400 1108.0300 ;
+    END
+  END io_uncached_0_acquire_bits_union[0]
+  PIN io_uncached_0_acquire_bits_data[63]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 930.6500 1999.7600 930.7900 ;
+    END
+  END io_uncached_0_acquire_bits_data[63]
+  PIN io_uncached_0_acquire_bits_data[62]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 929.2500 0.1400 929.3900 ;
+    END
+  END io_uncached_0_acquire_bits_data[62]
+  PIN io_uncached_0_acquire_bits_data[61]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 928.6900 0.0000 928.8300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[61]
+  PIN io_uncached_0_acquire_bits_data[60]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 927.8500 1999.7600 927.9900 ;
+    END
+  END io_uncached_0_acquire_bits_data[60]
+  PIN io_uncached_0_acquire_bits_data[59]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 926.4500 0.1400 926.5900 ;
+    END
+  END io_uncached_0_acquire_bits_data[59]
+  PIN io_uncached_0_acquire_bits_data[58]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 925.8900 0.0000 926.0300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[58]
+  PIN io_uncached_0_acquire_bits_data[57]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 925.0500 1999.7600 925.1900 ;
+    END
+  END io_uncached_0_acquire_bits_data[57]
+  PIN io_uncached_0_acquire_bits_data[56]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 923.6500 0.1400 923.7900 ;
+    END
+  END io_uncached_0_acquire_bits_data[56]
+  PIN io_uncached_0_acquire_bits_data[55]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 923.0900 0.0000 923.2300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[55]
+  PIN io_uncached_0_acquire_bits_data[54]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 922.2500 1999.7600 922.3900 ;
+    END
+  END io_uncached_0_acquire_bits_data[54]
+  PIN io_uncached_0_acquire_bits_data[53]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 920.8500 0.1400 920.9900 ;
+    END
+  END io_uncached_0_acquire_bits_data[53]
+  PIN io_uncached_0_acquire_bits_data[52]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 920.2900 0.0000 920.4300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[52]
+  PIN io_uncached_0_acquire_bits_data[51]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 919.4500 1999.7600 919.5900 ;
+    END
+  END io_uncached_0_acquire_bits_data[51]
+  PIN io_uncached_0_acquire_bits_data[50]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 918.0500 0.1400 918.1900 ;
+    END
+  END io_uncached_0_acquire_bits_data[50]
+  PIN io_uncached_0_acquire_bits_data[49]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 917.4900 0.0000 917.6300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[49]
+  PIN io_uncached_0_acquire_bits_data[48]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 916.6500 1999.7600 916.7900 ;
+    END
+  END io_uncached_0_acquire_bits_data[48]
+  PIN io_uncached_0_acquire_bits_data[47]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 916.0900 1999.3400 916.2300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[47]
+  PIN io_uncached_0_acquire_bits_data[46]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 915.2500 0.1400 915.3900 ;
+    END
+  END io_uncached_0_acquire_bits_data[46]
+  PIN io_uncached_0_acquire_bits_data[45]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 914.6900 0.0000 914.8300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[45]
+  PIN io_uncached_0_acquire_bits_data[44]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1085.4900 0.1400 1085.6300 ;
+    END
+  END io_uncached_0_acquire_bits_data[44]
+  PIN io_uncached_0_acquire_bits_data[43]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 913.8500 1999.7600 913.9900 ;
+    END
+  END io_uncached_0_acquire_bits_data[43]
+  PIN io_uncached_0_acquire_bits_data[42]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 913.2900 1999.3400 913.4300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[42]
+  PIN io_uncached_0_acquire_bits_data[41]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 912.4500 0.1400 912.5900 ;
+    END
+  END io_uncached_0_acquire_bits_data[41]
+  PIN io_uncached_0_acquire_bits_data[40]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 911.8900 0.0000 912.0300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[40]
+  PIN io_uncached_0_acquire_bits_data[39]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1088.0100 0.0000 1088.1500 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[39]
+  PIN io_uncached_0_acquire_bits_data[38]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1088.2900 0.1400 1088.4300 ;
+    END
+  END io_uncached_0_acquire_bits_data[38]
+  PIN io_uncached_0_acquire_bits_data[37]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 911.0500 1999.7600 911.1900 ;
+    END
+  END io_uncached_0_acquire_bits_data[37]
+  PIN io_uncached_0_acquire_bits_data[36]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 910.4900 1999.3400 910.6300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[36]
+  PIN io_uncached_0_acquire_bits_data[35]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 909.6500 0.1400 909.7900 ;
+    END
+  END io_uncached_0_acquire_bits_data[35]
+  PIN io_uncached_0_acquire_bits_data[34]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 909.0900 0.0000 909.2300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[34]
+  PIN io_uncached_0_acquire_bits_data[33]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1090.8100 0.0000 1090.9500 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[33]
+  PIN io_uncached_0_acquire_bits_data[32]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1091.0900 0.1400 1091.2300 ;
+    END
+  END io_uncached_0_acquire_bits_data[32]
+  PIN io_uncached_0_acquire_bits_data[31]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 908.2500 1999.7600 908.3900 ;
+    END
+  END io_uncached_0_acquire_bits_data[31]
+  PIN io_uncached_0_acquire_bits_data[30]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 907.6900 1999.3400 907.8300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[30]
+  PIN io_uncached_0_acquire_bits_data[29]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1092.4900 1999.3400 1092.6300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[29]
+  PIN io_uncached_0_acquire_bits_data[28]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 906.8500 0.1400 906.9900 ;
+    END
+  END io_uncached_0_acquire_bits_data[28]
+  PIN io_uncached_0_acquire_bits_data[27]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 906.2900 0.0000 906.4300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[27]
+  PIN io_uncached_0_acquire_bits_data[26]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1093.6100 0.0000 1093.7500 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[26]
+  PIN io_uncached_0_acquire_bits_data[25]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1093.6100 1999.7600 1093.7500 ;
+    END
+  END io_uncached_0_acquire_bits_data[25]
+  PIN io_uncached_0_acquire_bits_data[24]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1093.8900 0.1400 1094.0300 ;
+    END
+  END io_uncached_0_acquire_bits_data[24]
+  PIN io_uncached_0_acquire_bits_data[23]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 905.4500 1999.7600 905.5900 ;
+    END
+  END io_uncached_0_acquire_bits_data[23]
+  PIN io_uncached_0_acquire_bits_data[22]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 904.8900 1999.3400 905.0300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[22]
+  PIN io_uncached_0_acquire_bits_data[21]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1095.2900 1999.3400 1095.4300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[21]
+  PIN io_uncached_0_acquire_bits_data[20]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 904.0500 0.1400 904.1900 ;
+    END
+  END io_uncached_0_acquire_bits_data[20]
+  PIN io_uncached_0_acquire_bits_data[19]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 903.4900 0.0000 903.6300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[19]
+  PIN io_uncached_0_acquire_bits_data[18]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1096.4100 0.0000 1096.5500 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[18]
+  PIN io_uncached_0_acquire_bits_data[17]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1096.4100 1999.7600 1096.5500 ;
+    END
+  END io_uncached_0_acquire_bits_data[17]
+  PIN io_uncached_0_acquire_bits_data[16]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1096.6900 0.1400 1096.8300 ;
+    END
+  END io_uncached_0_acquire_bits_data[16]
+  PIN io_uncached_0_acquire_bits_data[15]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 902.6500 1999.7600 902.7900 ;
+    END
+  END io_uncached_0_acquire_bits_data[15]
+  PIN io_uncached_0_acquire_bits_data[14]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 902.0900 1999.3400 902.2300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[14]
+  PIN io_uncached_0_acquire_bits_data[13]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1098.0900 1999.3400 1098.2300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[13]
+  PIN io_uncached_0_acquire_bits_data[12]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 901.2500 0.1400 901.3900 ;
+    END
+  END io_uncached_0_acquire_bits_data[12]
+  PIN io_uncached_0_acquire_bits_data[11]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 900.6900 0.0000 900.8300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[11]
+  PIN io_uncached_0_acquire_bits_data[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1099.2100 0.0000 1099.3500 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[10]
+  PIN io_uncached_0_acquire_bits_data[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1099.2100 1999.7600 1099.3500 ;
+    END
+  END io_uncached_0_acquire_bits_data[9]
+  PIN io_uncached_0_acquire_bits_data[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1099.4900 0.1400 1099.6300 ;
+    END
+  END io_uncached_0_acquire_bits_data[8]
+  PIN io_uncached_0_acquire_bits_data[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 899.8500 1999.7600 899.9900 ;
+    END
+  END io_uncached_0_acquire_bits_data[7]
+  PIN io_uncached_0_acquire_bits_data[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 899.2900 1999.3400 899.4300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[6]
+  PIN io_uncached_0_acquire_bits_data[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1100.8900 1999.3400 1101.0300 1999.4800 ;
+    END
+  END io_uncached_0_acquire_bits_data[5]
+  PIN io_uncached_0_acquire_bits_data[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 898.4500 0.1400 898.5900 ;
+    END
+  END io_uncached_0_acquire_bits_data[4]
+  PIN io_uncached_0_acquire_bits_data[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 897.8900 0.0000 898.0300 0.1400 ;
+    END
+  END io_uncached_0_acquire_bits_data[3]
+  PIN io_uncached_0_acquire_bits_data[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1102.0100 1999.7600 1102.1500 ;
+    END
+  END io_uncached_0_acquire_bits_data[2]
+  PIN io_uncached_0_acquire_bits_data[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1102.2900 0.1400 1102.4300 ;
+    END
+  END io_uncached_0_acquire_bits_data[1]
+  PIN io_uncached_0_acquire_bits_data[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 897.0500 1999.7600 897.1900 ;
+    END
+  END io_uncached_0_acquire_bits_data[0]
+  PIN io_uncached_0_grant_ready
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1121.6100 1999.7600 1121.7500 ;
+    END
+  END io_uncached_0_grant_ready
+  PIN io_uncached_0_grant_valid
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 223.3700 0.1400 223.5100 ;
+    END
+  END io_uncached_0_grant_valid
+  PIN io_uncached_0_grant_bits_addr_beat[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 891.4500 1999.7600 891.5900 ;
+    END
+  END io_uncached_0_grant_bits_addr_beat[2]
+  PIN io_uncached_0_grant_bits_addr_beat[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 890.8900 1999.3400 891.0300 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_addr_beat[1]
+  PIN io_uncached_0_grant_bits_addr_beat[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1109.2900 1999.3400 1109.4300 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_addr_beat[0]
+  PIN io_uncached_0_grant_bits_client_xact_id
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1116.0100 1999.7600 1116.1500 ;
+    END
+  END io_uncached_0_grant_bits_client_xact_id
+  PIN io_uncached_0_grant_bits_manager_xact_id[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 886.4100 0.0000 886.5500 0.1400 ;
+    END
+  END io_uncached_0_grant_bits_manager_xact_id[3]
+  PIN io_uncached_0_grant_bits_manager_xact_id[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1113.2100 1999.7600 1113.3500 ;
+    END
+  END io_uncached_0_grant_bits_manager_xact_id[2]
+  PIN io_uncached_0_grant_bits_manager_xact_id[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 885.8500 1999.7600 885.9900 ;
+    END
+  END io_uncached_0_grant_bits_manager_xact_id[1]
+  PIN io_uncached_0_grant_bits_manager_xact_id[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 885.2900 1999.3400 885.4300 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_manager_xact_id[0]
+  PIN io_uncached_0_grant_bits_is_builtin_type
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 883.0500 1999.7600 883.1900 ;
+    END
+  END io_uncached_0_grant_bits_is_builtin_type
+  PIN io_uncached_0_grant_bits_g_type[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 1110.4100 1999.7600 1110.5500 ;
+    END
+  END io_uncached_0_grant_bits_g_type[3]
+  PIN io_uncached_0_grant_bits_g_type[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1999.6200 888.6500 1999.7600 888.7900 ;
+    END
+  END io_uncached_0_grant_bits_g_type[2]
+  PIN io_uncached_0_grant_bits_g_type[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 888.0900 1999.3400 888.2300 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_g_type[1]
+  PIN io_uncached_0_grant_bits_g_type[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 1112.0900 1999.3400 1112.2300 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_g_type[0]
+  PIN io_uncached_0_grant_bits_data[63]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1110.6900 0.1400 1110.8300 ;
+    END
+  END io_uncached_0_grant_bits_data[63]
+  PIN io_uncached_0_grant_bits_data[62]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1196.3700 0.1400 1196.5100 ;
+    END
+  END io_uncached_0_grant_bits_data[62]
+  PIN io_uncached_0_grant_bits_data[61]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 890.0500 0.1400 890.1900 ;
+    END
+  END io_uncached_0_grant_bits_data[61]
+  PIN io_uncached_0_grant_bits_data[60]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1129.1700 0.1400 1129.3100 ;
+    END
+  END io_uncached_0_grant_bits_data[60]
+  PIN io_uncached_0_grant_bits_data[59]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1113.4900 0.1400 1113.6300 ;
+    END
+  END io_uncached_0_grant_bits_data[59]
+  PIN io_uncached_0_grant_bits_data[58]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1116.2900 0.1400 1116.4300 ;
+    END
+  END io_uncached_0_grant_bits_data[58]
+  PIN io_uncached_0_grant_bits_data[57]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1164.1700 0.1400 1164.3100 ;
+    END
+  END io_uncached_0_grant_bits_data[57]
+  PIN io_uncached_0_grant_bits_data[56]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1119.0900 0.1400 1119.2300 ;
+    END
+  END io_uncached_0_grant_bits_data[56]
+  PIN io_uncached_0_grant_bits_data[55]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1121.8900 0.1400 1122.0300 ;
+    END
+  END io_uncached_0_grant_bits_data[55]
+  PIN io_uncached_0_grant_bits_data[54]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1206.4500 0.1400 1206.5900 ;
+    END
+  END io_uncached_0_grant_bits_data[54]
+  PIN io_uncached_0_grant_bits_data[53]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1124.6900 0.1400 1124.8300 ;
+    END
+  END io_uncached_0_grant_bits_data[53]
+  PIN io_uncached_0_grant_bits_data[52]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 810.5300 1999.3400 810.6700 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_data[52]
+  PIN io_uncached_0_grant_bits_data[51]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1131.9700 0.1400 1132.1100 ;
+    END
+  END io_uncached_0_grant_bits_data[51]
+  PIN io_uncached_0_grant_bits_data[50]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 816.6900 1999.3400 816.8300 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_data[50]
+  PIN io_uncached_0_grant_bits_data[49]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1134.7700 0.1400 1134.9100 ;
+    END
+  END io_uncached_0_grant_bits_data[49]
+  PIN io_uncached_0_grant_bits_data[48]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 874.3700 0.1400 874.5100 ;
+    END
+  END io_uncached_0_grant_bits_data[48]
+  PIN io_uncached_0_grant_bits_data[47]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1256.8500 0.1400 1256.9900 ;
+    END
+  END io_uncached_0_grant_bits_data[47]
+  PIN io_uncached_0_grant_bits_data[46]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1137.5700 0.1400 1137.7100 ;
+    END
+  END io_uncached_0_grant_bits_data[46]
+  PIN io_uncached_0_grant_bits_data[45]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1214.5700 0.1400 1214.7100 ;
+    END
+  END io_uncached_0_grant_bits_data[45]
+  PIN io_uncached_0_grant_bits_data[44]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1152.6900 0.1400 1152.8300 ;
+    END
+  END io_uncached_0_grant_bits_data[44]
+  PIN io_uncached_0_grant_bits_data[43]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1140.3700 0.1400 1140.5100 ;
+    END
+  END io_uncached_0_grant_bits_data[43]
+  PIN io_uncached_0_grant_bits_data[42]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 871.5700 0.1400 871.7100 ;
+    END
+  END io_uncached_0_grant_bits_data[42]
+  PIN io_uncached_0_grant_bits_data[41]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1143.1700 0.1400 1143.3100 ;
+    END
+  END io_uncached_0_grant_bits_data[41]
+  PIN io_uncached_0_grant_bits_data[40]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1145.9700 0.1400 1146.1100 ;
+    END
+  END io_uncached_0_grant_bits_data[40]
+  PIN io_uncached_0_grant_bits_data[39]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1148.7700 0.1400 1148.9100 ;
+    END
+  END io_uncached_0_grant_bits_data[39]
+  PIN io_uncached_0_grant_bits_data[38]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1203.6500 0.1400 1203.7900 ;
+    END
+  END io_uncached_0_grant_bits_data[38]
+  PIN io_uncached_0_grant_bits_data[37]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1155.4900 0.1400 1155.6300 ;
+    END
+  END io_uncached_0_grant_bits_data[37]
+  PIN io_uncached_0_grant_bits_data[36]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1158.2900 0.1400 1158.4300 ;
+    END
+  END io_uncached_0_grant_bits_data[36]
+  PIN io_uncached_0_grant_bits_data[35]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1161.0900 0.1400 1161.2300 ;
+    END
+  END io_uncached_0_grant_bits_data[35]
+  PIN io_uncached_0_grant_bits_data[34]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1166.9700 0.1400 1167.1100 ;
+    END
+  END io_uncached_0_grant_bits_data[34]
+  PIN io_uncached_0_grant_bits_data[33]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1179.5700 0.1400 1179.7100 ;
+    END
+  END io_uncached_0_grant_bits_data[33]
+  PIN io_uncached_0_grant_bits_data[32]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1169.7700 0.1400 1169.9100 ;
+    END
+  END io_uncached_0_grant_bits_data[32]
+  PIN io_uncached_0_grant_bits_data[31]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1172.5700 0.1400 1172.7100 ;
+    END
+  END io_uncached_0_grant_bits_data[31]
+  PIN io_uncached_0_grant_bits_data[30]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1175.3700 0.1400 1175.5100 ;
+    END
+  END io_uncached_0_grant_bits_data[30]
+  PIN io_uncached_0_grant_bits_data[29]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 868.7700 0.1400 868.9100 ;
+    END
+  END io_uncached_0_grant_bits_data[29]
+  PIN io_uncached_0_grant_bits_data[28]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 835.1700 1999.3400 835.3100 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_data[28]
+  PIN io_uncached_0_grant_bits_data[27]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1182.3700 0.1400 1182.5100 ;
+    END
+  END io_uncached_0_grant_bits_data[27]
+  PIN io_uncached_0_grant_bits_data[26]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1185.1700 0.1400 1185.3100 ;
+    END
+  END io_uncached_0_grant_bits_data[26]
+  PIN io_uncached_0_grant_bits_data[25]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1187.9700 0.1400 1188.1100 ;
+    END
+  END io_uncached_0_grant_bits_data[25]
+  PIN io_uncached_0_grant_bits_data[24]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 865.9700 0.1400 866.1100 ;
+    END
+  END io_uncached_0_grant_bits_data[24]
+  PIN io_uncached_0_grant_bits_data[23]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1281.7700 0.1400 1281.9100 ;
+    END
+  END io_uncached_0_grant_bits_data[23]
+  PIN io_uncached_0_grant_bits_data[22]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1190.7700 0.1400 1190.9100 ;
+    END
+  END io_uncached_0_grant_bits_data[22]
+  PIN io_uncached_0_grant_bits_data[21]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1193.5700 0.1400 1193.7100 ;
+    END
+  END io_uncached_0_grant_bits_data[21]
+  PIN io_uncached_0_grant_bits_data[20]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1199.1700 0.1400 1199.3100 ;
+    END
+  END io_uncached_0_grant_bits_data[20]
+  PIN io_uncached_0_grant_bits_data[19]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 863.1700 0.1400 863.3100 ;
+    END
+  END io_uncached_0_grant_bits_data[19]
+  PIN io_uncached_0_grant_bits_data[18]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 838.8100 0.1400 838.9500 ;
+    END
+  END io_uncached_0_grant_bits_data[18]
+  PIN io_uncached_0_grant_bits_data[17]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 836.0100 0.1400 836.1500 ;
+    END
+  END io_uncached_0_grant_bits_data[17]
+  PIN io_uncached_0_grant_bits_data[16]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1209.2500 0.1400 1209.3900 ;
+    END
+  END io_uncached_0_grant_bits_data[16]
+  PIN io_uncached_0_grant_bits_data[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 833.2100 0.1400 833.3500 ;
+    END
+  END io_uncached_0_grant_bits_data[15]
+  PIN io_uncached_0_grant_bits_data[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1217.3700 0.1400 1217.5100 ;
+    END
+  END io_uncached_0_grant_bits_data[14]
+  PIN io_uncached_0_grant_bits_data[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1220.1700 0.1400 1220.3100 ;
+    END
+  END io_uncached_0_grant_bits_data[13]
+  PIN io_uncached_0_grant_bits_data[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1222.9700 0.1400 1223.1100 ;
+    END
+  END io_uncached_0_grant_bits_data[12]
+  PIN io_uncached_0_grant_bits_data[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 827.3300 0.1400 827.4700 ;
+    END
+  END io_uncached_0_grant_bits_data[11]
+  PIN io_uncached_0_grant_bits_data[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1225.7700 0.1400 1225.9100 ;
+    END
+  END io_uncached_0_grant_bits_data[10]
+  PIN io_uncached_0_grant_bits_data[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 824.5300 0.1400 824.6700 ;
+    END
+  END io_uncached_0_grant_bits_data[9]
+  PIN io_uncached_0_grant_bits_data[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1228.5700 0.1400 1228.7100 ;
+    END
+  END io_uncached_0_grant_bits_data[8]
+  PIN io_uncached_0_grant_bits_data[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 584.8500 1999.3400 584.9900 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_data[7]
+  PIN io_uncached_0_grant_bits_data[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1231.3700 0.1400 1231.5100 ;
+    END
+  END io_uncached_0_grant_bits_data[6]
+  PIN io_uncached_0_grant_bits_data[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1234.1700 0.1400 1234.3100 ;
+    END
+  END io_uncached_0_grant_bits_data[5]
+  PIN io_uncached_0_grant_bits_data[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1236.9700 0.1400 1237.1100 ;
+    END
+  END io_uncached_0_grant_bits_data[4]
+  PIN io_uncached_0_grant_bits_data[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1239.7700 0.1400 1239.9100 ;
+    END
+  END io_uncached_0_grant_bits_data[3]
+  PIN io_uncached_0_grant_bits_data[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1242.5700 0.1400 1242.7100 ;
+    END
+  END io_uncached_0_grant_bits_data[2]
+  PIN io_uncached_0_grant_bits_data[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 837.9700 1999.3400 838.1100 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_data[1]
+  PIN io_uncached_0_grant_bits_data[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 807.1700 1999.3400 807.3100 1999.4800 ;
+    END
+  END io_uncached_0_grant_bits_data[0]
+  PIN io_prci_reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 882.4900 1999.3400 882.6300 1999.4800 ;
+    END
+  END io_prci_reset
+  PIN io_prci_id[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 918.8900 1999.3400 919.0300 1999.4800 ;
+    END
+  END io_prci_id[1]
+  PIN io_prci_id[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 1082.6900 0.1400 1082.8300 ;
+    END
+  END io_prci_id[0]
+  PIN io_prci_interrupts_meip
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 879.6900 1999.3400 879.8300 1999.4800 ;
+    END
+  END io_prci_interrupts_meip
+  PIN io_prci_interrupts_seip
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 876.8900 1999.3400 877.0300 1999.4800 ;
+    END
+  END io_prci_interrupts_seip
+  PIN io_prci_interrupts_debug
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 874.0900 1999.3400 874.2300 1999.4800 ;
+    END
+  END io_prci_interrupts_debug
+  PIN io_prci_interrupts_mtip
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 871.2900 1999.3400 871.4300 1999.4800 ;
+    END
+  END io_prci_interrupts_mtip
+  PIN io_prci_interrupts_msip
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 868.4900 1999.3400 868.6300 1999.4800 ;
+    END
+  END io_prci_interrupts_msip
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+	SHAPE FEEDTHRU ;
+    PORT
+      LAYER metal2 ;
+        RECT 49.4500 49.4500 1950.2750 49.8500 ;
+        RECT 49.4500 1949.6300 1950.2750 1950.0300 ;
+      LAYER metal3 ;
+        RECT 49.4500 49.4500 49.8500 1950.0300 ;
+        RECT 1949.8750 49.4500 1950.2750 1950.0300 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+	SHAPE FEEDTHRU ;
+    PORT
+      LAYER metal2 ;
+        RECT 50.2500 50.2500 1949.4750 50.6500 ;
+        RECT 50.2500 1948.8300 1949.4750 1949.2300 ;
+      LAYER metal3 ;
+        RECT 50.2500 50.2500 50.6500 1949.2300 ;
+        RECT 1949.0750 50.2500 1949.4750 1949.2300 ;
+    END
+  END VDD
+END RocketTile_1
+
+END LIBRARY

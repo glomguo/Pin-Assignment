@@ -1,0 +1,44 @@
+# PPCMD 1 
+# sroute -blockPin useLef -connect { blockPin } -nets { VDD VSS } -layerChangeRange {metal2 metal3}
+# 2 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addRing -layer {top metal2 bottom metal2 left metal3 right metal3} -spacing {top 1 bottom 1 left 1 right 1} -width {top 1 bottom 1 left 1 right 1} -nets { VDD VSS }
+# 1 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VSS 2000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 4618140 393120 4618140 7995120 
+# END_RING_PT_INFO_LIST 
+# VSS 2000 3 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 393140 4194120 8843140 4194120 
+# END_RING_PT_INFO_LIST 
+# VDD 2000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 4618140 397120 4618140 7991120 
+# END_RING_PT_INFO_LIST 
+# VDD 2000 3 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 397140 4194120 8839140 4194120 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+

@@ -1,0 +1,79 @@
+EE201A - Winter 2017 Course Project
+Automated Inter-Chip Pin Assignment
+Author: Vishesh Dokania <vdokania@ucla.edu>
+
+-----------------------------------------------------------
+
+FIRST: Use the Bash shell for the project. 
+This is to maintain uniformity of runtimes using the 'time' command
+
+$ bash
+$ source /w/class/ee201a/ee201ata/bash_ee201a_setup
+
+-----------------------------------------------------------
+What's in the directory tree?
+-----------------------------------------------------------
+
+src/				--	All C++ source code needed to build your PinAssign tool should go here. 
+						You are provided with some starter code to help in correct I/O file 
+						handling, basic traversal and maintaining the global flow.
+
+benchmarks/			--	Input designs for your flow. Contain global designs, macros and 3 sets 
+						of input rules. Don't modify anything here.
+
+innovus/			--	All Innovus runs will be handled here. Contains a template Tcl script 
+						that is copied and customized for each run. You don't need to touch anything here.
+
+library/			--	Nangate 45nm Standard Cell Library files. We only need the technology LEF 
+						defining metal layers, vias, etc.
+
+Python scripts		--	Read these before using them! They are used for importing to OA database, 
+						running PinAssign and Innovus and automating the entire flow. The most 
+						important file you should start with is run_all.py.
+					--	Note that you are ONLY allowed to customize run_pinassign_and_innovus.py. 
+						All other scripts must be left untouched, except when running a subset of
+						input designs from run_all.py
+
+SConstruct			--	This is a special Python script used by the SCons tool to build your PinAssign 
+						source code. This is an easier alternative to Makefiles. All you need to modify
+						here is the list of src files. For info on SCons, visit www.scons.org.
+
+-----------------------------------------------------------
+Building your Source Code and running the flow
+-----------------------------------------------------------
+
+From the top directory, simply type:
+$ scons
+
+This will compile the sources at src/ and produce an executable called PinAssign. To build faster using multiple threads:
+$ scons -j<NUMBER_OF_THREADS>
+I recommend not using more than 2 to be fair to other users on the machine.
+
+Once your PinAssign executable is created, simply run the flow using the run_all script:
+$ ./run_all.py
+
+To clean your PinAssign build (including .o files):
+$ scons -c
+
+-----------------------------------------------------------
+Outputs
+-----------------------------------------------------------
+
+All logs will be created in the logs/ subdirectory, grouped by design
+All outputs will be created in the outputs/ subdirectory, grouped by design
+
+To view output GDS files, use the Mentor Graphics Calibre GUI:
+$ calibrewb <GDS_FILE>
+
+The layer numbers on the right panel map to the layer.map file inside the innovus/ subdirectory
+Each layer can be turned on or off using the mouse.
+
+-----------------------------------------------------------
+Credits
+-----------------------------------------------------------
+[1] Some source code and flow material adopted from:
+	"SnakeRouter: A Lightweight Standard Cell Router"
+	Originally written for EE 201A, Fall 2013 Quarter
+	Authors: Mark Gottscho <mgottscho@ucla.edu> and Yasmine Badr <ybadr@ucla.edu>
+[2] Innovus flow and benchmarks adopted from:
+	Saptadeep Pal <saptadeep@ucla.edu> 

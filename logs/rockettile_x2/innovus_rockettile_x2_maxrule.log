@@ -1,0 +1,2778 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v16.10-p004_1, built Thu May 12 14:48:49 PDT 2016
+Options:	-nowin -init run_innovus.tcl -log ../logs/rockettile_x2/innovus_rockettile_x2_maxrule 
+Date:		Mon Mar 13 01:18:33 2017
+Host:		eeapps02.seas.ucla.edu (x86_64 w/Linux 2.6.32-642.15.1.el6.x86_64) (8cores*32cpus*Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz 20480KB)
+OS:		Red Hat Enterprise Linux Server release 6.8 (Santiago)
+
+License:
+		invs	Innovus Implementation System	16.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+Sourcing file "run_innovus.tcl" ...
+<CMD> set lefDefOutVersion 5.7
+<CMD> setMultiCpuUsage -localCpu 8
+<CMD> suppressMessage ENCLF-200 ENCLF-201 LEFPARS-2043 LEFPARS-2007 TECHLIB-459
+<CMD> suppressMessage IMPVL-159 TECHLIB-436 IMPLF-217 IMPLF-217 IMPEXT-2773 IMPEXT-2766 IMPEXT-2882
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_lef_file ../library/NangateOpenCellLibrary.tech.lef
+<CMD> set init_design_netlisttype OA
+<CMD> set init_oa_design_view layout
+<CMD> set init_oa_design_lib DesignLib
+<CMD> set init_oa_design_cell rockettile_x2_maxrule
+<CMD> create_library_set -name TT_LIB -timing [list $libs]
+<CMD> create_rc_corner -name _TT_rc_corner_ -T 25.0
+<CMD> create_delay_corner -name TT -library_set TT_LIB -rc_corner _TT_rc_corner_
+<CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+<CMD> create_analysis_view -name TT_VIEW -delay_corner TT -constraint_mode CON
+<CMD> init_design -setup TT_VIEW -hold TT_VIEW
+**WARN: (GLOBAL-100):	Global 'timing_disable_backward_compatible_mmmc_mode' has become obsolete. It will be removed in the next release.
+
+Loading LEF file ../library/NangateOpenCellLibrary.tech.lef ...
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Mon Mar 13 01:18:40 2017
+viaInitial ends at Mon Mar 13 01:18:40 2017
+Reading OA reference library 'DesignLib' ...
+**WARN: (IMPOAX-741):	Site 'FreePDK45_38x28_10R_NP_162NW_34O' has already been defined in Innovus, the contents will be skipped.
+Reading OA reference library 'DesignLib' ...
+**WARN: (IMPOAX-252):	Found busBit terminals of bus 'io_cached_0_acquire_bits_addr_block[25]' of cell 'RocketTile_1_tile1' without bus ordering information in OA library 'DesignLib'. This may lead to problems during saveDesign. It is recommended to run verilogAnnotate on the library for annotating bus ordering information to such terminals.
+Type 'man IMPOAX-252' for more detail.
+Starting library reading in 'Multi-threaded flow' (with '8' threads)
+Reading TT_LIB timing library /w/class/ee201a/chengg/project_W17_v4.1/innovus/RocketTile_1_tile1.lib.
+Read 1 cells in RocketTile_1_tile1.
+Reading TT_LIB timing library /w/class/ee201a/chengg/project_W17_v4.1/innovus/RocketTile_1_tile2.lib.
+Read 1 cells in RocketTile_1_tile2.
+Library reading multithread flow ended. (File /w/class/ee201a/chengg/project_W17_v4.1/innovus/RocketTile_1_tile1.lib)
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.14min, fe_real=0.13min, fe_mem=458.9M) ***
+Reading EMH from OA ...
+Created 2 new cells from 2 timing libraries.
+
+*** Memory Usage v#1 (Current mem = 458.918M, initial mem = 164.250M) ***
+Set top cell to rockettile_x2_maxrule.
+Hooked 2 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell rockettile_x2_maxrule ...
+*** Netlist is unique.
+Setting Std. cell height to 2800 DBU, based on Site FreePDK45_38x28_10R_NP_162NW_34O.
+**WARN: (IMPTRN-1101):	Could not determine power-rail locations in cells. Use default value GNDOnBtm.
+** info: there are 3 modules.
+** info: there are 0 stdCell insts.
+** info: there are 2 macros.
+
+*** Memory Usage v#1 (Current mem = 468.668M, initial mem = 164.250M) ***
+**WARN: (IMPFP-3961):	The techSite 'FreePDK45_38x28_10R_NP_162NW_34O' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+TT_VIEW
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (EMS-42):	Message (IMPEXT-2773) has been suppressed from output.
+**WARN: (EMS-42):	Message (IMPEXT-2766) has been suppressed from output.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: TT_VIEW
+    RC-Corner Name        : _TT_rc_corner_
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+*Info: initialize multi-corner CTS.
+**WARN: (IMPTS-313):	Cell 'RocketTile_1_tile2' is missing in current active analysis view. No library found in MMMC library set corresponding to the cell. This can cause problem during optimization flow. The cell will therefore be marked as 'dont_use' during optimization.
+Reading timing constraints file 'rockettile_x2_maxrule.sdc' ...
+Current (total cpu=0:00:08.6, real=0:00:08.0, peak res=240.8M, current mem=596.5M)
+rockettile_x2_maxrule
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File rockettile_x2_maxrule.sdc, Line 266).
+
+INFO (CTE): Reading of timing constraints file rockettile_x2_maxrule.sdc completed, with 1 WARNING
+WARNING (CTE-25): Line: 9, 10 of File rockettile_x2_maxrule.sdc : Skipped unsupported command: set_units
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=257.7M, current mem=612.7M)
+Current (total cpu=0:00:08.7, real=0:00:08.0, peak res=257.7M, current mem=612.7M)
+Total number of combinational cells: 0
+Total number of sequential cells: 0
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers:
+Total number of usable buffers: 0
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters:
+Total number of usable inverters: 0
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+---------- oaIn ----------
+Reading physical information from OA database (DesignLib/rockettile_x2_maxrule/layout).
+FE units: 0.0005 microns/dbu, OA units: 0.0005 microns/dbu, Conversion factor: 1
+No new Ext DEF rule to be processed.
+**WARN: (IMPOAX-269):	IO box attributes are not specified in the OA database. IO box co-ordinates will be calculated from floorplan data.
+New IO box co-ordinates for module 'rockettile_x2_maxrule' are : LowerLeft = (0,0), UpperRight = (9236280,8388240).
+Set FPlanBox to (0 0 9236280 8388240)
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+TIMER: Purge OA from memory: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0
+TIMER: oaIn total process: 0h 0m  0.03s cpu {0h 0m 0s elapsed} Memory = 2.0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPTRN-1101          1  Could not determine power-rail locations...
+WARNING   IMPFP-3961           1  The techSite '%s' has no related standar...
+WARNING   IMPTS-313            1  Cell '%s' is missing in current active a...
+WARNING   IMPOAX-741           1  Site '%s' has already been defined in %s...
+WARNING   IMPOAX-252           1  Found busBit terminals of bus '%s' of ce...
+WARNING   IMPOAX-269           1  IO box attributes are not specified in t...
+*** Message Summary: 6 warning(s), 0 error(s)
+
+<CMD> setDesignMode -process 45
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+Updating process node dependent CCOpt properties for the 45nm process node.
+<CMD> setTrialRouteMode -maxRouteLayer 8 -minRouteLayer 7
+<CMD> setPinAssignMode -minLayer 7 -maxLayer 8
+<CMD> setNanoRouteMode -routeBottomRoutingLayer 7
+<CMD> setNanoRouteMode -routeTopRoutingLayer 8
+<CMD> addRing -layer {top metal2 bottom metal2 left metal3 right metal3} -spacing {top 1 bottom 1 left 1 right 1} -width {top 1 bottom 1 left 1 right 1} -nets { VDD VSS }
+#- Begin addRing (date=03/13 01:18:41, mem=614.7M)
+
+Ring generation is complete; vias are now being generated.
+The power planner created 8 wires.
+#- End addRing (date=03/13 01:18:41, total cpu=0:00:00.0, real=0:00:00.0, peak res=616.7M, current mem=616.7M)
+<CMD> sroute -blockPin useLef -connect { blockPin } -nets { VDD VSS } -layerChangeRange {metal2 metal3}
+#- Begin sroute (date=03/13 01:18:41, mem=616.7M)
+*** Begin SPECIAL ROUTE on Mon Mar 13 01:18:41 2017 ***
+SPECIAL ROUTE ran on directory: /w/class/ee201a/chengg/project_W17_v4.1/innovus
+SPECIAL ROUTE ran on machine: eeapps02.seas.ucla.edu (Linux 2.6.32-642.15.1.el6.x86_64 Xeon 1.20Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VDD VSS"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 2
+srouteConnectConverterPin set to false
+srouteConnectCorePin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteTopLayerLimit set to 3
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1270.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 20 layers, 10 routing layers, 1 overlap layer
+Read in 2 macros, 2 used
+Read in 2 components
+  2 block/ring components: 0 unplaced, 0 placed, 2 fixed
+Read in 760 physical pins
+  760 physical pins: 0 unplaced, 760 placed, 0 fixed
+Read in 1 blockages
+Read in 760 nets
+Read in 2 special nets, 2 routed
+Read in 764 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (IMPSR-554):	The specified top target layer is beyond top routing layer. Set top target layer to 3.
+**WARN: (IMPSR-555):	The specified Bottom target layer is below bottom routing layer. Set bottom target layer to 2.
+  Number of Block ports routed: 4
+  Number of Power Bump ports routed: 0
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1285.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 31 via definition ...
+ Updating DB with 760 io pins ...
+
+sroute post-processing starts at Mon Mar 13 01:18:41 2017
+The viaGen is rebuilding shadow vias for net VSS.
+sroute post-processing ends at Mon Mar 13 01:18:41 2017
+
+sroute post-processing starts at Mon Mar 13 01:18:41 2017
+The viaGen is rebuilding shadow vias for net VDD.
+sroute post-processing ends at Mon Mar 13 01:18:41 2017
+#- End sroute (date=03/13 01:18:41, total cpu=0:00:00.1, real=0:00:00.0, peak res=631.0M, current mem=631.0M)
+<CMD> trialRoute
+**WARN: (IMPTR-6402):	There are 150 terms which are above maxRouteLayer=M8 upto M9.
+To identify the terms above maxRouteLayer, report them using dbGet.
+
+For example, the following command reports the terminals on layer M9:
+dbGet [dbGet -p5 top.insts.instTerms.cellTerm.pins.allShapes.layer.extName M9].name
+*** Starting trialRoute (mem=631.0M) ***
+
+There are 0 guide points passed to trialRoute for fixed pins.
+There are 0 guide points passed to trialRoute for pinGroup/netGroup/pinGuide pins.
+Options:  -minRouteLayer 7 -maxRouteLayer 8 -noPinGuide
+
+
+Phase 1a-1d Overflow: 0.02% H + 0.01% V (0:00:00.8 1786.1M)
+
+Phase 1e-1f Overflow: 0.00% H + 0.00% V (0:00:00.9 1799.6M)
+
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_acquire_ready of net tile1_io_cached_0_acquire_ready at (4618.140 396.930) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_acquire_bits_union[8] of net tile1_io_cached_0_acquire_bits_union[8] at (4618.140 2203.330) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_acquire_bits_union[0] of net tile1_io_cached_0_acquire_bits_union[0] at (4618.140 2251.330) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_probe_ready of net tile1_io_cached_0_probe_ready at (4618.140 492.930) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_probe_bits_addr_block[5] of net tile1_io_cached_0_probe_bits_addr_block[5] at (4618.140 1176.130) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_probe_bits_addr_block[2] of net tile1_io_cached_0_probe_bits_addr_block[2] at (4618.140 1128.130) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_release_bits_addr_beat[2] of net tile1_io_cached_0_release_bits_addr_beat[2] at (4618.140 204.930) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_release_bits_addr_beat[0] of net tile1_io_cached_0_release_bits_addr_beat[0] at (4618.140 1224.130) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_release_bits_addr_block[16] of net tile1_io_cached_0_release_bits_addr_block[16] at (4618.140 156.930) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+**WARN: (IMPTR-6189):	Pin tile1_io_cached_0_release_bits_addr_block[14] of net tile1_io_cached_0_release_bits_addr_block[14] at (4618.140 252.930) on M9 is out of routing layer range (maximum is M8). The pin will be unconnected. Change the pin layer, or increase the routing layer range.
+Num terms with invalid layer = 150
+Phase 1l Overflow: 0.00% H + 0.00% V (0:00:01.4 1799.6M)
+
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -2:	0	 0.00%	1	 0.00%
+ -1:	0	 0.00%	3	 0.00%
+--------------------------------------
+  0:	876	 0.01%	838	 0.01%
+  1:	29	 0.00%	22	 0.00%
+  2:	28	 0.00%	40	 0.00%
+  3:	29	 0.00%	50	 0.00%
+  4:	77	 0.00%	124	 0.00%
+  5:	13643857	99.99%	13643818	99.99%
+
+
+Total length: 9.488e+05um, number of vias: 2139
+M1(H) length: 0.000e+00um, number of vias: 0
+M2(V) length: 0.000e+00um, number of vias: 0
+M3(H) length: 0.000e+00um, number of vias: 0
+M4(V) length: 0.000e+00um, number of vias: 0
+M5(H) length: 0.000e+00um, number of vias: 0
+M6(V) length: 4.984e+02um, number of vias: 1056
+M7(H) length: 6.858e+05um, number of vias: 1083
+M8(V) length: 2.625e+05um
+
+Peak Memory Usage was 1799.6M 
+*** Finished trialRoute (cpu=0:00:11.6 real=0:00:10.7 mem=1799.6M) ***
+
+<CMD> routeDesign
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1725.39 (MB), peak = 1728.45 (MB)
+#_TT_rc_corner_ has no qx tech file defined
+#No active RC corner or QRC tech file is missing.
+#**INFO: setDesignMode -flowEffort standard
+#**INFO: multi-cut via swapping will be performed after routing.
+#**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+#**INFO: auto set of routeReserveSpaceForMultiCut to true
+#**INFO: auto set of routeConcurrentMinimizeViaCountEffort to high
+**WARN: (IMPTRN-1101):	Could not determine power-rail locations in cells. Use default value GNDOnBtm.
+Estimated cell power/ground rail width = 0.175 um
+**WARN: (IMPSP-390):	Could not determine power-rail locations, as no insts available to check PGTerms.
+Begin checking placement ... (start mem=1799.6M, init mem=1799.6M)
+*info: Placed = 2              (Fixed = 2)
+*info: Unplaced = 0           
+Placement Density:0.00%(0/8000932)
+Placement Density (including fixed std cells):0.00%(0/8000932)
+Finished checkPlace (cpu: total=0:00:01.5, vio checks=0:00:00.3; mem=1799.6M)
+#**INFO: auto set of routeWithTimingDriven to true
+#**INFO: auto set of routeWithSiDriven to true
+
+changeUseClockNetStatus Option :  -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=1799.6M) ***
+#**INFO: auto set of droutePostRouteSwapVia to multiCut
+
+globalDetailRoute
+
+#setNanoRouteMode -droutePostRouteSwapVia "multiCut"
+#setNanoRouteMode -routeBottomRoutingLayer 7
+#setNanoRouteMode -routeConcurrentMinimizeViaCountEffort "high"
+#setNanoRouteMode -routeReserveSpaceForMultiCut true
+#setNanoRouteMode -routeTopRoutingLayer 8
+#setNanoRouteMode -routeWithSiDriven true
+#setNanoRouteMode -routeWithTimingDriven true
+#Start globalDetailRoute on Mon Mar 13 01:18:54 2017
+#
+#Generating timing data, please wait...
+#906 total nets, 0 already routed, 0 will ignore in trialRoute
+**WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+#Dump tif for version 2.1
+**WARN: (EMS-42):	Message (IMPEXT-2882) has been suppressed from output.
+Total number of fetched objects 906
+End delay calculation. (MEM=2827.95 CPU=0:00:00.3 REAL=0:00:00.0)
+#Generating timing data took: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2683.12 (MB), peak = 2799.13 (MB)
+#Done generating timing data.
+#Start reading timing information from file .timing_file_102978.tif.gz ...
+#Read in timing information for 760 ports, 2 instances from timing file .timing_file_102978.tif.gz.
+#NanoRoute Version 16.10-p004_1 NR160506-1445/16_10-UB
+#Using multithreading with 8 threads.
+#Start routing data preparation.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.070.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.070.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.070.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.070.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal2 is not specified for width 0.070.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal3 is not specified for width 0.070.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal2 is not specified for width 0.070.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal3 is not specified for width 0.070.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal3 is not specified for width 0.070.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal4 is not specified for width 0.140.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal3 is not specified for width 0.070.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal4 is not specified for width 0.140.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal4 is not specified for width 0.140.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal5 is not specified for width 0.140.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal4 is not specified for width 0.140.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal5 is not specified for width 0.140.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal5 is not specified for width 0.140.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal6 is not specified for width 0.140.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal5 is not specified for width 0.140.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal6 is not specified for width 0.140.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal6 is not specified for width 0.140.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal7 is not specified for width 0.400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal6 is not specified for width 0.140.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal7 is not specified for width 0.400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal7 is not specified for width 0.400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal8 is not specified for width 0.400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal7 is not specified for width 0.400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal8 is not specified for width 0.400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal8 is not specified for width 0.400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal9 is not specified for width 0.800.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal8 is not specified for width 0.400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal9 is not specified for width 0.800.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal9 is not specified for width 0.800.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal10 is not specified for width 0.800.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal9 is not specified for width 0.800.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal10 is not specified for width 0.800.
+#Minimum voltage of a net in the design = 0.000.
+#Maximum voltage of a net in the design = 1.100.
+#Voltage range [0.000 - 0.000] has 1 net.
+#Voltage range [0.000 - 1.100] has 907 nets.
+# metal1       H   Track-Pitch = 0.140    Line-2-Via Pitch = 0.135
+# metal2       V   Track-Pitch = 0.190    Line-2-Via Pitch = 0.140
+# metal3       H   Track-Pitch = 0.140    Line-2-Via Pitch = 0.140
+# metal4       V   Track-Pitch = 0.280    Line-2-Via Pitch = 0.280
+# metal5       H   Track-Pitch = 0.280    Line-2-Via Pitch = 0.280
+# metal6       V   Track-Pitch = 0.280    Line-2-Via Pitch = 0.280
+# metal7       H   Track-Pitch = 0.840    Line-2-Via Pitch = 0.800
+# metal8       V   Track-Pitch = 0.840    Line-2-Via Pitch = 0.800
+# metal9       H   Track-Pitch = 1.600    Line-2-Via Pitch = 1.600
+# metal10      V   Track-Pitch = 1.680    Line-2-Via Pitch = 1.600
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=20 tracks, using layer metal3's pitch = 0.140.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1099.88 (MB), peak = 2799.13 (MB)
+#Merging special wires using 8 threads...
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#Number of eco nets is 0
+#
+#Start data preparation...
+#
+#Data preparation is done on Mon Mar 13 01:18:59 2017
+#
+#Analyzing routing resource...
+#Routing resource analysis is done on Mon Mar 13 01:19:00 2017
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  Metal 1        H       29958           0     2470202     0.00%
+#  Metal 2        V       24305           1     2470202     0.44%
+#  Metal 3        H       29957           1     2470202     0.36%
+#  Metal 4        V       16489           0     2470202     0.00%
+#  Metal 5        H       14977           0     2470202     0.00%
+#  Metal 6        V       16489           0     2470202     0.00%
+#  Metal 7        H        4992           0     2470202     0.00%
+#  Metal 8        V        5497           0     2470202     0.00%
+#  Metal 9        H        2621           0     2470202     0.00%
+#  --------------------------------------------------------------
+#  Total                 145286       0.00%    22231818     0.09%
+#
+#
+#
+#cpu time = 00:00:08, elapsed time = 00:00:04, memory = 1372.75 (MB), peak = 2799.13 (MB)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:20, elapsed time = 00:00:03, memory = 1373.59 (MB), peak = 2799.13 (MB)
+#
+#start global routing iteration 2...
+#cpu time = 00:00:10, elapsed time = 00:00:10, memory = 1535.17 (MB), peak = 2799.13 (MB)
+#
+#start global routing iteration 3...
+#cpu time = 00:00:09, elapsed time = 00:00:02, memory = 1393.29 (MB), peak = 2799.13 (MB)
+#
+#
+#Total number of trivial nets (e.g. < 2 pins) = 2 (skipped).
+#Total number of routable nets = 906.
+#Total number of nets in the design = 908.
+#
+#906 routable nets have only global wires.
+#
+#Routed nets constraints summary:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default             906  
+#-----------------------------
+#        Total             906  
+#-----------------------------
+#
+#Routing constraints summary of the whole design:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default             906  
+#-----------------------------
+#        Total             906  
+#-----------------------------
+#
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon          
+#                  #Gcell    %Gcell
+#     Layer           (1)   OverCon
+#  --------------------------------
+#   Metal 7      2(0.00%)   (0.00%)
+#   Metal 8      0(0.00%)   (0.00%)
+#  --------------------------------
+#     Total      2(0.00%)   (0.00%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 1
+#  Overflow after GR: 0.00% H + 0.00% V
+#
+#Complete Global Routing.
+#Total wire length = 953650 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 686465 um.
+#Total wire length on LAYER metal8 = 267186 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3841
+#Up-Via Summary (total 3841):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2635
+#  Metal 8          150
+#-----------------------
+#                  3841 
+#
+#Max overcon = 1 tracks.
+#Total overcon = 0.00%.
+#Worst layer Gcell overcon rate = 0.00%.
+#cpu time = 00:00:47, elapsed time = 00:00:20, memory = 1444.86 (MB), peak = 2799.13 (MB)
+#
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1162.77 (MB), peak = 2799.13 (MB)
+#Start Track Assignment.
+#Done with 1764 horizontal wires in 12 hboxes and 1519 vertical wires in 13 hboxes.
+#Done with 116 horizontal wires in 12 hboxes and 56 vertical wires in 13 hboxes.
+#Done with 12 horizontal wires in 12 hboxes and 13 vertical wires in 13 hboxes.
+#
+#Track assignment summary:
+#layer  (wire length)   (overlap)        (long ovlp) 
+#----------------------------------------------------
+#M7 	 687099.19 	  0.00%  	  0.00%
+#M8 	 267727.91 	  0.00%  	  0.00%
+#----------------------------------------------------
+#All 	 954827.10  	  0.00% 	  0.00%
+#Complete Track Assignment.
+#Total wire length = 954139 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 188 um.
+#Total wire length on LAYER metal7 = 686769 um.
+#Total wire length on LAYER metal8 = 267146 um.
+#Total wire length on LAYER metal9 = 36 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3841
+#Up-Via Summary (total 3841):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2635
+#  Metal 8          150
+#-----------------------
+#                  3841 
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1178.86 (MB), peak = 2799.13 (MB)
+#
+#Cpu time = 00:00:48
+#Elapsed time = 00:00:20
+#Increased memory = 96.04 (MB)
+#Total memory = 1178.87 (MB)
+#Peak memory = 2799.13 (MB)
+#Using multithreading with 8 threads.
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#routeSiEffort set to high
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#    completing 10% with 2 violations
+#    elapsed time = 00:00:02, memory = 1287.43 (MB)
+#    completing 20% with 18 violations
+#    elapsed time = 00:00:04, memory = 1289.81 (MB)
+#    completing 30% with 31 violations
+#    elapsed time = 00:00:06, memory = 1296.03 (MB)
+#    completing 40% with 26 violations
+#    elapsed time = 00:00:08, memory = 1291.70 (MB)
+#    completing 50% with 24 violations
+#    elapsed time = 00:00:10, memory = 1314.55 (MB)
+#    completing 60% with 30 violations
+#    elapsed time = 00:00:12, memory = 1297.06 (MB)
+#    completing 70% with 44 violations
+#    elapsed time = 00:00:14, memory = 1298.71 (MB)
+#    completing 80% with 44 violations
+#    elapsed time = 00:00:16, memory = 1303.05 (MB)
+#    completing 90% with 37 violations
+#    elapsed time = 00:00:18, memory = 1309.45 (MB)
+#    completing 100% with 35 violations
+#    elapsed time = 00:00:21, memory = 1304.95 (MB)
+#    number of violations = 35
+#
+#    By Layer and Type :
+#	         MetSpc    Short   Totals
+#	metal1        0        0        0
+#	metal2        0        0        0
+#	metal3        0        0        0
+#	metal4        0        0        0
+#	metal5        0        0        0
+#	metal6        0        0        0
+#	metal7        5        1        6
+#	metal8        0       29       29
+#	Totals        5       30       35
+#cpu time = 00:02:44, elapsed time = 00:00:21, memory = 1300.54 (MB), peak = 2799.13 (MB)
+#start 1st optimization iteration ...
+#    number of violations = 3
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3        0        0
+#	metal4        0        0
+#	metal5        0        0
+#	metal6        0        0
+#	metal7        0        0
+#	metal8        3        3
+#	Totals        3        3
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1347.27 (MB), peak = 2799.13 (MB)
+#start 2nd optimization iteration ...
+#    number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3        0        0
+#	metal4        0        0
+#	metal5        0        0
+#	metal6        0        0
+#	metal7        0        0
+#	metal8        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1347.50 (MB), peak = 2799.13 (MB)
+#start 3rd optimization iteration ...
+#    number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1347.20 (MB), peak = 2799.13 (MB)
+#Complete Detail Routing.
+#Total wire length = 954475 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 687207 um.
+#Total wire length on LAYER metal8 = 267268 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3303
+#Up-Via Summary (total 3303):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2097
+#  Metal 8          150
+#-----------------------
+#                  3303 
+#
+#Total number of DRC violations = 0
+#Cpu time = 00:02:45
+#Elapsed time = 00:00:21
+#Increased memory = 0.62 (MB)
+#Total memory = 1179.50 (MB)
+#Peak memory = 2799.13 (MB)
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#
+#Start Post Route wire spreading..
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#
+#Start data preparation for wire spreading...
+#
+#Data preparation is done on Mon Mar 13 01:19:40 2017
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1181.47 (MB), peak = 2799.13 (MB)
+#
+#Start Post Route Wire Spread.
+#Done with 164 horizontal wires in 25 hboxes and 105 vertical wires in 26 hboxes.
+#Complete Post Route Wire Spread.
+#
+#Total wire length = 954896 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 687469 um.
+#Total wire length on LAYER metal8 = 267428 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3303
+#Up-Via Summary (total 3303):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2097
+#  Metal 8          150
+#-----------------------
+#                  3303 
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1204.53 (MB), peak = 2799.13 (MB)
+#
+#Post Route wire spread is done.
+#Total wire length = 954896 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 687469 um.
+#Total wire length on LAYER metal8 = 267428 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3303
+#Up-Via Summary (total 3303):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2097
+#  Metal 8          150
+#-----------------------
+#                  3303 
+#
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#
+#Start DRC checking..
+#    number of violations = 0
+#cpu time = 00:00:30, elapsed time = 00:00:04, memory = 1266.08 (MB), peak = 2799.13 (MB)
+#CELL_VIEW rockettile_x2_maxrule,init has no DRC violation.
+#Total number of DRC violations = 0
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#
+#Start Post Route via swapping...
+#3.55% of area are rerouted by ECO routing.
+#    number of violations = 0
+#cpu time = 00:00:06, elapsed time = 00:00:01, memory = 1220.25 (MB), peak = 2799.13 (MB)
+#    number of violations = 0
+#cpu time = 00:00:06, elapsed time = 00:00:01, memory = 1220.25 (MB), peak = 2799.13 (MB)
+#CELL_VIEW rockettile_x2_maxrule,init has no DRC violation.
+#Total number of DRC violations = 0
+#No via is swapped.
+#Post Route via swapping is done.
+#Total wire length = 954896 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 687469 um.
+#Total wire length on LAYER metal8 = 267428 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3303
+#Up-Via Summary (total 3303):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2097
+#  Metal 8          150
+#-----------------------
+#                  3303 
+#
+#detailRoute Statistics:
+#Cpu time = 00:03:21
+#Elapsed time = 00:00:26
+#Increased memory = 13.78 (MB)
+#Total memory = 1192.64 (MB)
+#Peak memory = 2799.13 (MB)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:04:17
+#Elapsed time = 00:00:51
+#Increased memory = -562.18 (MB)
+#Total memory = 1164.08 (MB)
+#Peak memory = 2799.13 (MB)
+#Number of warnings = 36
+#Total number of warnings = 38
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Mon Mar 13 01:19:45 2017
+#
+#routeDesign: cpu time = 00:04:19, elapsed time = 00:00:53, memory = 1164.11 (MB), peak = 2799.13 (MB)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPTRN-1101          1  Could not determine power-rail locations...
+WARNING   IMPEXT-6197          1  The Cap table file is not specified. Thi...
+WARNING   IMPSP-390            1  Could not determine power-rail locations...
+*** Message Summary: 3 warning(s), 0 error(s)
+
+<CMD> setExtractRCMode -engine postRoute -effortLevel low
+<CMD> extractRC
+Extraction called for design 'rockettile_x2_maxrule' of instances=2 and nets=908 using extraction engine 'postRoute' at effort level 'low' .
+PostRoute (effortLevel low) RC Extraction called for design rockettile_x2_maxrule.
+RC Extraction called in multi-corner(1) mode.
+**WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+Type 'man IMPEXT-6197' for more detail.
+**WARN: (IMPEXT-3032):	Because the cap table file was not provided, it will be created internally with the following process info:
+* Layer Id             : 1 - M1
+      Thickness        : 0.13
+      Min Width        : 0.07
+      Layer Dielectric : 4.1
+* Layer Id             : 2 - M2
+      Thickness        : 0.14
+      Min Width        : 0.07
+      Layer Dielectric : 4.1
+* Layer Id             : 3 - M3
+      Thickness        : 0.14
+      Min Width        : 0.07
+      Layer Dielectric : 4.1
+* Layer Id             : 4 - M4
+      Thickness        : 0.28
+      Min Width        : 0.14
+      Layer Dielectric : 4.1
+* Layer Id             : 5 - M5
+      Thickness        : 0.28
+      Min Width        : 0.14
+      Layer Dielectric : 4.1
+* Layer Id             : 6 - M6
+      Thickness        : 0.28
+      Min Width        : 0.14
+      Layer Dielectric : 4.1
+* Layer Id             : 7 - M7
+      Thickness        : 0.8
+      Min Width        : 0.4
+      Layer Dielectric : 4.1
+* Layer Id             : 8 - M8
+      Thickness        : 0.8
+      Min Width        : 0.4
+      Layer Dielectric : 4.1
+* Layer Id             : 9 - M9
+      Thickness        : 2
+      Min Width        : 0.8
+      Layer Dielectric : 4.1
+* Layer Id             : 10 - M10
+      Thickness        : 2
+      Min Width        : 0.8
+      Layer Dielectric : 4.1
+extractDetailRC Option : -outfile /tmp/innovus_temp_102978_eeapps02.seas.ucla.edu_chengg_vN0hsH/rockettile_x2_maxrule_102978_WkZ7lt.rcdb.d  -basic
+RC Mode: PostRoute -effortLevel low [Basic CapTable, LEF Resistances]
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+Initializing multi-corner resistance tables ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1404.9M)
+Extracted 10.0164% (CPU Time= 0:00:00.3  MEM= 1428.9M)
+Extracted 20.0192% (CPU Time= 0:00:00.3  MEM= 1456.9M)
+Extracted 30.0219% (CPU Time= 0:00:00.4  MEM= 1456.9M)
+Extracted 40.0247% (CPU Time= 0:00:00.5  MEM= 1456.9M)
+Extracted 50.0274% (CPU Time= 0:00:00.5  MEM= 1456.9M)
+Extracted 60.0164% (CPU Time= 0:00:00.5  MEM= 1456.9M)
+Extracted 70.0192% (CPU Time= 0:00:00.5  MEM= 1456.9M)
+Extracted 80.0219% (CPU Time= 0:00:00.6  MEM= 1456.9M)
+Extracted 90.0247% (CPU Time= 0:00:00.7  MEM= 1456.9M)
+Extracted 100% (CPU Time= 0:00:00.7  MEM= 1456.9M)
+Number of Extracted Resistors     : 14671
+Number of Extracted Ground Cap.   : 15566
+Number of Extracted Coupling Cap. : 32204
+Filtering XCap in 'relativeAndCoupling' mode using values coupling_c_threshold=0.1fF, relative_c_threshold=1, and total_c_threshold=0fF.
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1424.9M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.8  Real Time: 0:00:01.0  MEM: 1428.922M)
+<CMD> editDeleteViolations
+<CMD> ecoRoute
+
+globalDetailRoute
+
+#setNanoRouteMode -routeBottomRoutingLayer 7
+#setNanoRouteMode -routeTopRoutingLayer 8
+#setNanoRouteMode -routeWithEco true
+#Start globalDetailRoute on Mon Mar 13 01:19:46 2017
+#
+#NanoRoute Version 16.10-p004_1 NR160506-1445/16_10-UB
+#Using multithreading with 8 threads.
+#Start routing data preparation.
+#Minimum voltage of a net in the design = 0.000.
+#Maximum voltage of a net in the design = 1.100.
+#Voltage range [0.000 - 0.000] has 1 net.
+#Voltage range [0.000 - 1.100] has 907 nets.
+# metal1       H   Track-Pitch = 0.140    Line-2-Via Pitch = 0.135
+# metal2       V   Track-Pitch = 0.190    Line-2-Via Pitch = 0.140
+# metal3       H   Track-Pitch = 0.140    Line-2-Via Pitch = 0.140
+# metal4       V   Track-Pitch = 0.280    Line-2-Via Pitch = 0.280
+# metal5       H   Track-Pitch = 0.280    Line-2-Via Pitch = 0.280
+# metal6       V   Track-Pitch = 0.280    Line-2-Via Pitch = 0.280
+# metal7       H   Track-Pitch = 0.840    Line-2-Via Pitch = 0.800
+# metal8       V   Track-Pitch = 0.840    Line-2-Via Pitch = 0.800
+# metal9       H   Track-Pitch = 1.600    Line-2-Via Pitch = 1.600
+# metal10      V   Track-Pitch = 1.680    Line-2-Via Pitch = 1.600
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=20 tracks, using layer metal3's pitch = 0.140.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1154.95 (MB), peak = 2799.13 (MB)
+#Merging special wires using 8 threads...
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#WARNING (NRGR-22) Design is already detail routed.
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 12.86 (MB)
+#Total memory = 1154.95 (MB)
+#Peak memory = 2799.13 (MB)
+#Using multithreading with 8 threads.
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#    completing 10% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.00 (MB)
+#    completing 20% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.02 (MB)
+#    completing 30% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.02 (MB)
+#    completing 40% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.04 (MB)
+#    completing 50% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.04 (MB)
+#    completing 60% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.06 (MB)
+#    completing 70% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.08 (MB)
+#    completing 80% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.10 (MB)
+#    completing 90% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.11 (MB)
+#    completing 100% with 0 violations
+#    elapsed time = 00:00:00, memory = 1182.11 (MB)
+#    number of violations = 0
+#cpu time = 00:00:01, elapsed time = 00:00:00, memory = 1176.54 (MB), peak = 2799.13 (MB)
+#start 1st optimization iteration ...
+#    number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1216.61 (MB), peak = 2799.13 (MB)
+#Complete Detail Routing.
+#Total wire length = 954896 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 687469 um.
+#Total wire length on LAYER metal8 = 267428 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3303
+#Up-Via Summary (total 3303):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2097
+#  Metal 8          150
+#-----------------------
+#                  3303 
+#
+#Total number of DRC violations = 0
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:00
+#Increased memory = 14.68 (MB)
+#Total memory = 1169.63 (MB)
+#Peak memory = 2799.13 (MB)
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#
+#Start Post Route wire spreading..
+#
+#Connectivity extraction summary:
+#Total number of nets = 0.
+#
+#
+#Start data preparation for wire spreading...
+#
+#Data preparation is done on Mon Mar 13 01:19:47 2017
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1171.57 (MB), peak = 2799.13 (MB)
+#
+#Start Post Route Wire Spread.
+#Done with 10 horizontal wires in 25 hboxes and 14 vertical wires in 26 hboxes.
+#Complete Post Route Wire Spread.
+#
+#Total wire length = 954915 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 687484 um.
+#Total wire length on LAYER metal8 = 267431 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3303
+#Up-Via Summary (total 3303):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2097
+#  Metal 8          150
+#-----------------------
+#                  3303 
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1188.91 (MB), peak = 2799.13 (MB)
+#
+#Post Route wire spread is done.
+#Total wire length = 954915 um.
+#Total half perimeter of net bounding box = 948632 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 0 um.
+#Total wire length on LAYER metal3 = 0 um.
+#Total wire length on LAYER metal4 = 0 um.
+#Total wire length on LAYER metal5 = 0 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 687484 um.
+#Total wire length on LAYER metal8 = 267431 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 3303
+#Up-Via Summary (total 3303):
+#           
+#-----------------------
+#  Metal 6         1056
+#  Metal 7         2097
+#  Metal 8          150
+#-----------------------
+#                  3303 
+#
+#detailRoute Statistics:
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:00
+#Increased memory = 20.84 (MB)
+#Total memory = 1175.79 (MB)
+#Peak memory = 2799.13 (MB)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:01
+#Increased memory = -54.84 (MB)
+#Total memory = 1148.79 (MB)
+#Peak memory = 2799.13 (MB)
+#Number of warnings = 2
+#Total number of warnings = 40
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Mon Mar 13 01:19:47 2017
+#
+<CMD> verifyGeometry -error 10000 -report ../logs/rockettile_x2/innovus_rockettile_x2_maxrule_geometry.rpt
+ *** Starting Verify Geometry (MEM: 1402.9) ***
+
+**WARN: (IMPVFG-257):	verifyGeometry command is replaced by verify_drc command. It still works in this release but will be removed in future release. Please update your script to use the new command.
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 2160
+Multi-CPU acceleration using 8 CPU(s).
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+VG: elapsed time: 6.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:42.1  MEM: 735.5M)
+
+<CMD> verifyConnectivity -error 10000 -report ../logs/rockettile_x2/innovus_rockettile_x2_maxrule_connectivity.rpt
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Mon Mar 13 01:19:53 2017
+
+Design Name: rockettile_x2_maxrule
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (4618.1400, 4194.1200)
+Error Limit = 10000; Warning Limit = 50
+Check all nets
+Multi-CPU acceleration using 8 CPU(s).
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Mon Mar 13 01:19:53 2017
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.2  MEM: 0.094M)
+
+<CMD> reportRoute > ../logs/rockettile_x2/innovus_rockettile_x2_maxrule_routeReport.rpt
+*** Statistics for net list rockettile_x2_maxrule ***
+Number of cells      = 2
+Number of nets       = 906
+Number of tri-nets   = 0
+Number of degen nets = 0
+Number of pins       = 1816
+Number of i/os       = 760
+
+Number of nets with    2 terms = 902 (99.6%)
+Number of nets with    3 terms = 4 (0.4%)
+Number of nets with >=10 terms = 0 (0.0%)
+
+*** 2 Primitives used:
+Primitive RocketTile_1_tile2 (1 insts)
+Primitive RocketTile_1_tile1 (1 insts)
+************
+*** Net length and connection length statistics (cell rockettile_x2_maxrule) ***
+
+Total net length = 9.520e+05 (6.867e+05 2.653e+05)
+
+Avg net length = 1.051e+03 (sigma = 9.479e+02)
+Sqrt of avg square net length = 1.415e+03
+
+Avg connection length = 1.046e+03 (sigma = 9.397e+02)
+Sqrt of avg square connection length = 1.406e+03
+
+Net and connection length distribution:
+
+[length   range   ]      #net #connection
+[2.01e+02 2.05e+02]:       66       66
+[2.05e+02 2.09e+02]:      264      264
+[2.09e+02 2.13e+02]:        7        7
+[2.13e+02 2.17e+02]:        1        1
+[2.17e+02 2.20e+02]:        2        2
+[2.20e+02 2.24e+02]:        8        8
+[2.24e+02 2.28e+02]:        4        4
+[2.28e+02 2.32e+02]:        2        2
+[2.32e+02 2.36e+02]:        6        6
+[2.36e+02 2.39e+02]:        5        5
+[2.39e+02 2.43e+02]:        2        2
+[2.43e+02 2.47e+02]:        3        3
+[2.51e+02 2.55e+02]:        6        6
+[2.55e+02 2.58e+02]:        8        8
+[2.58e+02 2.62e+02]:        2        2
+[2.62e+02 2.66e+02]:        4        4
+[2.66e+02 2.70e+02]:        6        6
+[2.70e+02 2.74e+02]:        3        3
+[2.74e+02 2.77e+02]:        1        1
+[2.77e+02 2.81e+02]:        4        4
+[2.81e+02 2.85e+02]:        1        1
+[2.85e+02 2.89e+02]:        1        1
+[2.89e+02 2.93e+02]:        1        1
+[2.93e+02 2.96e+02]:        2        2
+[3.00e+02 3.04e+02]:        2        2
+[3.04e+02 3.08e+02]:        2        2
+[3.08e+02 3.12e+02]:        1        1
+[3.12e+02 3.15e+02]:        1        1
+[3.15e+02 3.19e+02]:        3        3
+[3.19e+02 3.23e+02]:        1        1
+[3.23e+02 3.27e+02]:        1        1
+[3.27e+02 3.31e+02]:        3        3
+[3.31e+02 3.34e+02]:        1        1
+[3.34e+02 3.38e+02]:        1        1
+[3.38e+02 3.42e+02]:        2        2
+[3.42e+02 3.46e+02]:        1        1
+[3.46e+02 3.50e+02]:        2        2
+[3.50e+02 3.53e+02]:        1        1
+[3.53e+02 3.57e+02]:        2        2
+[3.57e+02 3.61e+02]:        2        2
+[3.61e+02 3.65e+02]:        2        2
+[3.65e+02 3.69e+02]:        2        2
+[3.72e+02 3.76e+02]:        4        4
+[7.52e+05 infinity]:      463      463
+
+Net clk nrTerm=3 conLen=2.21e+06 len=(424160 3994000)
+  FTerm clk loc=(4605370 8388240)
+  Inst tile2 loc=(4410800 7979890)
+  Inst tile1 loc=(4830490 4394640)
+Net reset nrTerm=3 conLen=4.01e+06 len=(4032800 3982030)
+  FTerm reset loc=(798490 0)
+  Inst tile2 loc=(798940 3981630)
+  Inst tile1 loc=(4830490 1177440)
+Net tile1_io_cached_0_acquire_bits_addr_block[1] nrTerm=2 conLen=7.59e+05 len=(252800 506500)
+  FTerm tile1_io_cached_0_acquire_bits_addr_block[1] loc=(4578490 0)
+  Inst tile1 loc=(4830490 493680)
+Net tile1_io_cached_0_acquire_bits_union[9] nrTerm=2 conLen=7.91e+05 len=(303200 487360)
+  FTerm tile1_io_cached_0_acquire_bits_union[9] loc=(4528090 0)
+  Inst tile1 loc=(4830490 486960)
+Net tile1_io_cached_0_acquire_bits_union[5] nrTerm=2 conLen=8.41e+05 len=(431300 409660)
+  FTerm tile1_io_cached_0_acquire_bits_union[5] loc=(4477690 0)
+  Inst tile1 loc=(4908190 409260)
+Net tile1_io_cached_0_acquire_bits_union[3] nrTerm=2 conLen=8.97e+05 len=(404000 493060)
+  FTerm tile1_io_cached_0_acquire_bits_union[3] loc=(4427290 0)
+  Inst tile1 loc=(4830490 483600)
+Net tile1_io_cached_0_probe_valid nrTerm=2 conLen=8.17e+05 len=(396440 420160)
+  FTerm tile1_io_cached_0_probe_valid loc=(9225370 0)
+  Inst tile1 loc=(8829730 419760)
+Net tile1_io_cached_0_probe_bits_addr_block[25] nrTerm=2 conLen=2.10e+06 len=(1613200 490720)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[25] loc=(3217690 0)
+  Inst tile1 loc=(4830490 490320)
+Net tile1_io_cached_0_probe_bits_addr_block[24] nrTerm=2 conLen=2.15e+06 len=(1738340 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[24] loc=(3167290 0)
+  Inst tile1 loc=(4904830 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[23] nrTerm=2 conLen=2.21e+06 len=(1796720 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[23] loc=(3116890 0)
+  Inst tile1 loc=(4901470 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[22] nrTerm=2 conLen=2.25e+06 len=(1837040 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[22] loc=(3066490 0)
+  Inst tile1 loc=(4898110 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[21] nrTerm=2 conLen=2.29e+06 len=(1879460 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[21] loc=(3016090 0)
+  Inst tile1 loc=(4894750 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[20] nrTerm=2 conLen=2.34e+06 len=(1929440 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[20] loc=(2965690 0)
+  Inst tile1 loc=(4891390 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[19] nrTerm=2 conLen=2.38e+06 len=(1973540 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[19] loc=(2915290 0)
+  Inst tile1 loc=(4888030 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[18] nrTerm=2 conLen=2.43e+06 len=(2020580 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[18] loc=(2864890 0)
+  Inst tile1 loc=(4884670 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[17] nrTerm=2 conLen=2.48e+06 len=(2066360 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[17] loc=(2814490 0)
+  Inst tile1 loc=(4877950 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[16] nrTerm=2 conLen=2.53e+06 len=(2119280 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[16] loc=(2764090 0)
+  Inst tile1 loc=(4874590 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[15] nrTerm=2 conLen=2.57e+06 len=(2117600 451060)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[15] loc=(2713690 0)
+  Inst tile1 loc=(4830490 450000)
+Net tile1_io_cached_0_probe_bits_addr_block[14] nrTerm=2 conLen=2.62e+06 len=(2210000 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[14] loc=(2663290 0)
+  Inst tile1 loc=(4871230 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[13] nrTerm=2 conLen=2.67e+06 len=(2255780 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[13] loc=(2612890 0)
+  Inst tile1 loc=(4867870 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[12] nrTerm=2 conLen=2.71e+06 len=(2268800 443680)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[12] loc=(2562490 0)
+  Inst tile1 loc=(4830490 443280)
+Net tile1_io_cached_0_probe_bits_addr_block[10] nrTerm=2 conLen=2.77e+06 len=(2320880 447040)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[10] loc=(2512090 0)
+  Inst tile1 loc=(4830490 446640)
+Net tile1_io_cached_0_probe_bits_addr_block[9] nrTerm=2 conLen=2.81e+06 len=(2403620 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[9] loc=(2461690 0)
+  Inst tile1 loc=(4864510 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[8] nrTerm=2 conLen=2.86e+06 len=(2420000 442660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[8] loc=(2411290 0)
+  Inst tile1 loc=(4830490 439920)
+Net tile1_io_cached_0_probe_bits_addr_block[6] nrTerm=2 conLen=2.91e+06 len=(2501060 409660)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[6] loc=(2360890 0)
+  Inst tile1 loc=(4861150 409260)
+Net tile1_io_cached_0_probe_bits_addr_block[5] nrTerm=2 conLen=4.41e+06 len=(4406190 1600)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[5] loc=(9236280 2352260)
+  Inst tile1 loc=(4830490 2352320)
+Net tile1_io_cached_0_probe_bits_addr_block[4] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[4] loc=(9236280 2337300)
+  Inst tile1 loc=(4830490 2337200)
+Net tile1_io_cached_0_probe_bits_addr_block[3] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[3] loc=(9236280 2286900)
+  Inst tile1 loc=(4830490 2286800)
+Net tile1_io_cached_0_probe_bits_addr_block[2] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[2] loc=(9236280 2256260)
+  Inst tile1 loc=(4830490 2256000)
+Net tile1_io_cached_0_probe_bits_addr_block[1] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[1] loc=(9236280 2236500)
+  Inst tile1 loc=(4830490 2236400)
+Net tile1_io_cached_0_probe_bits_addr_block[0] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_cached_0_probe_bits_addr_block[0] loc=(9236280 2438100)
+  Inst tile1 loc=(4830490 2438000)
+Net tile1_io_cached_0_release_bits_addr_beat[1] nrTerm=2 conLen=4.41e+06 len=(4406190 4060)
+  FTerm tile1_io_cached_0_release_bits_addr_beat[1] loc=(9236280 2186100)
+  Inst tile1 loc=(4830490 2189360)
+Net tile1_io_cached_0_release_bits_addr_beat[0] nrTerm=2 conLen=4.41e+06 len=(4406190 7540)
+  FTerm tile1_io_cached_0_release_bits_addr_beat[0] loc=(9236280 2448260)
+  Inst tile1 loc=(4830490 2441920)
+Net tile1_io_cached_0_release_bits_addr_block[25] nrTerm=2 conLen=2.95e+06 len=(2520800 430900)
+  FTerm tile1_io_cached_0_release_bits_addr_block[25] loc=(2310490 0)
+  Inst tile1 loc=(4830490 429840)
+Net tile1_io_cached_0_release_bits_addr_block[24] nrTerm=2 conLen=3.00e+06 len=(2588420 412420)
+  FTerm tile1_io_cached_0_release_bits_addr_block[24] loc=(2260090 0)
+  Inst tile1 loc=(4847710 409260)
+Net tile1_io_cached_0_release_bits_addr_block[23] nrTerm=2 conLen=3.05e+06 len=(2638400 409660)
+  FTerm tile1_io_cached_0_release_bits_addr_block[23] loc=(2209690 0)
+  Inst tile1 loc=(4844350 409260)
+Net tile1_io_cached_0_release_bits_addr_block[22] nrTerm=2 conLen=3.09e+06 len=(2683760 409660)
+  FTerm tile1_io_cached_0_release_bits_addr_block[22] loc=(2159290 0)
+  Inst tile1 loc=(4840990 409260)
+Net tile1_io_cached_0_release_bits_addr_block[19] nrTerm=2 conLen=3.15e+06 len=(2727440 423520)
+  FTerm tile1_io_cached_0_release_bits_addr_block[19] loc=(2108890 0)
+  Inst tile1 loc=(4830490 423120)
+Net tile1_io_cached_0_release_bits_addr_block[18] nrTerm=2 conLen=3.19e+06 len=(2772800 416800)
+  FTerm tile1_io_cached_0_release_bits_addr_block[18] loc=(2058490 0)
+  Inst tile1 loc=(4830490 416400)
+Net tile1_io_cached_0_release_bits_addr_block[13] nrTerm=2 conLen=3.24e+06 len=(2830340 409660)
+  FTerm tile1_io_cached_0_release_bits_addr_block[13] loc=(2008090 0)
+  Inst tile1 loc=(4837630 409260)
+Net tile1_io_cached_0_release_bits_addr_block[10] nrTerm=2 conLen=3.29e+06 len=(2875280 413440)
+  FTerm tile1_io_cached_0_release_bits_addr_block[10] loc=(1957690 0)
+  Inst tile1 loc=(4830490 413040)
+Net tile1_io_cached_0_release_bits_addr_block[9] nrTerm=2 conLen=3.34e+06 len=(2927780 415780)
+  FTerm tile1_io_cached_0_release_bits_addr_block[9] loc=(1907290 0)
+  Inst tile1 loc=(4834270 409260)
+Net tile1_io_cached_0_release_bits_addr_block[6] nrTerm=2 conLen=3.39e+06 len=(2979440 410080)
+  FTerm tile1_io_cached_0_release_bits_addr_block[6] loc=(1856890 0)
+  Inst tile1 loc=(4830490 409680)
+Net tile1_io_cached_0_release_bits_addr_block[5] nrTerm=2 conLen=4.41e+06 len=(4406190 2240)
+  FTerm tile1_io_cached_0_release_bits_addr_block[5] loc=(9236280 2160260)
+  Inst tile1 loc=(4830490 2160240)
+Net tile1_io_cached_0_release_bits_addr_block[3] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_cached_0_release_bits_addr_block[3] loc=(9236280 2135700)
+  Inst tile1 loc=(4830490 2135600)
+Net tile1_io_cached_0_release_bits_addr_block[1] nrTerm=2 conLen=4.43e+06 len=(4406190 28700)
+  FTerm tile1_io_cached_0_release_bits_addr_block[1] loc=(9236280 2488500)
+  Inst tile1 loc=(4830490 2516400)
+Net tile1_io_cached_0_release_bits_r_type[1] nrTerm=2 conLen=7.75e+05 len=(406950 368060)
+  FTerm tile1_io_cached_0_release_bits_r_type[1] loc=(9236280 55860)
+  Inst tile1 loc=(8829730 423120)
+Net tile1_io_cached_0_release_bits_r_type[0] nrTerm=2 conLen=4.83e+06 len=(4830890 2580)
+  FTerm tile1_io_cached_0_release_bits_r_type[0] loc=(0 2273460)
+  Inst tile1 loc=(4830490 2273360)
+Net tile1_io_cached_0_release_bits_data[54] nrTerm=2 conLen=4.41e+06 len=(4406190 2000)
+  FTerm tile1_io_cached_0_release_bits_data[54] loc=(9236280 2736260)
+  Inst tile1 loc=(4830490 2736480)
+Net tile1_io_cached_0_release_bits_data[53] nrTerm=2 conLen=4.41e+06 len=(4406190 5840)
+  FTerm tile1_io_cached_0_release_bits_data[53] loc=(9236280 2740500)
+  Inst tile1 loc=(4830490 2744320)
+Net tile1_io_cached_0_release_bits_data[51] nrTerm=2 conLen=4.41e+06 len=(4406190 4160)
+  FTerm tile1_io_cached_0_release_bits_data[51] loc=(9236280 2085300)
+  Inst tile1 loc=(4830490 2082400)
+Net tile1_io_cached_0_release_bits_data[50] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_cached_0_release_bits_data[50] loc=(9236280 2790900)
+  Inst tile1 loc=(4830490 2790800)
+Net tile1_io_cached_0_release_bits_data[49] nrTerm=2 conLen=4.41e+06 len=(4406190 2000)
+  FTerm tile1_io_cached_0_release_bits_data[49] loc=(9236280 2064260)
+  Inst tile1 loc=(4830490 2064480)
+Net tile1_io_cached_0_release_bits_data[35] nrTerm=2 conLen=3.44e+06 len=(3024800 420160)
+  FTerm tile1_io_cached_0_release_bits_data[35] loc=(1806490 0)
+  Inst tile1 loc=(4830490 419760)
+Net tile1_io_cached_0_release_bits_data[13] nrTerm=2 conLen=7.73e+05 len=(363260 409660)
+  FTerm tile1_io_cached_0_release_bits_data[13] loc=(9174970 0)
+  Inst tile1 loc=(8812510 409260)
+Net tile1_io_cached_0_release_bits_data[12] nrTerm=2 conLen=4.83e+06 len=(4830890 2580)
+  FTerm tile1_io_cached_0_release_bits_data[12] loc=(0 2535540)
+  Inst tile1 loc=(4830490 2535440)
+Net tile1_io_cached_0_release_bits_data[10] nrTerm=2 conLen=4.83e+06 len=(4830890 4080)
+  FTerm tile1_io_cached_0_release_bits_data[10] loc=(0 2541060)
+  Inst tile1 loc=(4830490 2541040)
+Net tile1_io_cached_0_release_bits_data[9] nrTerm=2 conLen=7.99e+05 len=(406950 391840)
+  FTerm tile1_io_cached_0_release_bits_data[9] loc=(9236280 4761540)
+  Inst tile1 loc=(8829730 4370560)
+Net tile1_io_cached_0_release_bits_data[8] nrTerm=2 conLen=4.41e+06 len=(4406190 6300)
+  FTerm tile1_io_cached_0_release_bits_data[8] loc=(9236280 2992500)
+  Inst tile1 loc=(4830490 2998000)
+Net tile1_io_cached_0_release_bits_data[7] nrTerm=2 conLen=8.31e+05 len=(444330 386480)
+  FTerm tile1_io_cached_0_release_bits_data[7] loc=(9236280 4790660)
+  Inst tile1 loc=(8792350 4407940)
+Net tile1_io_cached_0_release_bits_data[6] nrTerm=2 conLen=4.83e+06 len=(4830890 2580)
+  FTerm tile1_io_cached_0_release_bits_data[6] loc=(0 2585940)
+  Inst tile1 loc=(4830490 2585840)
+Net tile1_io_cached_0_release_bits_data[4] nrTerm=2 conLen=4.41e+06 len=(4406190 1600)
+  FTerm tile1_io_cached_0_release_bits_data[4] loc=(9236280 3024260)
+  Inst tile1 loc=(4830490 3024320)
+Net tile1_io_cached_0_release_bits_data[2] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_cached_0_release_bits_data[2] loc=(9236280 3042900)
+  Inst tile1 loc=(4830490 3042800)
+Net tile1_io_cached_0_release_bits_data[1] nrTerm=2 conLen=8.46e+05 len=(406950 438820)
+  FTerm tile1_io_cached_0_release_bits_data[1] loc=(9236280 4811940)
+  Inst tile1 loc=(8829730 4373920)
+Net tile1_io_cached_0_release_bits_data[0] nrTerm=2 conLen=4.84e+06 len=(4830890 9100)
+  FTerm tile1_io_cached_0_release_bits_data[0] loc=(0 2636340)
+  Inst tile1 loc=(4830490 2636240)
+Net tile1_io_cached_0_grant_bits_addr_beat[2] nrTerm=2 conLen=1.11e+06 len=(605600 503140)
+  FTerm tile1_io_cached_0_grant_bits_addr_beat[2] loc=(4225690 0)
+  Inst tile1 loc=(4830490 473520)
+Net tile1_io_cached_0_grant_bits_addr_beat[1] nrTerm=2 conLen=1.18e+06 len=(659360 518260)
+  FTerm tile1_io_cached_0_grant_bits_addr_beat[1] loc=(4175290 0)
+  Inst tile1 loc=(4830490 466800)
+Net tile1_io_cached_0_grant_bits_client_xact_id nrTerm=2 conLen=1.35e+06 len=(412830 939460)
+  FTerm tile1_io_cached_0_grant_bits_client_xact_id loc=(9236280 5315940)
+  Inst tile1 loc=(8829730 4377280)
+Net tile1_io_cached_0_grant_bits_manager_xact_id[2] nrTerm=2 conLen=1.90e+06 len=(1490960 409660)
+  FTerm tile1_io_cached_0_grant_bits_manager_xact_id[2] loc=(3368890 0)
+  Inst tile1 loc=(4857790 409260)
+Net tile1_io_cached_0_grant_bits_manager_xact_id[1] nrTerm=2 conLen=1.95e+06 len=(1536740 409660)
+  FTerm tile1_io_cached_0_grant_bits_manager_xact_id[1] loc=(3318490 0)
+  Inst tile1 loc=(4854430 409260)
+Net tile1_io_cached_0_grant_bits_manager_xact_id[0] nrTerm=2 conLen=2.01e+06 len=(1566560 447700)
+  FTerm tile1_io_cached_0_grant_bits_manager_xact_id[0] loc=(3268090 0)
+  Inst tile1 loc=(4830490 433200)
+Net tile1_io_cached_0_grant_bits_g_type[3] nrTerm=2 conLen=1.78e+06 len=(1351940 425860)
+  FTerm tile1_io_cached_0_grant_bits_g_type[3] loc=(3570490 0)
+  Inst tile1 loc=(4921630 409260)
+Net tile1_io_cached_0_grant_bits_g_type[2] nrTerm=2 conLen=1.82e+06 len=(1311200 504160)
+  FTerm tile1_io_cached_0_grant_bits_g_type[2] loc=(3520090 0)
+  Inst tile1 loc=(4830490 503760)
+Net tile1_io_cached_0_grant_bits_g_type[1] nrTerm=2 conLen=1.87e+06 len=(1459460 409660)
+  FTerm tile1_io_cached_0_grant_bits_g_type[1] loc=(3469690 0)
+  Inst tile1 loc=(4928350 409260)
+Net tile1_io_cached_0_grant_bits_g_type[0] nrTerm=2 conLen=1.92e+06 len=(1506500 409660)
+  FTerm tile1_io_cached_0_grant_bits_g_type[0] loc=(3419290 0)
+  Inst tile1 loc=(4924990 409260)
+Net tile1_io_cached_0_grant_bits_data[62] nrTerm=2 conLen=1.22e+06 len=(706400 514900)
+  FTerm tile1_io_cached_0_grant_bits_data[62] loc=(4124890 0)
+  Inst tile1 loc=(4830490 456720)
+Net tile1_io_cached_0_grant_bits_data[57] nrTerm=2 conLen=1.23e+06 len=(756800 472900)
+  FTerm tile1_io_cached_0_grant_bits_data[57] loc=(4074490 0)
+  Inst tile1 loc=(4830490 453360)
+Net tile1_io_cached_0_grant_bits_data[55] nrTerm=2 conLen=1.28e+06 len=(807200 470560)
+  FTerm tile1_io_cached_0_grant_bits_data[55] loc=(4024090 0)
+  Inst tile1 loc=(4830490 470160)
+Net tile1_io_cached_0_grant_bits_data[54] nrTerm=2 conLen=1.34e+06 len=(857600 486340)
+  FTerm tile1_io_cached_0_grant_bits_data[54] loc=(3973690 0)
+  Inst tile1 loc=(4830490 476880)
+Net tile1_io_cached_0_grant_bits_data[52] nrTerm=2 conLen=1.39e+06 len=(908000 480640)
+  FTerm tile1_io_cached_0_grant_bits_data[52] loc=(3923290 0)
+  Inst tile1 loc=(4830490 480240)
+Net tile1_io_cached_0_grant_bits_data[50] nrTerm=2 conLen=1.42e+06 len=(958400 464500)
+  FTerm tile1_io_cached_0_grant_bits_data[50] loc=(3872890 0)
+  Inst tile1 loc=(4830490 463440)
+Net tile1_io_cached_0_grant_bits_data[49] nrTerm=2 conLen=1.47e+06 len=(1008800 461140)
+  FTerm tile1_io_cached_0_grant_bits_data[49] loc=(3822490 0)
+  Inst tile1 loc=(4830490 460080)
+Net tile1_io_cached_0_grant_bits_data[48] nrTerm=2 conLen=1.64e+06 len=(1110020 526660)
+  FTerm tile1_io_cached_0_grant_bits_data[48] loc=(3772090 0)
+  Inst tile1 loc=(4881310 409260)
+Net tile1_io_cached_0_grant_bits_data[28] nrTerm=2 conLen=1.56e+06 len=(1109600 452740)
+  FTerm tile1_io_cached_0_grant_bits_data[28] loc=(3721690 0)
+  Inst tile1 loc=(4830490 436560)
+Net tile1_io_cached_0_grant_bits_data[26] nrTerm=2 conLen=1.59e+06 len=(1180580 409660)
+  FTerm tile1_io_cached_0_grant_bits_data[26] loc=(3671290 0)
+  Inst tile1 loc=(4851070 409260)
+Net tile1_io_cached_0_grant_bits_data[24] nrTerm=2 conLen=1.68e+06 len=(1210400 472900)
+  FTerm tile1_io_cached_0_grant_bits_data[24] loc=(3620890 0)
+  Inst tile1 loc=(4830490 426480)
+Net tile1_io_cached_0_grant_bits_manager_id nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_cached_0_grant_bits_manager_id loc=(9236280 1329300)
+  Inst tile1 loc=(4830490 1329200)
+Net tile1_io_cached_0_finish_bits_manager_xact_id[2] nrTerm=2 conLen=9.52e+05 len=(542180 409660)
+  FTerm tile1_io_cached_0_finish_bits_manager_xact_id[2] loc=(4376890 0)
+  Inst tile1 loc=(4918270 409260)
+Net tile1_io_cached_0_finish_bits_manager_xact_id[1] nrTerm=2 conLen=9.99e+05 len=(589220 409660)
+  FTerm tile1_io_cached_0_finish_bits_manager_xact_id[1] loc=(4326490 0)
+  Inst tile1 loc=(4914910 409260)
+Net tile1_io_cached_0_finish_bits_manager_xact_id[0] nrTerm=2 conLen=1.05e+06 len=(636260 415780)
+  FTerm tile1_io_cached_0_finish_bits_manager_xact_id[0] loc=(4276090 0)
+  Inst tile1 loc=(4911550 409260)
+Net tile1_io_cached_0_finish_bits_manager_id nrTerm=2 conLen=4.41e+06 len=(4406190 3500)
+  FTerm tile1_io_cached_0_finish_bits_manager_id loc=(9236280 1178100)
+  Inst tile1 loc=(4830490 1180800)
+Net tile1_io_uncached_0_acquire_ready nrTerm=2 conLen=4.41e+06 len=(4406190 1760)
+  FTerm tile1_io_uncached_0_acquire_ready loc=(9236280 1296260)
+  Inst tile1 loc=(4830490 1296160)
+Net tile1_io_uncached_0_acquire_bits_addr_block[25] nrTerm=2 conLen=3.98e+06 len=(2480 3980700)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[25] loc=(5413450 8388240)
+  Inst tile1 loc=(5413310 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[24] nrTerm=2 conLen=3.98e+06 len=(2480 3980700)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[24] loc=(5482330 8388240)
+  Inst tile1 loc=(5482190 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[23] nrTerm=2 conLen=3.99e+06 len=(10880 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[23] loc=(5532730 8388240)
+  Inst tile1 loc=(5532590 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[22] nrTerm=2 conLen=3.99e+06 len=(7660 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[22] loc=(5583130 8388240)
+  Inst tile1 loc=(5582990 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[21] nrTerm=2 conLen=3.99e+06 len=(4300 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[21] loc=(5363050 8388240)
+  Inst tile1 loc=(5362910 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[20] nrTerm=2 conLen=3.99e+06 len=(9340 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[20] loc=(5312650 8388240)
+  Inst tile1 loc=(5312510 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[19] nrTerm=2 conLen=3.98e+06 len=(2620 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[19] loc=(5633530 8388240)
+  Inst tile1 loc=(5633390 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[18] nrTerm=2 conLen=3.99e+06 len=(9200 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[18] loc=(5262250 8388240)
+  Inst tile1 loc=(5262110 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[17] nrTerm=2 conLen=3.98e+06 len=(2480 3980700)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[17] loc=(5211850 8388240)
+  Inst tile1 loc=(5211710 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[16] nrTerm=2 conLen=3.99e+06 len=(4300 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[16] loc=(5161450 8388240)
+  Inst tile1 loc=(5161310 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[15] nrTerm=2 conLen=3.98e+06 len=(2480 3980700)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[15] loc=(5683930 8388240)
+  Inst tile1 loc=(5683790 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[14] nrTerm=2 conLen=3.99e+06 len=(9340 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[14] loc=(5111050 8388240)
+  Inst tile1 loc=(5110910 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[13] nrTerm=2 conLen=8.80e+05 len=(420810 459440)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[13] loc=(9236280 4862340)
+  Inst tile1 loc=(8815870 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[12] nrTerm=2 conLen=3.99e+06 len=(9200 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[12] loc=(5060650 8388240)
+  Inst tile1 loc=(5060510 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[11] nrTerm=2 conLen=3.99e+06 len=(10880 3981580)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[11] loc=(5734330 8388240)
+  Inst tile1 loc=(5734190 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[10] nrTerm=2 conLen=3.98e+06 len=(2480 3980700)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[10] loc=(5010250 8388240)
+  Inst tile1 loc=(5010110 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[9] nrTerm=2 conLen=8.97e+05 len=(417450 479920)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[9] loc=(9236280 4886660)
+  Inst tile1 loc=(8819230 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[6] nrTerm=2 conLen=9.23e+05 len=(406950 516100)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[6] loc=(9236280 4912740)
+  Inst tile1 loc=(8829730 4397440)
+Net tile1_io_uncached_0_acquire_bits_addr_block[4] nrTerm=2 conLen=9.89e+05 len=(406950 582080)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[4] loc=(9236280 4963140)
+  Inst tile1 loc=(8829730 4384000)
+Net tile1_io_uncached_0_acquire_bits_addr_block[3] nrTerm=2 conLen=1.01e+06 len=(427530 578480)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[3] loc=(9236280 4982660)
+  Inst tile1 loc=(8809150 4407940)
+Net tile1_io_uncached_0_acquire_bits_addr_block[1] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[1] loc=(9236280 3093300)
+  Inst tile1 loc=(4830490 3093200)
+Net tile1_io_uncached_0_acquire_bits_addr_block[0] nrTerm=2 conLen=4.41e+06 len=(4406190 1600)
+  FTerm tile1_io_uncached_0_acquire_bits_addr_block[0] loc=(9236280 3120260)
+  Inst tile1 loc=(4830490 3120640)
+Net tile1_io_uncached_0_acquire_bits_union[9] nrTerm=2 conLen=1.06e+06 len=(451050 606400)
+  FTerm tile1_io_uncached_0_acquire_bits_union[9] loc=(9236280 5013540)
+  Inst tile1 loc=(8785630 4407940)
+Net tile1_io_uncached_0_acquire_bits_union[8] nrTerm=2 conLen=4.83e+06 len=(4830890 900)
+  FTerm tile1_io_uncached_0_acquire_bits_union[8] loc=(0 2201220)
+  Inst tile1 loc=(4830490 2201120)
+Net tile1_io_uncached_0_acquire_bits_union[6] nrTerm=2 conLen=4.84e+06 len=(4830890 9200)
+  FTerm tile1_io_uncached_0_acquire_bits_union[6] loc=(0 2686740)
+  Inst tile1 loc=(4830490 2686640)
+Net tile1_io_uncached_0_acquire_bits_union[3] nrTerm=2 conLen=1.10e+06 len=(447690 656800)
+  FTerm tile1_io_uncached_0_acquire_bits_union[3] loc=(9236280 5063940)
+  Inst tile1 loc=(8788990 4407940)
+Net tile1_io_uncached_0_acquire_bits_union[2] nrTerm=2 conLen=4.85e+06 len=(4830890 14240)
+  FTerm tile1_io_uncached_0_acquire_bits_union[2] loc=(0 2195460)
+  Inst tile1 loc=(4830490 2195520)
+Net tile1_io_uncached_0_acquire_bits_union[0] nrTerm=2 conLen=4.84e+06 len=(4830890 10320)
+  FTerm tile1_io_uncached_0_acquire_bits_union[0] loc=(0 2733060)
+  Inst tile1 loc=(4830490 2733120)
+Net tile1_io_uncached_0_grant_ready nrTerm=2 conLen=2.49e+06 len=(406950 2083540)
+  FTerm tile1_io_uncached_0_grant_ready loc=(9236280 6476820)
+  Inst tile1 loc=(8829730 4394080)
+Net tile1_io_uncached_0_grant_valid nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_uncached_0_grant_valid loc=(9236280 963060)
+  Inst tile1 loc=(4830490 962960)
+Net tile1_io_uncached_0_grant_bits_addr_beat[1] nrTerm=2 conLen=1.12e+06 len=(449790 674480)
+  FTerm tile1_io_uncached_0_grant_bits_addr_beat[1] loc=(9236280 5078660)
+  Inst tile1 loc=(8799070 4407940)
+Net tile1_io_uncached_0_grant_bits_manager_xact_id[3] nrTerm=2 conLen=8.08e+05 len=(422910 384600)
+  FTerm tile1_io_uncached_0_grant_bits_manager_xact_id[3] loc=(9236280 25860)
+  Inst tile1 loc=(8815870 409260)
+Net tile1_io_uncached_0_grant_bits_manager_xact_id[0] nrTerm=2 conLen=1.29e+06 len=(406950 884960)
+  FTerm tile1_io_uncached_0_grant_bits_manager_xact_id[0] loc=(9236280 5270660)
+  Inst tile1 loc=(8829730 4387360)
+Net tile1_io_uncached_0_grant_bits_g_type[1] nrTerm=2 conLen=1.24e+06 len=(406950 835300)
+  FTerm tile1_io_uncached_0_grant_bits_g_type[1] loc=(9236280 5215140)
+  Inst tile1 loc=(8829730 4380640)
+Net tile1_io_uncached_0_grant_bits_g_type[0] nrTerm=2 conLen=1.30e+06 len=(443070 858400)
+  FTerm tile1_io_uncached_0_grant_bits_g_type[0] loc=(9236280 5265540)
+  Inst tile1 loc=(8795710 4407940)
+Net tile1_io_uncached_0_grant_bits_data[63] nrTerm=2 conLen=4.84e+06 len=(4830890 12560)
+  FTerm tile1_io_uncached_0_grant_bits_data[63] loc=(0 2737140)
+  Inst tile1 loc=(4830490 2740960)
+Net tile1_io_uncached_0_grant_bits_data[62] nrTerm=2 conLen=4.41e+06 len=(4406190 1600)
+  FTerm tile1_io_uncached_0_grant_bits_data[62] loc=(9236280 3216260)
+  Inst tile1 loc=(4830490 3216400)
+Net tile1_io_uncached_0_grant_bits_data[61] nrTerm=2 conLen=4.84e+06 len=(4830890 12660)
+  FTerm tile1_io_uncached_0_grant_bits_data[61] loc=(0 2150820)
+  Inst tile1 loc=(4830490 2150720)
+Net tile1_io_uncached_0_grant_bits_data[60] nrTerm=2 conLen=4.83e+06 len=(4830890 2580)
+  FTerm tile1_io_uncached_0_grant_bits_data[60] loc=(0 2787540)
+  Inst tile1 loc=(4830490 2787440)
+Net tile1_io_uncached_0_grant_bits_data[59] nrTerm=2 conLen=4.87e+06 len=(4830890 35060)
+  FTerm tile1_io_uncached_0_grant_bits_data[59] loc=(0 2485140)
+  Inst tile1 loc=(4830490 2450880)
+Net tile1_io_uncached_0_grant_bits_data[58] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_uncached_0_grant_bits_data[58] loc=(9236280 3244500)
+  Inst tile1 loc=(4830490 3244400)
+Net tile1_io_uncached_0_grant_bits_data[57] nrTerm=2 conLen=4.83e+06 len=(4830890 3360)
+  FTerm tile1_io_uncached_0_grant_bits_data[57] loc=(0 2829060)
+  Inst tile1 loc=(4830490 2828880)
+Net tile1_io_uncached_0_grant_bits_data[56] nrTerm=2 conLen=4.83e+06 len=(4830890 3700)
+  FTerm tile1_io_uncached_0_grant_bits_data[56] loc=(0 2837940)
+  Inst tile1 loc=(4830490 2835040)
+Net tile1_io_uncached_0_grant_bits_data[55] nrTerm=2 conLen=4.84e+06 len=(4830890 9360)
+  FTerm tile1_io_uncached_0_grant_bits_data[55] loc=(0 2445060)
+  Inst tile1 loc=(4830490 2445280)
+Net tile1_io_uncached_0_grant_bits_data[54] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_uncached_0_grant_bits_data[54] loc=(9236280 3294900)
+  Inst tile1 loc=(4830490 3294800)
+Net tile1_io_uncached_0_grant_bits_data[53] nrTerm=2 conLen=4.83e+06 len=(4830890 900)
+  FTerm tile1_io_uncached_0_grant_bits_data[53] loc=(0 2434740)
+  Inst tile1 loc=(4830490 2434640)
+Net tile1_io_uncached_0_grant_bits_data[51] nrTerm=2 conLen=4.41e+06 len=(4406190 1760)
+  FTerm tile1_io_uncached_0_grant_bits_data[51] loc=(9236280 3312260)
+  Inst tile1 loc=(4830490 3312160)
+Net tile1_io_uncached_0_grant_bits_data[50] nrTerm=2 conLen=1.16e+06 len=(434250 729920)
+  FTerm tile1_io_uncached_0_grant_bits_data[50] loc=(9236280 5114340)
+  Inst tile1 loc=(8802430 4407940)
+Net tile1_io_uncached_0_grant_bits_data[49] nrTerm=2 conLen=4.84e+06 len=(4830890 9200)
+  FTerm tile1_io_uncached_0_grant_bits_data[49] loc=(0 2888340)
+  Inst tile1 loc=(4830490 2888240)
+Net tile1_io_uncached_0_grant_bits_data[48] nrTerm=2 conLen=4.84e+06 len=(4830890 12100)
+  FTerm tile1_io_uncached_0_grant_bits_data[48] loc=(0 2100420)
+  Inst tile1 loc=(4830490 2089120)
+Net tile1_io_uncached_0_grant_bits_data[47] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_uncached_0_grant_bits_data[47] loc=(9236280 3345300)
+  Inst tile1 loc=(4830490 3345200)
+Net tile1_io_uncached_0_grant_bits_data[46] nrTerm=2 conLen=4.83e+06 len=(4830890 3500)
+  FTerm tile1_io_uncached_0_grant_bits_data[46] loc=(0 2925060)
+  Inst tile1 loc=(4830490 2926320)
+Net tile1_io_uncached_0_grant_bits_data[45] nrTerm=2 conLen=4.84e+06 len=(4830890 10880)
+  FTerm tile1_io_uncached_0_grant_bits_data[45] loc=(0 2938740)
+  Inst tile1 loc=(4830490 2938640)
+Net tile1_io_uncached_0_grant_bits_data[44] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_uncached_0_grant_bits_data[44] loc=(9236280 3395700)
+  Inst tile1 loc=(4830490 3395600)
+Net tile1_io_uncached_0_grant_bits_data[43] nrTerm=2 conLen=4.41e+06 len=(4406190 2000)
+  FTerm tile1_io_uncached_0_grant_bits_data[43] loc=(9236280 3408260)
+  Inst tile1 loc=(4830490 3408480)
+Net tile1_io_uncached_0_grant_bits_data[42] nrTerm=2 conLen=4.85e+06 len=(4830890 15360)
+  FTerm tile1_io_uncached_0_grant_bits_data[42] loc=(0 2099460)
+  Inst tile1 loc=(4830490 2085760)
+Net tile1_io_uncached_0_grant_bits_data[41] nrTerm=2 conLen=4.84e+06 len=(4830890 6300)
+  FTerm tile1_io_uncached_0_grant_bits_data[41] loc=(0 2989140)
+  Inst tile1 loc=(4830490 2994640)
+Net tile1_io_uncached_0_grant_bits_data[40] nrTerm=2 conLen=4.88e+06 len=(4830890 44480)
+  FTerm tile1_io_uncached_0_grant_bits_data[40] loc=(0 2384340)
+  Inst tile1 loc=(4830490 2427360)
+Net tile1_io_uncached_0_grant_bits_data[39] nrTerm=2 conLen=4.84e+06 len=(4830890 7920)
+  FTerm tile1_io_uncached_0_grant_bits_data[39] loc=(0 3021060)
+  Inst tile1 loc=(4830490 3020960)
+Net tile1_io_uncached_0_grant_bits_data[38] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_uncached_0_grant_bits_data[38] loc=(9236280 3446100)
+  Inst tile1 loc=(4830490 3446000)
+Net tile1_io_uncached_0_grant_bits_data[37] nrTerm=2 conLen=4.83e+06 len=(4830890 2480)
+  FTerm tile1_io_uncached_0_grant_bits_data[37] loc=(0 3039540)
+  Inst tile1 loc=(4830490 3039440)
+Net tile1_io_uncached_0_grant_bits_data[36] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_uncached_0_grant_bits_data[36] loc=(9236280 3496500)
+  Inst tile1 loc=(4830490 3496400)
+Net tile1_io_uncached_0_grant_bits_data[35] nrTerm=2 conLen=4.41e+06 len=(4406190 2240)
+  FTerm tile1_io_uncached_0_grant_bits_data[35] loc=(9236280 3504260)
+  Inst tile1 loc=(4830490 3504240)
+Net tile1_io_uncached_0_grant_bits_data[34] nrTerm=2 conLen=4.84e+06 len=(4830890 9200)
+  FTerm tile1_io_uncached_0_grant_bits_data[34] loc=(0 3089940)
+  Inst tile1 loc=(4830490 3089840)
+Net tile1_io_uncached_0_grant_bits_data[33] nrTerm=2 conLen=4.84e+06 len=(4830890 9360)
+  FTerm tile1_io_uncached_0_grant_bits_data[33] loc=(0 3117060)
+  Inst tile1 loc=(4830490 3117280)
+Net tile1_io_uncached_0_grant_bits_data[32] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_uncached_0_grant_bits_data[32] loc=(9236280 3546900)
+  Inst tile1 loc=(4830490 3546800)
+Net tile1_io_uncached_0_grant_bits_data[31] nrTerm=2 conLen=4.84e+06 len=(4830890 10880)
+  FTerm tile1_io_uncached_0_grant_bits_data[31] loc=(0 3140340)
+  Inst tile1 loc=(4830490 3140240)
+Net tile1_io_uncached_0_grant_bits_data[30] nrTerm=2 conLen=4.91e+06 len=(4830890 82460)
+  FTerm tile1_io_uncached_0_grant_bits_data[30] loc=(0 2349060)
+  Inst tile1 loc=(4830490 2424000)
+Net tile1_io_uncached_0_grant_bits_data[29] nrTerm=2 conLen=4.83e+06 len=(4830890 900)
+  FTerm tile1_io_uncached_0_grant_bits_data[29] loc=(0 2050020)
+  Inst tile1 loc=(4830490 2049920)
+Net tile1_io_uncached_0_grant_bits_data[27] nrTerm=2 conLen=4.41e+06 len=(4406190 4060)
+  FTerm tile1_io_uncached_0_grant_bits_data[27] loc=(9236280 3597300)
+  Inst tile1 loc=(4830490 3600560)
+Net tile1_io_uncached_0_grant_bits_data[26] nrTerm=2 conLen=4.41e+06 len=(4406190 4960)
+  FTerm tile1_io_uncached_0_grant_bits_data[26] loc=(9236280 3600260)
+  Inst tile1 loc=(4830490 3603920)
+Net tile1_io_uncached_0_grant_bits_data[25] nrTerm=2 conLen=4.83e+06 len=(4830890 2580)
+  FTerm tile1_io_uncached_0_grant_bits_data[25] loc=(0 3190740)
+  Inst tile1 loc=(4830490 3190640)
+Net tile1_io_uncached_0_grant_bits_data[24] nrTerm=2 conLen=4.41e+06 len=(4406190 1600)
+  FTerm tile1_io_uncached_0_grant_bits_data[24] loc=(9236280 1584260)
+  Inst tile1 loc=(4830490 1584000)
+Net tile1_io_uncached_0_grant_bits_data[23] nrTerm=2 conLen=4.83e+06 len=(4830890 4080)
+  FTerm tile1_io_uncached_0_grant_bits_data[23] loc=(0 3213060)
+  Inst tile1 loc=(4830490 3213040)
+Net tile1_io_uncached_0_grant_bits_data[22] nrTerm=2 conLen=4.83e+06 len=(4830890 2480)
+  FTerm tile1_io_uncached_0_grant_bits_data[22] loc=(0 3241140)
+  Inst tile1 loc=(4830490 3241040)
+Net tile1_io_uncached_0_grant_bits_data[21] nrTerm=2 conLen=4.90e+06 len=(4830890 68000)
+  FTerm tile1_io_uncached_0_grant_bits_data[21] loc=(0 2333940)
+  Inst tile1 loc=(4830490 2270000)
+Net tile1_io_uncached_0_grant_bits_data[20] nrTerm=2 conLen=4.84e+06 len=(4830890 9200)
+  FTerm tile1_io_uncached_0_grant_bits_data[20] loc=(0 3291540)
+  Inst tile1 loc=(4830490 3291440)
+Net tile1_io_uncached_0_grant_bits_data[19] nrTerm=2 conLen=4.41e+06 len=(4406190 2480)
+  FTerm tile1_io_uncached_0_grant_bits_data[19] loc=(9236280 1581300)
+  Inst tile1 loc=(4830490 1580640)
+Net tile1_io_uncached_0_grant_bits_data[18] nrTerm=2 conLen=4.83e+06 len=(4830890 4080)
+  FTerm tile1_io_uncached_0_grant_bits_data[18] loc=(0 2003460)
+  Inst tile1 loc=(4830490 2003440)
+Net tile1_io_uncached_0_grant_bits_data[17] nrTerm=2 conLen=4.83e+06 len=(4830890 900)
+  FTerm tile1_io_uncached_0_grant_bits_data[17] loc=(0 1999620)
+  Inst tile1 loc=(4830490 1999520)
+Net tile1_io_uncached_0_grant_bits_data[16] nrTerm=2 conLen=4.83e+06 len=(4830890 1920)
+  FTerm tile1_io_uncached_0_grant_bits_data[16] loc=(0 3309060)
+  Inst tile1 loc=(4830490 3308800)
+Net tile1_io_uncached_0_grant_bits_data[15] nrTerm=2 conLen=4.41e+06 len=(4406190 2380)
+  FTerm tile1_io_uncached_0_grant_bits_data[15] loc=(9236280 1530900)
+  Inst tile1 loc=(4830490 1530800)
+Net tile1_io_uncached_0_grant_bits_data[14] nrTerm=2 conLen=4.84e+06 len=(4830890 10880)
+  FTerm tile1_io_uncached_0_grant_bits_data[14] loc=(0 3341940)
+  Inst tile1 loc=(4830490 3341840)
+Net tile1_io_uncached_0_grant_bits_data[13] nrTerm=2 conLen=4.83e+06 len=(4830890 2580)
+  FTerm tile1_io_uncached_0_grant_bits_data[13] loc=(0 3392340)
+  Inst tile1 loc=(4830490 3392240)
+Net tile1_io_uncached_0_grant_bits_data[12] nrTerm=2 conLen=4.84e+06 len=(4830890 13680)
+  FTerm tile1_io_uncached_0_grant_bits_data[12] loc=(0 3405060)
+  Inst tile1 loc=(4830490 3405120)
+Net tile1_io_uncached_0_grant_bits_data[11] nrTerm=2 conLen=4.84e+06 len=(4830890 12660)
+  FTerm tile1_io_uncached_0_grant_bits_data[11] loc=(0 1949220)
+  Inst tile1 loc=(4830490 1949120)
+Net tile1_io_uncached_0_grant_bits_data[10] nrTerm=2 conLen=4.83e+06 len=(4830890 2480)
+  FTerm tile1_io_uncached_0_grant_bits_data[10] loc=(0 3442740)
+  Inst tile1 loc=(4830490 3442640)
+Net tile1_io_uncached_0_grant_bits_data[9] nrTerm=2 conLen=4.41e+06 len=(4406190 2240)
+  FTerm tile1_io_uncached_0_grant_bits_data[9] loc=(9236280 1488260)
+  Inst tile1 loc=(4830490 1488240)
+Net tile1_io_uncached_0_grant_bits_data[8] nrTerm=2 conLen=4.84e+06 len=(4830890 9200)
+  FTerm tile1_io_uncached_0_grant_bits_data[8] loc=(0 3493140)
+  Inst tile1 loc=(4830490 3493040)
+Net tile1_io_uncached_0_grant_bits_data[7] nrTerm=2 conLen=3.99e+06 len=(7520 3981580)
+  FTerm tile1_io_uncached_0_grant_bits_data[7] loc=(5999770 8388240)
+  Inst tile1 loc=(5999630 4407940)
+Net tile1_io_uncached_0_grant_bits_data[6] nrTerm=2 conLen=4.84e+06 len=(4830890 6720)
+  FTerm tile1_io_uncached_0_grant_bits_data[6] loc=(0 3501060)
+  Inst tile1 loc=(4830490 3500880)
+Net tile1_io_uncached_0_grant_bits_data[5] nrTerm=2 conLen=4.84e+06 len=(4830890 10880)
+  FTerm tile1_io_uncached_0_grant_bits_data[5] loc=(0 3543540)
+  Inst tile1 loc=(4830490 3543440)
+Net tile1_io_uncached_0_grant_bits_data[4] nrTerm=2 conLen=4.05e+06 len=(66320 3984940)
+  FTerm tile1_io_uncached_0_grant_bits_data[4] loc=(4830490 8388240)
+  Inst tile1 loc=(4884670 4407940)
+Net tile1_io_uncached_0_grant_bits_data[3] nrTerm=2 conLen=4.84e+06 len=(4830890 9300)
+  FTerm tile1_io_uncached_0_grant_bits_data[3] loc=(0 3593940)
+  Inst tile1 loc=(4830490 3593840)
+Net tile1_io_uncached_0_grant_bits_data[2] nrTerm=2 conLen=4.83e+06 len=(4830890 2640)
+  FTerm tile1_io_uncached_0_grant_bits_data[2] loc=(0 3597060)
+  Inst tile1 loc=(4830490 3597200)
+Net tile1_io_uncached_0_grant_bits_data[1] nrTerm=2 conLen=1.19e+06 len=(430890 757600)
+  FTerm tile1_io_uncached_0_grant_bits_data[1] loc=(9236280 5164740)
+  Inst tile1 loc=(8805790 4407940)
+Net tile1_io_uncached_0_grant_bits_data[0] nrTerm=2 conLen=1.19e+06 len=(406950 785140)
+  FTerm tile1_io_uncached_0_grant_bits_data[0] loc=(9236280 5174660)
+  Inst tile1 loc=(8829730 4390720)
+Net tile1_io_prci_reset nrTerm=2 conLen=1.39e+06 len=(426270 960080)
+  FTerm tile1_io_prci_reset loc=(9236280 5366340)
+  Inst tile1 loc=(8812510 4407940)
+Net tile1_io_prci_id[0] nrTerm=2 conLen=4.83e+06 len=(4830890 4060)
+  FTerm tile1_io_prci_id[0] loc=(0 2637060)
+  Inst tile1 loc=(4830490 2639600)
+Net tile1_io_prci_interrupts_meip nrTerm=2 conLen=2.33e+06 len=(406950 1927760)
+  FTerm tile1_io_prci_interrupts_meip loc=(9236280 6325620)
+  Inst tile1 loc=(8829730 4400800)
+Net tile1_io_prci_interrupts_seip nrTerm=2 conLen=2.39e+06 len=(421230 1970640)
+  FTerm tile1_io_prci_interrupts_seip loc=(9236280 6371460)
+  Inst tile1 loc=(8822590 4407940)
+Net tile1_io_prci_interrupts_debug nrTerm=2 conLen=2.38e+06 len=(406950 1972660)
+  FTerm tile1_io_prci_interrupts_debug loc=(9236280 6376020)
+  Inst tile1 loc=(8829730 4404160)
+Net tile1_io_prci_interrupts_mtip nrTerm=2 conLen=2.43e+06 len=(410730 2021840)
+  FTerm tile1_io_prci_interrupts_mtip loc=(9236280 6426420)
+  Inst tile1 loc=(8825950 4407940)
+Net tile1_io_prci_interrupts_msip nrTerm=2 conLen=2.47e+06 len=(407370 2064960)
+  FTerm tile1_io_prci_interrupts_msip loc=(9236280 6467460)
+  Inst tile1 loc=(8829310 4407940)
+Net tile2_io_cached_0_acquire_ready nrTerm=2 conLen=3.99e+06 len=(4270 3982030)
+  FTerm tile2_io_cached_0_acquire_ready loc=(748090 0)
+  Inst tile2 loc=(747980 3981630)
+Net tile2_io_cached_0_acquire_valid nrTerm=2 conLen=3.98e+06 len=(2480 3982030)
+  FTerm tile2_io_cached_0_acquire_valid loc=(596890 0)
+  Inst tile2 loc=(596780 3981630)
+Net tile2_io_cached_0_acquire_bits_client_xact_id nrTerm=2 conLen=3.83e+06 len=(3404170 425550)
+  FTerm tile2_io_cached_0_acquire_bits_client_xact_id loc=(7814170 8388240)
+  Inst tile2 loc=(4410800 7963090)
+Net tile2_io_cached_0_acquire_bits_is_builtin_type nrTerm=2 conLen=3.87e+06 len=(3457790 408330)
+  FTerm tile2_io_cached_0_acquire_bits_is_builtin_type loc=(7864570 8388240)
+  Inst tile2 loc=(4407580 7980310)
+Net tile2_io_cached_0_acquire_bits_data[51] nrTerm=2 conLen=7.85e+05 len=(296170 488860)
+  FTerm tile2_io_cached_0_acquire_bits_data[51] loc=(4706170 8388240)
+  Inst tile2 loc=(4410800 7902610)
+Net tile2_io_cached_0_acquire_bits_data[39] nrTerm=2 conLen=8.48e+05 len=(439280 408330)
+  FTerm tile2_io_cached_0_acquire_bits_data[39] loc=(4756570 8388240)
+  Inst tile2 loc=(4333660 7980310)
+Net tile2_io_cached_0_acquire_bits_data[31] nrTerm=2 conLen=9.56e+05 len=(470890 485500)
+  FTerm tile2_io_cached_0_acquire_bits_data[31] loc=(4880890 8388240)
+  Inst tile2 loc=(4410800 7905970)
+Net tile2_io_cached_0_acquire_bits_data[27] nrTerm=2 conLen=1.00e+06 len=(595070 408330)
+  FTerm tile2_io_cached_0_acquire_bits_data[27] loc=(4931290 8388240)
+  Inst tile2 loc=(4337020 7980310)
+Net tile2_io_cached_0_probe_ready nrTerm=2 conLen=3.85e+06 len=(434330 3419370)
+  FTerm tile2_io_cached_0_probe_ready loc=(0 563460)
+  Inst tile2 loc=(432140 3981630)
+Net tile2_io_cached_0_probe_valid nrTerm=2 conLen=3.99e+06 len=(9310 3982030)
+  FTerm tile2_io_cached_0_probe_valid loc=(697690 0)
+  Inst tile2 loc=(697580 3981630)
+Net tile2_io_cached_0_probe_bits_addr_block[22] nrTerm=2 conLen=7.83e+05 len=(411960 370830)
+  FTerm tile2_io_cached_0_probe_bits_addr_block[22] loc=(0 3693060)
+  Inst tile2 loc=(411560 4062690)
+Net tile2_io_cached_0_probe_bits_addr_block[20] nrTerm=2 conLen=7.99e+05 len=(411960 387230)
+  FTerm tile2_io_cached_0_probe_bits_addr_block[20] loc=(0 3679620)
+  Inst tile2 loc=(411560 4066050)
+Net tile2_io_cached_0_release_ready nrTerm=2 conLen=3.80e+06 len=(476330 3323370)
+  FTerm tile2_io_cached_0_release_ready loc=(0 659460)
+  Inst tile2 loc=(472460 3981630)
+Net tile2_io_cached_0_release_valid nrTerm=2 conLen=3.99e+06 len=(4270 3982030)
+  FTerm tile2_io_cached_0_release_valid loc=(546490 0)
+  Inst tile2 loc=(546380 3981630)
+Net tile2_io_cached_0_release_bits_addr_block[21] nrTerm=2 conLen=2.57e+06 len=(489770 2075370)
+  FTerm tile2_io_cached_0_release_bits_addr_block[21] loc=(0 1907460)
+  Inst tile2 loc=(485900 3981630)
+Net tile2_io_cached_0_release_bits_addr_block[20] nrTerm=2 conLen=2.58e+06 len=(494810 2083610)
+  FTerm tile2_io_cached_0_release_bits_addr_block[20] loc=(0 1898820)
+  Inst tile2 loc=(489260 3981630)
+Net tile2_io_cached_0_release_bits_addr_block[17] nrTerm=2 conLen=2.63e+06 len=(498170 2134010)
+  FTerm tile2_io_cached_0_release_bits_addr_block[17] loc=(0 1848420)
+  Inst tile2 loc=(482540 3981630)
+Net tile2_io_cached_0_release_bits_addr_block[16] nrTerm=2 conLen=2.66e+06 len=(411960 2245710)
+  FTerm tile2_io_cached_0_release_bits_addr_block[16] loc=(0 1811460)
+  Inst tile2 loc=(411560 4055970)
+Net tile2_io_cached_0_release_bits_addr_block[15] nrTerm=2 conLen=2.67e+06 len=(486410 2184410)
+  FTerm tile2_io_cached_0_release_bits_addr_block[15] loc=(0 1798020)
+  Inst tile2 loc=(479180 3981630)
+Net tile2_io_cached_0_release_bits_addr_block[14] nrTerm=2 conLen=2.71e+06 len=(411960 2299070)
+  FTerm tile2_io_cached_0_release_bits_addr_block[14] loc=(0 1747620)
+  Inst tile2 loc=(411560 4045890)
+Net tile2_io_cached_0_release_bits_addr_block[12] nrTerm=2 conLen=2.86e+06 len=(518330 2338350)
+  FTerm tile2_io_cached_0_release_bits_addr_block[12] loc=(0 1715460)
+  Inst tile2 loc=(411560 4052610)
+Net tile2_io_cached_0_release_bits_addr_block[11] nrTerm=2 conLen=2.77e+06 len=(481370 2285210)
+  FTerm tile2_io_cached_0_release_bits_addr_block[11] loc=(0 1697220)
+  Inst tile2 loc=(475820 3981630)
+Net tile2_io_cached_0_release_bits_addr_block[8] nrTerm=2 conLen=2.82e+06 len=(411960 2404880)
+  FTerm tile2_io_cached_0_release_bits_addr_block[8] loc=(0 1646820)
+  Inst tile2 loc=(411560 4049250)
+Net tile2_io_cached_0_release_bits_addr_block[7] nrTerm=2 conLen=2.85e+06 len=(421730 2424270)
+  FTerm tile2_io_cached_0_release_bits_addr_block[7] loc=(0 1619460)
+  Inst tile2 loc=(411560 4042530)
+Net tile2_io_cached_0_release_bits_addr_block[4] nrTerm=2 conLen=3.99e+06 len=(4270 3982030)
+  FTerm tile2_io_cached_0_release_bits_addr_block[4] loc=(1756090 0)
+  Inst tile2 loc=(1755980 3981630)
+Net tile2_io_cached_0_release_bits_addr_block[2] nrTerm=2 conLen=3.99e+06 len=(9310 3982030)
+  FTerm tile2_io_cached_0_release_bits_addr_block[2] loc=(1705690 0)
+  Inst tile2 loc=(1705580 3981630)
+Net tile2_io_cached_0_release_bits_addr_block[0] nrTerm=2 conLen=3.99e+06 len=(9200 3982030)
+  FTerm tile2_io_cached_0_release_bits_addr_block[0] loc=(1655290 0)
+  Inst tile2 loc=(1655180 3981630)
+Net tile2_io_cached_0_release_bits_client_xact_id nrTerm=2 conLen=4.83e+06 len=(4825880 4160)
+  FTerm tile2_io_cached_0_release_bits_client_xact_id loc=(9236280 6527220)
+  Inst tile2 loc=(4410800 6527250)
+Net tile2_io_cached_0_release_bits_voluntary nrTerm=2 conLen=3.89e+06 len=(442730 3444410)
+  FTerm tile2_io_cached_0_release_bits_voluntary loc=(0 538020)
+  Inst tile2 loc=(428780 3981630)
+Net tile2_io_cached_0_release_bits_r_type[2] nrTerm=2 conLen=3.99e+06 len=(4270 3982030)
+  FTerm tile2_io_cached_0_release_bits_r_type[2] loc=(1352890 0)
+  Inst tile2 loc=(1352780 3981630)
+Net tile2_io_cached_0_release_bits_r_type[1] nrTerm=2 conLen=3.10e+06 len=(466140 2638010)
+  FTerm tile2_io_cached_0_release_bits_r_type[1] loc=(0 1344420)
+  Inst tile2 loc=(465740 3981630)
+Net tile2_io_cached_0_release_bits_data[63] nrTerm=2 conLen=1.85e+06 len=(1445150 408330)
+  FTerm tile2_io_cached_0_release_bits_data[63] loc=(5784730 8388240)
+  Inst tile2 loc=(4340380 7980310)
+Net tile2_io_cached_0_release_bits_data[62] nrTerm=2 conLen=1.90e+06 len=(1425130 475950)
+  FTerm tile2_io_cached_0_release_bits_data[62] loc=(5835130 8388240)
+  Inst tile2 loc=(4410800 7912690)
+Net tile2_io_cached_0_release_bits_data[60] nrTerm=2 conLen=1.95e+06 len=(1475530 479310)
+  FTerm tile2_io_cached_0_release_bits_data[60] loc=(5885530 8388240)
+  Inst tile2 loc=(4410800 7909330)
+Net tile2_io_cached_0_release_bits_data[58] nrTerm=2 conLen=2.01e+06 len=(1525930 480460)
+  FTerm tile2_io_cached_0_release_bits_data[58] loc=(5935930 8388240)
+  Inst tile2 loc=(4410800 7916050)
+Net tile2_io_cached_0_release_bits_data[57] nrTerm=2 conLen=2.11e+06 len=(1704320 408330)
+  FTerm tile2_io_cached_0_release_bits_data[57] loc=(6050170 8388240)
+  Inst tile2 loc=(4347100 7980310)
+Net tile2_io_cached_0_release_bits_data[56] nrTerm=2 conLen=2.17e+06 len=(1766480 408330)
+  FTerm tile2_io_cached_0_release_bits_data[56] loc=(6100570 8388240)
+  Inst tile2 loc=(4343740 7980310)
+Net tile2_io_cached_0_release_bits_data[47] nrTerm=2 conLen=2.22e+06 len=(1808480 408330)
+  FTerm tile2_io_cached_0_release_bits_data[47] loc=(6150970 8388240)
+  Inst tile2 loc=(4350460 7980310)
+Net tile2_io_cached_0_release_bits_data[46] nrTerm=2 conLen=3.98e+06 len=(2480 3982030)
+  FTerm tile2_io_cached_0_release_bits_data[46] loc=(1604890 0)
+  Inst tile2 loc=(1604780 3981630)
+Net tile2_io_cached_0_release_bits_data[44] nrTerm=2 conLen=2.26e+06 len=(1791370 470380)
+  FTerm tile2_io_cached_0_release_bits_data[44] loc=(6201370 8388240)
+  Inst tile2 loc=(4410800 7922770)
+Net tile2_io_cached_0_release_bits_data[43] nrTerm=2 conLen=2.34e+06 len=(1842080 493900)
+  FTerm tile2_io_cached_0_release_bits_data[43] loc=(6251770 8388240)
+  Inst tile2 loc=(4410800 7926130)
+Net tile2_io_cached_0_release_bits_data[42] nrTerm=2 conLen=2.36e+06 len=(1892170 465340)
+  FTerm tile2_io_cached_0_release_bits_data[42] loc=(6302170 8388240)
+  Inst tile2 loc=(4410800 7929490)
+Net tile2_io_cached_0_release_bits_data[41] nrTerm=2 conLen=2.86e+06 len=(411960 2445200)
+  FTerm tile2_io_cached_0_release_bits_data[41] loc=(0 1596420)
+  Inst tile2 loc=(411560 4039170)
+Net tile2_io_cached_0_release_bits_data[40] nrTerm=2 conLen=3.99e+06 len=(4270 3982030)
+  FTerm tile2_io_cached_0_release_bits_data[40] loc=(1554490 0)
+  Inst tile2 loc=(1554380 3981630)
+Net tile2_io_cached_0_release_bits_data[39] nrTerm=2 conLen=2.41e+06 len=(1942570 469230)
+  FTerm tile2_io_cached_0_release_bits_data[39] loc=(6352570 8388240)
+  Inst tile2 loc=(4410800 7919410)
+Net tile2_io_cached_0_release_bits_data[38] nrTerm=2 conLen=2.46e+06 len=(2055440 408330)
+  FTerm tile2_io_cached_0_release_bits_data[38] loc=(6402970 8388240)
+  Inst tile2 loc=(4360540 7980310)
+Net tile2_io_cached_0_release_bits_data[36] nrTerm=2 conLen=2.51e+06 len=(2099950 408330)
+  FTerm tile2_io_cached_0_release_bits_data[36] loc=(6453370 8388240)
+  Inst tile2 loc=(4353820 7980310)
+Net tile2_io_cached_0_release_bits_data[33] nrTerm=2 conLen=2.91e+06 len=(469500 2436410)
+  FTerm tile2_io_cached_0_release_bits_data[33] loc=(0 1546020)
+  Inst tile2 loc=(469100 3981630)
+Net tile2_io_cached_0_release_bits_data[32] nrTerm=2 conLen=2.93e+06 len=(411960 2513550)
+  FTerm tile2_io_cached_0_release_bits_data[32] loc=(0 1523460)
+  Inst tile2 loc=(411560 4035810)
+Net tile2_io_cached_0_release_bits_data[31] nrTerm=2 conLen=3.99e+06 len=(9310 3982030)
+  FTerm tile2_io_cached_0_release_bits_data[31] loc=(1504090 0)
+  Inst tile2 loc=(1503980 3981630)
+Net tile2_io_cached_0_release_bits_data[30] nrTerm=2 conLen=2.56e+06 len=(2154560 408330)
+  FTerm tile2_io_cached_0_release_bits_data[30] loc=(6503770 8388240)
+  Inst tile2 loc=(4357180 7980310)
+Net tile2_io_cached_0_release_bits_data[29] nrTerm=2 conLen=2.96e+06 len=(411960 2544320)
+  FTerm tile2_io_cached_0_release_bits_data[29] loc=(0 1495620)
+  Inst tile2 loc=(411560 4032450)
+Net tile2_io_cached_0_release_bits_data[28] nrTerm=2 conLen=2.60e+06 len=(2144170 458620)
+  FTerm tile2_io_cached_0_release_bits_data[28] loc=(6554170 8388240)
+  Inst tile2 loc=(4410800 7936210)
+Net tile2_io_cached_0_release_bits_data[27] nrTerm=2 conLen=2.65e+06 len=(2244880 408330)
+  FTerm tile2_io_cached_0_release_bits_data[27] loc=(6604570 8388240)
+  Inst tile2 loc=(4367260 7980310)
+Net tile2_io_cached_0_release_bits_data[25] nrTerm=2 conLen=2.70e+06 len=(2244970 455790)
+  FTerm tile2_io_cached_0_release_bits_data[25] loc=(6654970 8388240)
+  Inst tile2 loc=(4410800 7932850)
+Net tile2_io_cached_0_release_bits_data[23] nrTerm=2 conLen=3.99e+06 len=(9200 3982030)
+  FTerm tile2_io_cached_0_release_bits_data[23] loc=(1453690 0)
+  Inst tile2 loc=(1453580 3981630)
+Net tile2_io_cached_0_release_bits_data[22] nrTerm=2 conLen=2.75e+06 len=(2342270 408330)
+  FTerm tile2_io_cached_0_release_bits_data[22] loc=(6705370 8388240)
+  Inst tile2 loc=(4363900 7980310)
+Net tile2_io_cached_0_release_bits_data[21] nrTerm=2 conLen=4.84e+06 len=(4825880 10880)
+  FTerm tile2_io_cached_0_release_bits_data[21] loc=(9236280 5893860)
+  Inst tile2 loc=(4410800 5893890)
+Net tile2_io_cached_0_release_bits_data[20] nrTerm=2 conLen=3.00e+06 len=(462890 2539280)
+  FTerm tile2_io_cached_0_release_bits_data[20] loc=(0 1445220)
+  Inst tile2 loc=(452300 3981630)
+Net tile2_io_cached_0_release_bits_data[19] nrTerm=2 conLen=4.83e+06 len=(4825880 9040)
+  FTerm tile2_io_cached_0_release_bits_data[19] loc=(9236280 5888260)
+  Inst tile2 loc=(4410800 5888290)
+Net tile2_io_cached_0_release_bits_data[18] nrTerm=2 conLen=2.79e+06 len=(2345770 445710)
+  FTerm tile2_io_cached_0_release_bits_data[18] loc=(6755770 8388240)
+  Inst tile2 loc=(4410800 7942930)
+Net tile2_io_cached_0_release_bits_data[17] nrTerm=2 conLen=4.84e+06 len=(4825880 14240)
+  FTerm tile2_io_cached_0_release_bits_data[17] loc=(9236280 5843460)
+  Inst tile2 loc=(4410800 5841810)
+Net tile2_io_cached_0_release_bits_data[16] nrTerm=2 conLen=3.01e+06 len=(459420 2555370)
+  FTerm tile2_io_cached_0_release_bits_data[16] loc=(0 1427460)
+  Inst tile2 loc=(459020 3981630)
+Net tile2_io_cached_0_release_bits_data[14] nrTerm=2 conLen=3.98e+06 len=(2480 3982030)
+  FTerm tile2_io_cached_0_release_bits_data[14] loc=(1403290 0)
+  Inst tile2 loc=(1403180 3981630)
+Net tile2_io_cached_0_release_bits_data[13] nrTerm=2 conLen=3.04e+06 len=(411960 2631710)
+  FTerm tile2_io_cached_0_release_bits_data[13] loc=(0 1394820)
+  Inst tile2 loc=(411560 4025730)
+Net tile2_io_cached_0_grant_ready nrTerm=2 conLen=4.00e+06 len=(16030 3982030)
+  FTerm tile2_io_cached_0_grant_ready loc=(496090 0)
+  Inst tile2 loc=(495980 3981630)
+Net tile2_io_cached_0_grant_bits_manager_id nrTerm=2 conLen=3.78e+06 len=(411960 3370910)
+  FTerm tile2_io_cached_0_grant_bits_manager_id loc=(0 638820)
+  Inst tile2 loc=(411560 4008930)
+Net tile2_io_cached_0_finish_ready nrTerm=2 conLen=3.99e+06 len=(11330 3982030)
+  FTerm tile2_io_cached_0_finish_ready loc=(647290 0)
+  Inst tile2 loc=(649420 3981630)
+Net tile2_io_cached_0_finish_valid nrTerm=2 conLen=3.93e+06 len=(425820 3506960)
+  FTerm tile2_io_cached_0_finish_valid loc=(0 487620)
+  Inst tile2 loc=(425420 3981630)
+Net tile2_io_cached_0_finish_bits_manager_id nrTerm=2 conLen=3.94e+06 len=(411960 3532590)
+  FTerm tile2_io_cached_0_finish_bits_manager_id loc=(0 467460)
+  Inst tile2 loc=(411560 3998850)
+Net tile2_io_uncached_0_acquire_ready nrTerm=2 conLen=3.81e+06 len=(411960 3397790)
+  FTerm tile2_io_uncached_0_acquire_ready loc=(0 588420)
+  Inst tile2 loc=(411560 3985410)
+Net tile2_io_uncached_0_acquire_valid nrTerm=2 conLen=3.96e+06 len=(411960 3545630)
+  FTerm tile2_io_uncached_0_acquire_valid loc=(0 437220)
+  Inst tile2 loc=(411560 3982050)
+Net tile2_io_uncached_0_acquire_bits_client_xact_id nrTerm=2 conLen=4.84e+06 len=(4825880 13680)
+  FTerm tile2_io_uncached_0_acquire_bits_client_xact_id loc=(9236280 6563460)
+  Inst tile2 loc=(4410800 6563650)
+Net tile2_io_uncached_0_acquire_bits_addr_beat[2] nrTerm=2 conLen=2.84e+06 len=(2396170 443500)
+  FTerm tile2_io_uncached_0_acquire_bits_addr_beat[2] loc=(6806170 8388240)
+  Inst tile2 loc=(4410800 7946290)
+Net tile2_io_uncached_0_acquire_bits_addr_beat[1] nrTerm=2 conLen=4.83e+06 len=(4825880 7520)
+  FTerm tile2_io_uncached_0_acquire_bits_addr_beat[1] loc=(9236280 5742660)
+  Inst tile2 loc=(4410800 5742690)
+Net tile2_io_uncached_0_acquire_bits_addr_beat[0] nrTerm=2 conLen=3.11e+06 len=(462780 2651370)
+  FTerm tile2_io_uncached_0_acquire_bits_addr_beat[0] loc=(0 1331460)
+  Inst tile2 loc=(462380 3981630)
+Net tile2_io_uncached_0_acquire_bits_is_builtin_type nrTerm=2 conLen=3.93e+06 len=(3522920 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_is_builtin_type loc=(7914970 8388240)
+  Inst tile2 loc=(4394140 7980310)
+Net tile2_io_uncached_0_acquire_bits_a_type[2] nrTerm=2 conLen=4.90e+06 len=(4825880 71890)
+  FTerm tile2_io_uncached_0_acquire_bits_a_type[2] loc=(9236280 5944260)
+  Inst tile2 loc=(4410800 5873170)
+Net tile2_io_uncached_0_acquire_bits_a_type[1] nrTerm=2 conLen=4.84e+06 len=(4825880 9230)
+  FTerm tile2_io_uncached_0_acquire_bits_a_type[1] loc=(9236280 5793060)
+  Inst tile2 loc=(4410800 5793090)
+Net tile2_io_uncached_0_acquire_bits_a_type[0] nrTerm=2 conLen=4.83e+06 len=(4825880 4130)
+  FTerm tile2_io_uncached_0_acquire_bits_a_type[0] loc=(9236280 5792260)
+  Inst tile2 loc=(4410800 5789730)
+Net tile2_io_uncached_0_acquire_bits_union[10] nrTerm=2 conLen=3.28e+06 len=(2849770 428910)
+  FTerm tile2_io_uncached_0_acquire_bits_union[10] loc=(7259770 8388240)
+  Inst tile2 loc=(4410800 7959730)
+Net tile2_io_uncached_0_acquire_bits_union[9] nrTerm=2 conLen=3.34e+06 len=(2932400 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_union[9] loc=(7310170 8388240)
+  Inst tile2 loc=(4380700 7980310)
+Net tile2_io_uncached_0_acquire_bits_union[8] nrTerm=2 conLen=3.64e+06 len=(411960 3224720)
+  FTerm tile2_io_uncached_0_acquire_bits_union[8] loc=(0 790020)
+  Inst tile2 loc=(411560 4012290)
+Net tile2_io_uncached_0_acquire_bits_union[7] nrTerm=2 conLen=4.90e+06 len=(4825880 71360)
+  FTerm tile2_io_uncached_0_acquire_bits_union[7] loc=(9236280 6124020)
+  Inst tile2 loc=(4410800 6189010)
+Net tile2_io_uncached_0_acquire_bits_union[6] nrTerm=2 conLen=3.65e+06 len=(411960 3234510)
+  FTerm tile2_io_uncached_0_acquire_bits_union[6] loc=(0 755460)
+  Inst tile2 loc=(411560 3988770)
+Net tile2_io_uncached_0_acquire_bits_union[5] nrTerm=2 conLen=4.83e+06 len=(4825880 7550)
+  FTerm tile2_io_uncached_0_acquire_bits_union[5] loc=(9236280 5440260)
+  Inst tile2 loc=(4410800 5440290)
+Net tile2_io_uncached_0_acquire_bits_union[4] nrTerm=2 conLen=3.38e+06 len=(2970590 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_union[4] loc=(7360570 8388240)
+  Inst tile2 loc=(4390780 7980310)
+Net tile2_io_uncached_0_acquire_bits_union[3] nrTerm=2 conLen=3.44e+06 len=(3028160 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_union[3] loc=(7410970 8388240)
+  Inst tile2 loc=(4384060 7980310)
+Net tile2_io_uncached_0_acquire_bits_union[2] nrTerm=2 conLen=3.68e+06 len=(411960 3266750)
+  FTerm tile2_io_uncached_0_acquire_bits_union[2] loc=(0 739620)
+  Inst tile2 loc=(411560 4005570)
+Net tile2_io_uncached_0_acquire_bits_union[1] nrTerm=2 conLen=4.84e+06 len=(4825880 14240)
+  FTerm tile2_io_uncached_0_acquire_bits_union[1] loc=(9236280 6275220)
+  Inst tile2 loc=(4410800 6275250)
+Net tile2_io_uncached_0_acquire_bits_union[0] nrTerm=2 conLen=3.71e+06 len=(415740 3293210)
+  FTerm tile2_io_uncached_0_acquire_bits_union[0] loc=(0 689220)
+  Inst tile2 loc=(415340 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[63] nrTerm=2 conLen=4.98e+06 len=(4825880 150400)
+  FTerm tile2_io_uncached_0_acquire_bits_data[63] loc=(9236280 5984260)
+  Inst tile2 loc=(4410800 5845170)
+Net tile2_io_uncached_0_acquire_bits_data[61] nrTerm=2 conLen=3.99e+06 len=(9200 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[61] loc=(1302490 0)
+  Inst tile2 loc=(1306860 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[60] nrTerm=2 conLen=4.83e+06 len=(4825880 7280)
+  FTerm tile2_io_uncached_0_acquire_bits_data[60] loc=(9236280 5696260)
+  Inst tile2 loc=(4410800 5696210)
+Net tile2_io_uncached_0_acquire_bits_data[58] nrTerm=2 conLen=3.15e+06 len=(411960 2735870)
+  FTerm tile2_io_uncached_0_acquire_bits_data[58] loc=(0 1294020)
+  Inst tile2 loc=(411560 4029090)
+Net tile2_io_uncached_0_acquire_bits_data[57] nrTerm=2 conLen=4.83e+06 len=(4825880 4160)
+  FTerm tile2_io_uncached_0_acquire_bits_data[57] loc=(9236280 5692260)
+  Inst tile2 loc=(4410800 5692290)
+Net tile2_io_uncached_0_acquire_bits_data[55] nrTerm=2 conLen=4.02e+06 len=(37310 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[55] loc=(1252090 0)
+  Inst tile2 loc=(1215580 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[54] nrTerm=2 conLen=4.99e+06 len=(4825880 167120)
+  FTerm tile2_io_uncached_0_acquire_bits_data[54] loc=(9236280 5994660)
+  Inst tile2 loc=(4410800 5828370)
+Net tile2_io_uncached_0_acquire_bits_data[52] nrTerm=2 conLen=3.19e+06 len=(456060 2738810)
+  FTerm tile2_io_uncached_0_acquire_bits_data[52] loc=(0 1243620)
+  Inst tile2 loc=(455660 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[51] nrTerm=2 conLen=4.83e+06 len=(4825880 7550)
+  FTerm tile2_io_uncached_0_acquire_bits_data[51] loc=(9236280 5641860)
+  Inst tile2 loc=(4410800 5641890)
+Net tile2_io_uncached_0_acquire_bits_data[49] nrTerm=2 conLen=3.21e+06 len=(425930 2788110)
+  FTerm tile2_io_uncached_0_acquire_bits_data[49] loc=(0 1235460)
+  Inst tile2 loc=(411560 4022370)
+Net tile2_io_uncached_0_acquire_bits_data[48] nrTerm=2 conLen=2.90e+06 len=(2446570 448540)
+  FTerm tile2_io_uncached_0_acquire_bits_data[48] loc=(6856570 8388240)
+  Inst tile2 loc=(4410800 7949650)
+Net tile2_io_uncached_0_acquire_bits_data[45] nrTerm=2 conLen=3.99e+06 len=(4050 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[45] loc=(1201690 0)
+  Inst tile2 loc=(1204940 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[43] nrTerm=2 conLen=4.84e+06 len=(4825880 12560)
+  FTerm tile2_io_uncached_0_acquire_bits_data[43] loc=(9236280 5600260)
+  Inst tile2 loc=(4410800 5600450)
+Net tile2_io_uncached_0_acquire_bits_data[40] nrTerm=2 conLen=3.24e+06 len=(411960 2826590)
+  FTerm tile2_io_uncached_0_acquire_bits_data[40] loc=(0 1193220)
+  Inst tile2 loc=(411560 4019010)
+Net tile2_io_uncached_0_acquire_bits_data[39] nrTerm=2 conLen=3.99e+06 len=(4160 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[39] loc=(1151290 0)
+  Inst tile2 loc=(1151740 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[37] nrTerm=2 conLen=4.83e+06 len=(4825880 830)
+  FTerm tile2_io_uncached_0_acquire_bits_data[37] loc=(9236280 5591460)
+  Inst tile2 loc=(4410800 5591490)
+Net tile2_io_uncached_0_acquire_bits_data[34] nrTerm=2 conLen=3.29e+06 len=(451130 2839610)
+  FTerm tile2_io_uncached_0_acquire_bits_data[34] loc=(0 1142820)
+  Inst tile2 loc=(448940 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[33] nrTerm=2 conLen=3.32e+06 len=(471290 2850480)
+  FTerm tile2_io_uncached_0_acquire_bits_data[33] loc=(0 1139460)
+  Inst tile2 loc=(438860 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[31] nrTerm=2 conLen=4.91e+06 len=(4825880 86450)
+  FTerm tile2_io_uncached_0_acquire_bits_data[31] loc=(9236280 6045060)
+  Inst tile2 loc=(4410800 5959410)
+Net tile2_io_uncached_0_acquire_bits_data[30] nrTerm=2 conLen=7.71e+05 len=(411960 358640)
+  FTerm tile2_io_uncached_0_acquire_bits_data[30] loc=(0 8333220)
+  Inst tile2 loc=(411560 7976530)
+Net tile2_io_uncached_0_acquire_bits_data[29] nrTerm=2 conLen=7.92e+05 len=(383840 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_data[29] loc=(32410 8388240)
+  Inst tile2 loc=(414780 7980310)
+Net tile2_io_uncached_0_acquire_bits_data[28] nrTerm=2 conLen=7.98e+05 len=(411960 386370)
+  FTerm tile2_io_uncached_0_acquire_bits_data[28] loc=(0 8365060)
+  Inst tile2 loc=(411560 7979890)
+Net tile2_io_uncached_0_acquire_bits_data[27] nrTerm=2 conLen=4.01e+06 len=(24990 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[27] loc=(1100890 0)
+  Inst tile2 loc=(1085100 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[26] nrTerm=2 conLen=3.33e+06 len=(435900 2890400)
+  FTerm tile2_io_uncached_0_acquire_bits_data[26] loc=(0 1092420)
+  Inst tile2 loc=(435500 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[25] nrTerm=2 conLen=2.95e+06 len=(2496970 449070)
+  FTerm tile2_io_uncached_0_acquire_bits_data[25] loc=(6906970 8388240)
+  Inst tile2 loc=(4410800 7939570)
+Net tile2_io_uncached_0_acquire_bits_data[24] nrTerm=2 conLen=3.37e+06 len=(411960 2961600)
+  FTerm tile2_io_uncached_0_acquire_bits_data[24] loc=(0 1043460)
+  Inst tile2 loc=(411560 4002210)
+Net tile2_io_uncached_0_acquire_bits_data[23] nrTerm=2 conLen=4.83e+06 len=(4825880 4160)
+  FTerm tile2_io_uncached_0_acquire_bits_data[23] loc=(9236280 5541060)
+  Inst tile2 loc=(4410800 5541090)
+Net tile2_io_uncached_0_acquire_bits_data[22] nrTerm=2 conLen=2.98e+06 len=(2547370 435630)
+  FTerm tile2_io_uncached_0_acquire_bits_data[22] loc=(6957370 8388240)
+  Inst tile2 loc=(4410800 7953010)
+Net tile2_io_uncached_0_acquire_bits_data[21] nrTerm=2 conLen=3.05e+06 len=(2643440 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_data[21] loc=(7007770 8388240)
+  Inst tile2 loc=(4370620 7980310)
+Net tile2_io_uncached_0_acquire_bits_data[20] nrTerm=2 conLen=3.39e+06 len=(447770 2940410)
+  FTerm tile2_io_uncached_0_acquire_bits_data[20] loc=(0 1042020)
+  Inst tile2 loc=(445580 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[19] nrTerm=2 conLen=3.99e+06 len=(9200 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[19] loc=(1050490 0)
+  Inst tile2 loc=(1050380 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[18] nrTerm=2 conLen=3.98e+06 len=(2480 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[18] loc=(1000090 0)
+  Inst tile2 loc=(999980 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[17] nrTerm=2 conLen=4.84e+06 len=(4825880 9230)
+  FTerm tile2_io_uncached_0_acquire_bits_data[17] loc=(9236280 6174420)
+  Inst tile2 loc=(4410800 6174450)
+Net tile2_io_uncached_0_acquire_bits_data[16] nrTerm=2 conLen=3.42e+06 len=(417530 3004670)
+  FTerm tile2_io_uncached_0_acquire_bits_data[16] loc=(0 991620)
+  Inst tile2 loc=(411560 3995490)
+Net tile2_io_uncached_0_acquire_bits_data[15] nrTerm=2 conLen=4.83e+06 len=(4825880 1600)
+  FTerm tile2_io_uncached_0_acquire_bits_data[15] loc=(9236280 5504260)
+  Inst tile2 loc=(4410800 5504130)
+Net tile2_io_uncached_0_acquire_bits_data[14] nrTerm=2 conLen=3.08e+06 len=(2648170 433420)
+  FTerm tile2_io_uncached_0_acquire_bits_data[14] loc=(7058170 8388240)
+  Inst tile2 loc=(4410800 7956370)
+Net tile2_io_uncached_0_acquire_bits_data[13] nrTerm=2 conLen=3.15e+06 len=(2740880 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_data[13] loc=(7108570 8388240)
+  Inst tile2 loc=(4373980 7980310)
+Net tile2_io_uncached_0_acquire_bits_data[12] nrTerm=2 conLen=3.48e+06 len=(411960 3069390)
+  FTerm tile2_io_uncached_0_acquire_bits_data[12] loc=(0 947460)
+  Inst tile2 loc=(411560 4015650)
+Net tile2_io_uncached_0_acquire_bits_data[11] nrTerm=2 conLen=3.99e+06 len=(4270 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[11] loc=(949690 0)
+  Inst tile2 loc=(949580 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[10] nrTerm=2 conLen=3.47e+06 len=(422460 3043280)
+  FTerm tile2_io_uncached_0_acquire_bits_data[10] loc=(0 941220)
+  Inst tile2 loc=(422060 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[9] nrTerm=2 conLen=4.83e+06 len=(4825880 7920)
+  FTerm tile2_io_uncached_0_acquire_bits_data[9] loc=(9236280 6179460)
+  Inst tile2 loc=(4410800 6179490)
+Net tile2_io_uncached_0_acquire_bits_data[8] nrTerm=2 conLen=3.52e+06 len=(414170 3102110)
+  FTerm tile2_io_uncached_0_acquire_bits_data[8] loc=(0 890820)
+  Inst tile2 loc=(411560 3992130)
+Net tile2_io_uncached_0_acquire_bits_data[7] nrTerm=2 conLen=4.83e+06 len=(4825880 4160)
+  FTerm tile2_io_uncached_0_acquire_bits_data[7] loc=(9236280 5490660)
+  Inst tile2 loc=(4410800 5490690)
+Net tile2_io_uncached_0_acquire_bits_data[6] nrTerm=2 conLen=3.18e+06 len=(2772800 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_data[6] loc=(7158970 8388240)
+  Inst tile2 loc=(4387420 7980310)
+Net tile2_io_uncached_0_acquire_bits_data[5] nrTerm=2 conLen=3.24e+06 len=(2836640 408330)
+  FTerm tile2_io_uncached_0_acquire_bits_data[5] loc=(7209370 8388240)
+  Inst tile2 loc=(4377340 7980310)
+Net tile2_io_uncached_0_acquire_bits_data[4] nrTerm=2 conLen=3.57e+06 len=(442620 3131370)
+  FTerm tile2_io_uncached_0_acquire_bits_data[4] loc=(0 851460)
+  Inst tile2 loc=(442220 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[3] nrTerm=2 conLen=3.99e+06 len=(9310 3982030)
+  FTerm tile2_io_uncached_0_acquire_bits_data[3] loc=(899290 0)
+  Inst tile2 loc=(899180 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[2] nrTerm=2 conLen=4.84e+06 len=(4825880 9230)
+  FTerm tile2_io_uncached_0_acquire_bits_data[2] loc=(9236280 6224820)
+  Inst tile2 loc=(4410800 6224850)
+Net tile2_io_uncached_0_acquire_bits_data[1] nrTerm=2 conLen=3.56e+06 len=(419210 3142010)
+  FTerm tile2_io_uncached_0_acquire_bits_data[1] loc=(0 840420)
+  Inst tile2 loc=(418700 3981630)
+Net tile2_io_uncached_0_acquire_bits_data[0] nrTerm=2 conLen=4.94e+06 len=(4825880 118690)
+  FTerm tile2_io_uncached_0_acquire_bits_data[0] loc=(9236280 6080260)
+  Inst tile2 loc=(4410800 5962770)
+Net tile2_io_uncached_0_grant_ready nrTerm=2 conLen=4.84e+06 len=(4825880 9230)
+  FTerm tile2_io_uncached_0_grant_ready loc=(9236280 6577620)
+  Inst tile2 loc=(4410800 6577650)
+Net tile2_io_uncached_0_grant_bits_manager_xact_id[3] nrTerm=2 conLen=3.99e+06 len=(9200 3982030)
+  FTerm tile2_io_uncached_0_grant_bits_manager_xact_id[3] loc=(848890 0)
+  Inst tile2 loc=(848780 3981630)
+Net tile2_io_uncached_0_grant_bits_manager_xact_id[2] nrTerm=2 conLen=4.84e+06 len=(4825880 9360)
+  FTerm tile2_io_uncached_0_grant_bits_manager_xact_id[2] loc=(9236280 6275460)
+  Inst tile2 loc=(4410800 6278610)
+Net tile2_io_uncached_0_grant_bits_manager_xact_id[1] nrTerm=2 conLen=4.83e+06 len=(4825880 2960)
+  FTerm tile2_io_uncached_0_grant_bits_manager_xact_id[1] loc=(9236280 5408260)
+  Inst tile2 loc=(4410800 5408370)
+Net tile2_io_uncached_0_grant_bits_manager_xact_id[0] nrTerm=2 conLen=3.48e+06 len=(3051370 425020)
+  FTerm tile2_io_uncached_0_grant_bits_manager_xact_id[0] loc=(7461370 8388240)
+  Inst tile2 loc=(4410800 7966450)
+Net tile2_io_prci_reset nrTerm=2 conLen=3.53e+06 len=(3115070 413260)
+  FTerm tile2_io_prci_reset loc=(7511770 8388240)
+  Inst tile2 loc=(4397500 7980310)
+Net tile2_io_prci_interrupts_meip nrTerm=2 conLen=3.58e+06 len=(3157520 418830)
+  FTerm tile2_io_prci_interrupts_meip loc=(7562170 8388240)
+  Inst tile2 loc=(4410800 7969810)
+Net tile2_io_prci_interrupts_seip nrTerm=2 conLen=3.62e+06 len=(3214640 408330)
+  FTerm tile2_io_prci_interrupts_seip loc=(7612570 8388240)
+  Inst tile2 loc=(4400860 7980310)
+Net tile2_io_prci_interrupts_debug nrTerm=2 conLen=3.67e+06 len=(3252970 419980)
+  FTerm tile2_io_prci_interrupts_debug loc=(7662970 8388240)
+  Inst tile2 loc=(4410800 7973170)
+Net tile2_io_prci_interrupts_mtip nrTerm=2 conLen=3.72e+06 len=(3310400 408330)
+  FTerm tile2_io_prci_interrupts_mtip loc=(7713370 8388240)
+  Inst tile2 loc=(4404220 7980310)
+Net tile2_io_prci_interrupts_msip nrTerm=2 conLen=3.78e+06 len=(3363320 412110)
+  FTerm tile2_io_prci_interrupts_msip loc=(7763770 8388240)
+  Inst tile2 loc=(4410800 7976530)
+Net intrnl_io_uncached_0_acquire_bits_data[63] nrTerm=2 conLen=6.83e+06 len=(6721640 112070)
+  Inst tile2 loc=(2110460 3981630)
+  Inst tile1 loc=(8829730 3991440)
+Net intrnl_io_uncached_0_acquire_bits_data[62] nrTerm=2 conLen=2.84e+06 len=(2823310 15080)
+  Inst tile2 loc=(2007980 3981630)
+  Inst tile1 loc=(4830490 3978000)
+Net intrnl_io_uncached_0_acquire_bits_data[61] nrTerm=2 conLen=4.17e+06 len=(2220080 1948750)
+  Inst tile2 loc=(2616700 3981630)
+  Inst tile1 loc=(4830490 2033680)
+Net intrnl_io_uncached_0_acquire_bits_data[60] nrTerm=2 conLen=6.82e+06 len=(6714920 100580)
+  Inst tile2 loc=(2118300 3981630)
+  Inst tile1 loc=(8829730 3974640)
+Net intrnl_io_uncached_0_acquire_bits_data[59] nrTerm=2 conLen=4.47e+06 len=(4436950 33010)
+  Inst tile2 loc=(411560 4375730)
+  Inst tile1 loc=(4847710 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[58] nrTerm=2 conLen=4.67e+06 len=(2735840 1938670)
+  Inst tile2 loc=(2097020 3981630)
+  Inst tile1 loc=(4830490 2043760)
+Net intrnl_io_uncached_0_acquire_bits_data[57] nrTerm=2 conLen=6.79e+06 len=(6679330 106640)
+  Inst tile2 loc=(411560 4411570)
+  Inst tile1 loc=(7088270 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[56] nrTerm=2 conLen=4.49e+06 len=(4434850 50320)
+  Inst tile2 loc=(411560 4438450)
+  Inst tile1 loc=(4844350 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[55] nrTerm=2 conLen=4.61e+06 len=(2730910 1875780)
+  Inst tile2 loc=(2100380 3981630)
+  Inst tile1 loc=(4830490 2107040)
+Net intrnl_io_uncached_0_acquire_bits_data[54] nrTerm=2 conLen=6.93e+06 len=(6835430 91520)
+  Inst tile2 loc=(1995100 3981630)
+  Inst tile1 loc=(8829730 3981360)
+Net intrnl_io_uncached_0_acquire_bits_data[53] nrTerm=2 conLen=4.52e+06 len=(4441570 81440)
+  Inst tile2 loc=(411560 4435090)
+  Inst tile1 loc=(4840990 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[52] nrTerm=2 conLen=4.38e+06 len=(420490 3963390)
+  Inst tile2 loc=(4410800 6358690)
+  Inst tile1 loc=(4830490 2396560)
+Net intrnl_io_uncached_0_acquire_bits_data[51] nrTerm=2 conLen=6.82e+06 len=(6710720 107030)
+  Inst tile2 loc=(2121660 3981630)
+  Inst tile1 loc=(8829730 3988080)
+Net intrnl_io_uncached_0_acquire_bits_data[50] nrTerm=2 conLen=2.37e+06 len=(420490 1946900)
+  Inst tile2 loc=(4410800 6346370)
+  Inst tile1 loc=(4830490 4401360)
+Net intrnl_io_uncached_0_acquire_bits_data[49] nrTerm=2 conLen=4.60e+06 len=(2730800 1868670)
+  Inst tile2 loc=(2103740 3981630)
+  Inst tile1 loc=(4830490 2113760)
+Net intrnl_io_uncached_0_acquire_bits_data[48] nrTerm=2 conLen=6.31e+06 len=(6167910 139580)
+  Inst tile2 loc=(2662620 3981630)
+  Inst tile1 loc=(8829730 3998160)
+Net intrnl_io_uncached_0_acquire_bits_data[47] nrTerm=2 conLen=4.49e+06 len=(4440310 47840)
+  Inst tile2 loc=(411560 4441810)
+  Inst tile1 loc=(4851070 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[46] nrTerm=2 conLen=4.44e+06 len=(4419730 23660)
+  Inst tile2 loc=(411560 4379090)
+  Inst tile1 loc=(4830490 4398000)
+Net intrnl_io_uncached_0_acquire_bits_data[45] nrTerm=2 conLen=4.43e+06 len=(2849070 1583360)
+  Inst tile2 loc=(1982220 3981630)
+  Inst tile1 loc=(4830490 2399920)
+Net intrnl_io_uncached_0_acquire_bits_data[44] nrTerm=2 conLen=2.79e+06 len=(2744350 49520)
+  Inst tile2 loc=(2090300 3981630)
+  Inst tile1 loc=(4830490 3994800)
+Net intrnl_io_uncached_0_acquire_bits_data[43] nrTerm=2 conLen=6.79e+06 len=(6706520 87770)
+  Inst tile2 loc=(2125020 3981630)
+  Inst tile1 loc=(8829730 3978000)
+Net intrnl_io_uncached_0_acquire_bits_data[42] nrTerm=2 conLen=4.56e+06 len=(4470550 94080)
+  Inst tile2 loc=(411560 4345490)
+  Inst tile1 loc=(4881310 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[41] nrTerm=2 conLen=2.75e+06 len=(2737630 13850)
+  Inst tile2 loc=(2093660 3981630)
+  Inst tile1 loc=(4830490 3974640)
+Net intrnl_io_uncached_0_acquire_bits_data[40] nrTerm=2 conLen=4.40e+06 len=(2724190 1672010)
+  Inst tile2 loc=(2107100 3981630)
+  Inst tile1 loc=(4830490 2310880)
+Net intrnl_io_uncached_0_acquire_bits_data[39] nrTerm=2 conLen=4.57e+06 len=(2719040 1851770)
+  Inst tile2 loc=(2113820 3981630)
+  Inst tile1 loc=(4830490 2132240)
+Net intrnl_io_uncached_0_acquire_bits_data[38] nrTerm=2 conLen=2.86e+06 len=(2828240 28070)
+  Inst tile2 loc=(2004060 3981630)
+  Inst tile1 loc=(4830490 3991440)
+Net intrnl_io_uncached_0_acquire_bits_data[37] nrTerm=2 conLen=6.78e+06 len=(6675970 107520)
+  Inst tile2 loc=(411560 4404850)
+  Inst tile1 loc=(7084910 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[36] nrTerm=2 conLen=4.44e+06 len=(4419730 18060)
+  Inst tile2 loc=(411560 4355570)
+  Inst tile1 loc=(4830490 4372240)
+Net intrnl_io_uncached_0_acquire_bits_data[35] nrTerm=2 conLen=2.77e+06 len=(2746030 25340)
+  Inst tile2 loc=(2085260 3981630)
+  Inst tile1 loc=(4830490 3988080)
+Net intrnl_io_uncached_0_acquire_bits_data[34] nrTerm=2 conLen=4.42e+06 len=(2753870 1668190)
+  Inst tile2 loc=(2077420 3981630)
+  Inst tile1 loc=(4830490 2314240)
+Net intrnl_io_uncached_0_acquire_bits_data[33] nrTerm=2 conLen=4.60e+06 len=(2781200 1815470)
+  Inst tile2 loc=(2052220 3981630)
+  Inst tile1 loc=(4830490 2166960)
+Net intrnl_io_uncached_0_acquire_bits_data[32] nrTerm=2 conLen=4.50e+06 len=(4453750 50670)
+  Inst tile2 loc=(411560 4455250)
+  Inst tile1 loc=(4864510 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[31] nrTerm=2 conLen=6.87e+06 len=(6764310 104300)
+  Inst tile2 loc=(2066220 3981630)
+  Inst tile1 loc=(8829730 3984720)
+Net intrnl_io_uncached_0_acquire_bits_data[30] nrTerm=2 conLen=4.44e+06 len=(4419730 19740)
+  Inst tile2 loc=(411560 4358930)
+  Inst tile1 loc=(4830490 4375600)
+Net intrnl_io_uncached_0_acquire_bits_data[29] nrTerm=2 conLen=4.54e+06 len=(4461730 77200)
+  Inst tile2 loc=(411560 4458610)
+  Inst tile1 loc=(4871230 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[28] nrTerm=2 conLen=2.33e+06 len=(427630 1906510)
+  Inst tile2 loc=(4410800 6309410)
+  Inst tile1 loc=(4837630 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[27] nrTerm=2 conLen=4.38e+06 len=(2784670 1598190)
+  Inst tile2 loc=(2046620 3981630)
+  Inst tile1 loc=(4830490 2384240)
+Net intrnl_io_uncached_0_acquire_bits_data[26] nrTerm=2 conLen=4.60e+06 len=(2790270 1808480)
+  Inst tile2 loc=(2041020 3981630)
+  Inst tile1 loc=(4830490 2176480)
+Net intrnl_io_uncached_0_acquire_bits_data[25] nrTerm=2 conLen=6.92e+06 len=(6819190 96170)
+  Inst tile2 loc=(2011340 3981630)
+  Inst tile1 loc=(8829730 3971280)
+Net intrnl_io_uncached_0_acquire_bits_data[24] nrTerm=2 conLen=4.47e+06 len=(4419730 51200)
+  Inst tile2 loc=(411560 4342130)
+  Inst tile1 loc=(4830490 4355440)
+Net intrnl_io_uncached_0_acquire_bits_data[23] nrTerm=2 conLen=6.74e+06 len=(6667430 69680)
+  Inst tile2 loc=(411560 4408210)
+  Inst tile1 loc=(7078190 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[22] nrTerm=2 conLen=4.50e+06 len=(4450390 44750)
+  Inst tile2 loc=(411560 4451890)
+  Inst tile1 loc=(4861150 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[21] nrTerm=2 conLen=4.46e+06 len=(4424770 33870)
+  Inst tile2 loc=(411560 4431730)
+  Inst tile1 loc=(4834270 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[20] nrTerm=2 conLen=4.45e+06 len=(4419730 32060)
+  Inst tile2 loc=(411560 4382450)
+  Inst tile1 loc=(4830490 4404720)
+Net intrnl_io_uncached_0_acquire_bits_data[19] nrTerm=2 conLen=4.11e+06 len=(2152880 1954640)
+  Inst tile2 loc=(2685020 3981630)
+  Inst tile1 loc=(4830490 2030320)
+Net intrnl_io_uncached_0_acquire_bits_data[18] nrTerm=2 conLen=4.04e+06 len=(2097550 1942420)
+  Inst tile2 loc=(2733740 3981630)
+  Inst tile1 loc=(4830490 2040400)
+Net intrnl_io_uncached_0_acquire_bits_data[17] nrTerm=2 conLen=6.80e+06 len=(6701030 97440)
+  Inst tile2 loc=(411560 4398130)
+  Inst tile1 loc=(7111790 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[16] nrTerm=2 conLen=2.87e+06 len=(2839550 28340)
+  Inst tile2 loc=(1991740 3981630)
+  Inst tile1 loc=(4830490 3971280)
+Net intrnl_io_uncached_0_acquire_bits_data[15] nrTerm=2 conLen=6.78e+06 len=(6697670 83920)
+  Inst tile2 loc=(411560 4414930)
+  Inst tile1 loc=(7108430 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[14] nrTerm=2 conLen=4.44e+06 len=(4419730 22050)
+  Inst tile2 loc=(411560 4369010)
+  Inst tile1 loc=(4830490 4382320)
+Net intrnl_io_uncached_0_acquire_bits_data[13] nrTerm=2 conLen=4.46e+06 len=(4420150 39480)
+  Inst tile2 loc=(411560 4385810)
+  Inst tile1 loc=(4830910 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[12] nrTerm=2 conLen=2.91e+06 len=(2865870 39440)
+  Inst tile2 loc=(1965420 3981630)
+  Inst tile1 loc=(4830490 3984720)
+Net intrnl_io_uncached_0_acquire_bits_data[11] nrTerm=2 conLen=4.03e+06 len=(2074590 1959680)
+  Inst tile2 loc=(2756700 3981630)
+  Inst tile1 loc=(4830490 2026960)
+Net intrnl_io_uncached_0_acquire_bits_data[10] nrTerm=2 conLen=4.67e+06 len=(2871470 1798010)
+  Inst tile2 loc=(1959820 3981630)
+  Inst tile1 loc=(4830490 2186000)
+Net intrnl_io_uncached_0_acquire_bits_data[9] nrTerm=2 conLen=6.79e+06 len=(6704390 88960)
+  Inst tile2 loc=(411560 4422210)
+  Inst tile1 loc=(7115150 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[8] nrTerm=2 conLen=4.54e+06 len=(4443670 98240)
+  Inst tile2 loc=(411560 4445170)
+  Inst tile1 loc=(4854430 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[7] nrTerm=2 conLen=5.08e+06 len=(2664830 2416640)
+  Inst tile2 loc=(4410800 6810050)
+  Inst tile1 loc=(7074830 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[6] nrTerm=2 conLen=4.44e+06 len=(4419730 21420)
+  Inst tile2 loc=(411560 4372370)
+  Inst tile1 loc=(4830490 4385680)
+Net intrnl_io_uncached_0_acquire_bits_data[5] nrTerm=2 conLen=4.44e+06 len=(4419730 18190)
+  Inst tile2 loc=(411560 4389170)
+  Inst tile1 loc=(4830490 4389040)
+Net intrnl_io_uncached_0_acquire_bits_data[4] nrTerm=2 conLen=2.92e+06 len=(2893870 23300)
+  Inst tile2 loc=(1937420 3981630)
+  Inst tile1 loc=(4830490 3981360)
+Net intrnl_io_uncached_0_acquire_bits_data[3] nrTerm=2 conLen=4.42e+06 len=(2899470 1517550)
+  Inst tile2 loc=(1931820 3981630)
+  Inst tile1 loc=(4830490 2464880)
+Net intrnl_io_uncached_0_acquire_bits_data[2] nrTerm=2 conLen=6.39e+06 len=(6316870 70210)
+  Inst tile2 loc=(411560 4401490)
+  Inst tile1 loc=(6727630 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[1] nrTerm=2 conLen=2.37e+06 len=(470890 1896670)
+  Inst tile2 loc=(4410800 6303810)
+  Inst tile1 loc=(4867870 4407940)
+Net intrnl_io_uncached_0_acquire_bits_data[0] nrTerm=2 conLen=4.65e+06 len=(2685130 1967200)
+  Inst tile2 loc=(4410800 6365410)
+  Inst tile1 loc=(7081550 4407940)
+Net intrnl_io_uncached_0_acquire_bits_a_type[2] nrTerm=3 conLen=1.97e+06 len=(2608830 1334190)
+  Inst tile2 loc=(4410800 5735410)
+  Inst tile2 loc=(4410800 5738770)
+  Inst tile1 loc=(7018830 4407940)
+Net intrnl_io_uncached_0_acquire_bits_a_type[1] nrTerm=2 conLen=4.52e+06 len=(2684990 1831120)
+  Inst tile2 loc=(4410800 6231570)
+  Inst tile1 loc=(7094990 4407940)
+Net intrnl_io_uncached_0_acquire_bits_a_type[0] nrTerm=2 conLen=4.36e+06 len=(2706970 1654720)
+  Inst tile2 loc=(4410800 6059090)
+  Inst tile1 loc=(7105070 4407940)
+Net intrnl_io_uncached_0_acquire_bits_addr_beat[2] nrTerm=2 conLen=2.56e+06 len=(2546110 14240)
+  Inst tile2 loc=(4410800 4404850)
+  Inst tile1 loc=(6956110 4407940)
+Net intrnl_io_uncached_0_acquire_bits_addr_beat[1] nrTerm=2 conLen=4.52e+06 len=(2681630 1841200)
+  Inst tile2 loc=(4410800 6228210)
+  Inst tile1 loc=(7091630 4407940)
+Net intrnl_io_uncached_0_acquire_bits_addr_beat[0] nrTerm=2 conLen=4.64e+06 len=(424160 4212590)
+  Inst tile2 loc=(4410800 6248370)
+  Inst tile1 loc=(4830490 2037040)
+Net intrnl_io_cached_0_acquire_bits_data[63] nrTerm=2 conLen=4.54e+06 len=(4453750 85190)
+  Inst tile2 loc=(4376780 3981630)
+  Inst tile1 loc=(8829730 4035120)
+Net intrnl_io_cached_0_acquire_bits_data[62] nrTerm=2 conLen=6.75e+06 len=(6636070 114650)
+  Inst tile2 loc=(2194460 3981630)
+  Inst tile1 loc=(8829730 3967920)
+Net intrnl_io_cached_0_acquire_bits_data[61] nrTerm=2 conLen=4.44e+06 len=(4419730 20830)
+  Inst tile2 loc=(4410800 4011730)
+  Inst tile1 loc=(8829730 4031760)
+Net intrnl_io_cached_0_acquire_bits_data[59] nrTerm=2 conLen=4.24e+06 len=(2417060 1827790)
+  Inst tile2 loc=(4410800 6234930)
+  Inst tile1 loc=(6818350 4407940)
+Net intrnl_io_cached_0_acquire_bits_data[58] nrTerm=2 conLen=4.54e+06 len=(4455320 81440)
+  Inst tile2 loc=(4383500 3981630)
+  Inst tile1 loc=(8829730 3934320)
+Net intrnl_io_cached_0_acquire_bits_data[57] nrTerm=2 conLen=6.73e+06 len=(6627560 101990)
+  Inst tile2 loc=(2203980 3981630)
+  Inst tile1 loc=(8829730 3994800)
+Net intrnl_io_cached_0_acquire_bits_data[56] nrTerm=2 conLen=4.51e+06 len=(4433590 76400)
+  Inst tile2 loc=(4396940 3981630)
+  Inst tile1 loc=(8829730 3951120)
+Net intrnl_io_cached_0_acquire_bits_data[55] nrTerm=2 conLen=6.31e+06 len=(6200950 111680)
+  Inst tile2 loc=(2629580 3981630)
+  Inst tile1 loc=(8829730 3964560)
+Net intrnl_io_cached_0_acquire_bits_data[54] nrTerm=2 conLen=4.43e+06 len=(4419730 14700)
+  Inst tile2 loc=(411560 4348850)
+  Inst tile1 loc=(4830490 4362160)
+Net intrnl_io_cached_0_acquire_bits_data[53] nrTerm=2 conLen=4.45e+06 len=(4419730 34400)
+  Inst tile2 loc=(4410800 4001650)
+  Inst tile1 loc=(8829730 4001520)
+Net intrnl_io_cached_0_acquire_bits_data[52] nrTerm=2 conLen=4.53e+06 len=(4419730 110690)
+  Inst tile2 loc=(411560 4468690)
+  Inst tile1 loc=(4830490 4358800)
+Net intrnl_io_cached_0_acquire_bits_data[51] nrTerm=2 conLen=4.46e+06 len=(4420150 41120)
+  Inst tile2 loc=(4410380 3981630)
+  Inst tile1 loc=(8829730 3961200)
+Net intrnl_io_cached_0_acquire_bits_data[50] nrTerm=2 conLen=4.52e+06 len=(4463830 57920)
+  Inst tile2 loc=(411560 4461970)
+  Inst tile1 loc=(4874590 4407940)
+Net intrnl_io_cached_0_acquire_bits_data[49] nrTerm=2 conLen=4.42e+06 len=(4419730 4750)
+  Inst tile2 loc=(411560 4352210)
+  Inst tile1 loc=(4830490 4352080)
+Net intrnl_io_cached_0_acquire_bits_data[48] nrTerm=2 conLen=4.54e+06 len=(4467190 73040)
+  Inst tile2 loc=(411560 4465330)
+  Inst tile1 loc=(4877950 4407940)
+Net intrnl_io_cached_0_acquire_bits_data[40] nrTerm=2 conLen=4.52e+06 len=(4438520 84800)
+  Inst tile2 loc=(4393580 3981630)
+  Inst tile1 loc=(8829730 3947760)
+Net intrnl_io_cached_0_acquire_bits_data[39] nrTerm=2 conLen=4.43e+06 len=(4419730 9860)
+  Inst tile2 loc=(4410800 4028530)
+  Inst tile1 loc=(8829730 4028400)
+Net intrnl_io_cached_0_acquire_bits_data[38] nrTerm=2 conLen=4.52e+06 len=(4445240 73040)
+  Inst tile2 loc=(4386860 3981630)
+  Inst tile1 loc=(8829730 3941040)
+Net intrnl_io_cached_0_acquire_bits_data[37] nrTerm=2 conLen=4.52e+06 len=(4450390 64640)
+  Inst tile2 loc=(4380140 3981630)
+  Inst tile1 loc=(8829730 3930960)
+Net intrnl_io_cached_0_acquire_bits_data[36] nrTerm=2 conLen=4.51e+06 len=(4419730 94350)
+  Inst tile2 loc=(4410800 4008370)
+  Inst tile1 loc=(8829730 3937680)
+Net intrnl_io_cached_0_acquire_bits_data[31] nrTerm=2 conLen=4.34e+06 len=(2505790 1832030)
+  Inst tile2 loc=(4410800 6238290)
+  Inst tile1 loc=(6915790 4407940)
+Net intrnl_io_cached_0_acquire_bits_data[29] nrTerm=2 conLen=2.43e+06 len=(2402750 27150)
+  Inst tile2 loc=(4410800 4411570)
+  Inst tile1 loc=(6812750 4407940)
+Net intrnl_io_cached_0_acquire_bits_data[28] nrTerm=2 conLen=4.52e+06 len=(4428130 88620)
+  Inst tile2 loc=(411560 4362290)
+  Inst tile1 loc=(4830490 4378960)
+Net intrnl_io_cached_0_acquire_bits_data[27] nrTerm=2 conLen=4.52e+06 len=(2688490 1834510)
+  Inst tile2 loc=(4410800 6241650)
+  Inst tile1 loc=(7098350 4407940)
+Net intrnl_io_cached_0_acquire_bits_data[26] nrTerm=2 conLen=4.50e+06 len=(4433170 71360)
+  Inst tile2 loc=(411560 4365650)
+  Inst tile1 loc=(4830490 4365520)
+Net intrnl_io_cached_0_acquire_bits_data[25] nrTerm=2 conLen=4.54e+06 len=(2698570 1837870)
+  Inst tile2 loc=(4410800 6245010)
+  Inst tile1 loc=(7101710 4407940)
+Net intrnl_io_cached_0_acquire_bits_data[24] nrTerm=2 conLen=4.50e+06 len=(4449970 50320)
+  Inst tile2 loc=(411560 4448530)
+  Inst tile1 loc=(4857790 4407940)
+Net intrnl_io_cached_0_acquire_bits_data[23] nrTerm=2 conLen=4.50e+06 len=(4433480 66320)
+  Inst tile2 loc=(4410800 3995490)
+  Inst tile1 loc=(8829730 4018320)
+Net intrnl_io_cached_0_acquire_bits_data[22] nrTerm=2 conLen=4.45e+06 len=(4419730 31040)
+  Inst tile2 loc=(4410800 4025170)
+  Inst tile1 loc=(8829730 4025040)
+Net intrnl_io_cached_0_acquire_bits_data[21] nrTerm=2 conLen=4.51e+06 len=(4444400 66850)
+  Inst tile2 loc=(4410800 4005010)
+  Inst tile1 loc=(8829730 4021680)
+Net intrnl_io_cached_0_acquire_bits_data[19] nrTerm=2 conLen=4.44e+06 len=(4419730 24980)
+  Inst tile2 loc=(4410800 4015090)
+  Inst tile1 loc=(8829730 4014960)
+Net intrnl_io_cached_0_acquire_bits_data[17] nrTerm=2 conLen=4.55e+06 len=(4441880 111680)
+  Inst tile2 loc=(4390220 3981630)
+  Inst tile1 loc=(8829730 3944400)
+Net intrnl_io_cached_0_acquire_bits_data[16] nrTerm=2 conLen=4.55e+06 len=(4419730 128510)
+  Inst tile2 loc=(4410800 3992130)
+  Inst tile1 loc=(8829730 3954480)
+Net intrnl_io_cached_0_acquire_bits_data[15] nrTerm=2 conLen=4.49e+06 len=(4428440 57530)
+  Inst tile2 loc=(4403660 3981630)
+  Inst tile1 loc=(8829730 3957840)
+Net intrnl_io_cached_0_acquire_bits_data[13] nrTerm=2 conLen=4.49e+06 len=(4419730 70700)
+  Inst tile2 loc=(4410800 3985410)
+  Inst tile1 loc=(8829730 4008240)
+Net intrnl_io_cached_0_acquire_bits_data[8] nrTerm=2 conLen=4.50e+06 len=(4425080 71360)
+  Inst tile2 loc=(4407020 3981630)
+  Inst tile1 loc=(8829730 4004880)
+Net intrnl_io_cached_0_acquire_bits_data[1] nrTerm=2 conLen=4.50e+06 len=(4428440 69650)
+  Inst tile2 loc=(4410800 3988770)
+  Inst tile1 loc=(8829730 4011600)
+Net intrnl_io_cached_0_acquire_bits_a_type[2] nrTerm=3 conLen=2.22e+06 len=(4419730 20990)
+  Inst tile2 loc=(411560 4338210)
+  Inst tile2 loc=(411560 4334850)
+  Inst tile1 loc=(4830490 4335280)
+Net intrnl_io_cached_0_acquire_bits_a_type[0] nrTerm=2 conLen=4.43e+06 len=(4419730 10350)
+  Inst tile2 loc=(411560 4233490)
+  Inst tile1 loc=(4830490 4233360)
+Net intrnl_io_cached_0_acquire_bits_addr_beat[2] nrTerm=2 conLen=2.45e+06 len=(2412270 34790)
+  Inst tile2 loc=(2419020 3981630)
+  Inst tile1 loc=(4830490 3998160)
+Net intrnl_io_cached_0_acquire_bits_addr_beat[1] nrTerm=2 conLen=2.43e+06 len=(2399950 31040)
+  Inst tile2 loc=(2431340 3981630)
+  Inst tile1 loc=(4830490 3967920)
+Net intrnl_io_cached_0_acquire_bits_client_xact_id nrTerm=2 conLen=1.82e+06 len=(428890 1388610)
+  Inst tile2 loc=(4410800 5756690)
+  Inst tile1 loc=(4830490 4368880)
+Net intrnl_io_cached_0_acquire_valid nrTerm=2 conLen=1.75e+06 len=(430990 1319600)
+  Inst tile2 loc=(4400300 3981630)
+  Inst tile1 loc=(4830490 2664240)
+Net intrnl_io_uncached_0_acquire_bits_client_xact_id nrTerm=2 conLen=2.72e+06 len=(2708650 14240)
+  Inst tile2 loc=(4410800 4408210)
+  Inst tile1 loc=(7118510 4407940)
+Net intrnl_io_uncached_0_acquire_valid nrTerm=2 conLen=9.20e+05 len=(866670 53270)
+  Inst tile2 loc=(3964620 3981630)
+  Inst tile1 loc=(4830490 4001520)
+
+Total number of long connections = 930
+Io: nrCon=348
+HInst topLevel: nrCon=582
+
+
+Total length: 9.549e+05um, number of vias: 3303
+M1(H) length: 0.000e+00um, number of vias: 0
+M2(V) length: 0.000e+00um, number of vias: 0
+M3(H) length: 0.000e+00um, number of vias: 0
+M4(V) length: 0.000e+00um, number of vias: 0
+M5(H) length: 0.000e+00um, number of vias: 0
+M6(V) length: 0.000e+00um, number of vias: 1056
+M7(H) length: 6.875e+05um, number of vias: 2097
+M8(V) length: 2.674e+05um, number of vias: 150
+M9(H) length: 0.000e+00um, number of vias: 0
+M10(V) length: 0.000e+00um
+
+<CMD> reportWire ../logs/rockettile_x2/innovus_rockettile_x2_maxrule_wireReport.rpt 0
+<CMD> summaryReport -noHtml -outfile ../logs/rockettile_x2/innovus_rockettile_x2_maxrule_summaryReport.rpt
+Start to collect the design information.
+Build netlist information for Cell rockettile_x2_maxrule.
+Finished collecting the design information.
+Generating macro cells used in the design report.
+Analyze library ... 
+Analyze netlist ... 
+Analyze timing ... 
+Analyze floorplan/placement ... 
+**WARN: (IMPSP-390):	Could not determine power-rail locations, as no insts available to check PGTerms.
+Analysis Routing ...
+Report saved in file ../logs/rockettile_x2/innovus_rockettile_x2_maxrule_summaryReport.rpt.
+<CMD> saveDesign ../outputs/rockettile_x2/rockettile_x2_maxrule.invs
+#- Begin Save netlist data ... (date=03/13 01:19:55, mem=1580.9M)
+Writing Binary DB to ../outputs/rockettile_x2/rockettile_x2_maxrule.invs.dat/rockettile_x2_maxrule.v.bin ...
+#- End Save netlist data ... (date=03/13 01:19:55, total cpu=0:00:00.0, real=0:00:00.0, peak res=2102.9M, current mem=2102.9M)
+#- Begin Save AAE data ... (date=03/13 01:19:55, mem=2102.9M)
+Saving AAE Data ...
+#- End Save AAE data ... (date=03/13 01:19:55, total cpu=0:00:00.0, real=0:00:00.0, peak res=2102.9M, current mem=2102.9M)
+#- Begin Save clock tree data ... (date=03/13 01:19:55, mem=2102.9M)
+#- End Save clock tree data ... (date=03/13 01:19:55, total cpu=0:00:00.0, real=0:00:00.0, peak res=2102.9M, current mem=2102.9M)
+Saving preference file ../outputs/rockettile_x2/rockettile_x2_maxrule.invs.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+#- Begin Save floorplan data ... (date=03/13 01:19:56, mem=2103.1M)
+Saving floorplan file ...
+#- End Save floorplan data ... (date=03/13 01:19:56, total cpu=0:00:00.0, real=0:00:00.0, peak res=2103.1M, current mem=2103.1M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+#- Begin Save placement data ... (date=03/13 01:19:56, mem=2103.1M)
+Saving placement file ...
+#- End Save placement data ... (date=03/13 01:19:56, total cpu=0:00:00.0, real=0:00:00.0, peak res=2103.1M, current mem=2103.1M)
+#- Begin Save routing data ... (date=03/13 01:19:56, mem=2103.1M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:01.4 real=0:00:01.0 mem=2103.1M) ***
+#- End Save routing data ... (date=03/13 01:19:57, total cpu=0:00:01.4, real=0:00:01.0, peak res=2103.1M, current mem=2103.1M)
+Saving property file ../outputs/rockettile_x2/rockettile_x2_maxrule.invs.dat/rockettile_x2_maxrule.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2103.1M) ***
+#- Begin Save power constraints data ... (date=03/13 01:19:57, mem=2103.1M)
+#- End Save power constraints data ... (date=03/13 01:19:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=2103.1M, current mem=2103.1M)
+No integration constraint in the design.
+_TT_rc_corner_
+Generated self-contained design rockettile_x2_maxrule.invs.dat
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> defOut -routing ../outputs/rockettile_x2/rockettile_x2_maxrule.def
+Writing DEF file '../outputs/rockettile_x2/rockettile_x2_maxrule.def', current time is Mon Mar 13 01:19:59 2017 ...
+unitPerMicron=2000, dbgMicronPerDBU=0.000500, unitPerDBU=1.000000
+DEF file '../outputs/rockettile_x2/rockettile_x2_maxrule.def' is written, current time is Mon Mar 13 01:19:59 2017 ...
+<CMD> streamOut ../outputs/rockettile_x2/rockettile_x2_maxrule.gds -mapFile layer.map -libName DesignLib -units 2000 -mode ALL
+Parse map file...
+Writing GDSII file ...
+	****** db unit per micron = 2000 ******
+	****** output gds2 file unit per micron = 2000 ******
+	****** unit scaling factor = 1 ******
+Output for instance
+Output for bump
+Output for physical terminals
+Output for logical terminals
+Output for regular nets
+Output for special nets and metal fills
+Output for via structure generation
+Statistics for GDS generated (version 3)
+----------------------------------------
+Stream Out Layer Mapping Information:
+GDS Layer Number          GDS Layer Name
+----------------------------------------
+    31                              COMP
+    32                           DIEAREA
+    11                            metal1
+    12                              via1
+    13                            metal2
+    14                              via2
+    15                            metal3
+    16                              via3
+    17                            metal4
+    18                              via4
+    19                            metal5
+    20                              via5
+    21                              via5
+    21                            metal6
+    22                              via6
+    23                            metal7
+    24                              via7
+    25                            metal8
+    26                              via8
+    27                            metal9
+    28                              via9
+    29                           metal10
+    11                            metal1
+    13                            metal2
+    15                            metal3
+    17                            metal4
+    19                            metal5
+    21                            metal6
+    23                            metal7
+    25                            metal8
+    27                            metal9
+    29                           metal10
+
+
+Stream Out Information Processed for GDS version 3:
+Units: 2000 DBU
+
+Object                             Count
+----------------------------------------
+Instances                              2
+
+Ports/Pins                           757
+    metal layer metal7               283
+    metal layer metal8               325
+    metal layer metal9               149
+
+Nets                                7362
+    metal layer metal7              4505
+    metal layer metal8              2857
+
+    Via Instances                   3303
+
+Special Nets                          14
+    metal layer metal2                 7
+    metal layer metal3                 7
+
+    Via Instances                     16
+
+Metal Fills                            0
+
+    Via Instances                      0
+
+Metal FillOPCs                         0
+
+    Via Instances                      0
+
+Text                                1664
+    metal layer metal3                 1
+    metal layer metal7              1033
+    metal layer metal8               440
+    metal layer metal9               190
+
+
+Blockages                              0
+
+
+Custom Text                            0
+
+
+Custom Box                             0
+
+Trim Metal                             0
+
+######Streamout is finished!
+
+*** Memory Usage v#1 (Current mem = 1445.352M, initial mem = 164.250M) ***
+*** Message Summary: 26 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:05:29, real=0:01:26, mem=1445.4M) ---

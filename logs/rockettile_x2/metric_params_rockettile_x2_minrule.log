@@ -1,0 +1,9 @@
+Max wirelength = 4007.35
+Mean wirelength = 972.847682119
+Mean macro pin perturbation = 1659023.0
+Mean macro half-perimeter = 7998480.0
+Runtime = 6.68
+================================================
+Innovus DRC/LVS constraint c = 1
+Min pitch constraint pmin = 1
+Max perturbation constraint pmax = 1

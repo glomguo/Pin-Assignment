@@ -1,0 +1,9 @@
+*****************************************************************************
+Tool:		def2oa        	22.04.054
+*****************************************************************************
+Running: def2oa -lib DesignLib -def "benchmarks/rockettile_x2/rockettile_x2.def"
+Started: Mon Mar 13 01:18:26 2017 (Hostname: eeapps02.seas.ucla.edu)
+Finished def2oa
+Time elapsed:	0.10 seconds
+Peak VM:	1830912 bytes
+Messages:	0 errors, 0 warnings

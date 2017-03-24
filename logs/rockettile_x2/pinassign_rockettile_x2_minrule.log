@@ -1,0 +1,35 @@
+=================================================
+Automated Inter-Chip Pin Assignment
+UCLA EE 201A Winter 2017 Course Project
+
+<YOUR TEAM NUMBER HERE>
+<YOUR NAMES HERE>
+<YOUR STUDENT IDS HERE>
+=================================================
+
+Ensure you have an existing OA design database before running this tool. Also please adhere to the following command-line usage:
+./PinAssign <DESIGN NAME> <OUTPUT DESIGN NAME> <INPUT RULE FILE NAME> <MACRO INFO FILENAME>
+For example:
+./PinAssign sbox_x2 sbox_x2_minrule benchmarks/sbox_x2/min.inputrules logs/sbox_x2/pinassign_sbox_x2_minrule.macros
+
+Reading design library...
+
+Saving copies of each unique macro instance...
+
+Reading input rules...
+Input rules:
+... pin layer: 6
+... minimum routing layer: 7
+... maximum routing layer: 9
+... pin move step (microns): 0.28
+... minimum pin pitch (microns): 1.12
+... maximum pin perturbation (microns): Infinite. Setting value to -1.
+*** Pin Move Distance is   560
+*** minimum Pin Pitch is   2240
+*** max PinPerturbation is -2000
+
+Beginning pin assignment...
+Totol Number Of pins is 1056
+
+
+Done!

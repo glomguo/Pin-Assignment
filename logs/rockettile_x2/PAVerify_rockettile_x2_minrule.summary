@@ -1,0 +1,16 @@
+==================
+ PAVerify SUMMARY 
+==================
+
+Design: rockettile_x2_minrule
+
+    Connectivity clean! 
+    Macro placement/orientation clean! 
+    System pin placement clean! 
+    Macro pin placement clean! 
+    Macro pin perturbation clean! 
+
+==============================
+MIN INNOVUS REQUIREMENTS MET :)
+pmin = 1
+pmax = 1

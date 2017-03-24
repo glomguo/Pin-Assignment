@@ -1,0 +1,16 @@
+PAVerify:
+
+real	0m0.315s
+user	0m0.276s
+sys	0m0.014s
+====================
+Innovus:
+
+real	1m26.572s
+user	5m18.503s
+sys	0m18.466s
+====================
+
+real	1m32.677s
+user	5m24.122s
+sys	0m18.603s

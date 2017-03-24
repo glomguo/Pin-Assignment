@@ -1,0 +1,167 @@
+##
+## LEF for PtnCells ;
+## created by Innovus v16.10-p004_1 on Mon Feb  6 22:41:51 2017
+##
+
+VERSION 5.7 ;
+
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO aes_sbox
+  CLASS BLOCK ;
+  SIZE 47.8800 BY 45.3600 ;
+  FOREIGN aes_sbox 0.0000 0.0000 ;
+  ORIGIN 0 0 ;
+  SYMMETRY X Y R90 ;
+  PIN a[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 21.2950 45.2200 21.4350 45.3600 ;
+    END
+  END a[7]
+  PIN a[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 28.5750 45.2200 28.7150 45.3600 ;
+    END
+  END a[6]
+  PIN a[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 47.7400 28.0000 47.8800 28.1400 ;
+    END
+  END a[5]
+  PIN a[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 47.7400 22.4000 47.8800 22.5400 ;
+    END
+  END a[4]
+  PIN a[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 22.6950 0.0000 22.8350 0.1400 ;
+    END
+  END a[3]
+  PIN a[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 22.1200 0.1400 22.2600 ;
+    END
+  END a[2]
+  PIN a[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 17.0950 0.0000 17.2350 0.1400 ;
+    END
+  END a[1]
+  PIN a[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 28.2950 0.0000 28.4350 0.1400 ;
+    END
+  END a[0]
+  PIN d[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 27.7200 0.1400 27.8600 ;
+    END
+  END d[7]
+  PIN d[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 11.4950 0.0000 11.6350 0.1400 ;
+    END
+  END d[6]
+  PIN d[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 33.8950 0.0000 34.0350 0.1400 ;
+    END
+  END d[5]
+  PIN d[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 12.8950 45.2200 13.0350 45.3600 ;
+    END
+  END d[4]
+  PIN d[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 47.7400 12.3200 47.8800 12.4600 ;
+    END
+  END d[3]
+  PIN d[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 34.1750 45.2200 34.3150 45.3600 ;
+    END
+  END d[2]
+  PIN d[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 33.3200 0.1400 33.4600 ;
+    END
+  END d[1]
+  PIN d[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal6 ;
+        RECT 0.0000 16.5200 0.1400 16.6600 ;
+    END
+  END d[0]
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+	SHAPE FEEDTHRU ;
+    PORT
+      LAYER metal3 ;
+        RECT 43.0450 4.4400 43.4450 40.9200 ;
+        RECT 4.4350 4.4400 4.8350 40.9200 ;
+    END
+  END VSS
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+	SHAPE FEEDTHRU ;
+    PORT
+      LAYER metal3 ;
+        RECT 42.2450 5.2400 42.6450 40.1200 ;
+        RECT 5.2350 5.2400 5.6350 40.1200 ;
+    END
+  END VDD
+END aes_sbox
+
+END LIBRARY
